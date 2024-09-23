@@ -9,7 +9,7 @@ function App() {
       }, delay);
     },
   };
-
+  console.log(this);
   return <>{tahoe.print()}</>;
 }
 
