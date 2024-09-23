@@ -1,10 +1,16 @@
 import "./App.css";
 
 function App() {
-  const one = (firstName = "oleg", lastName = "klichko") => {
-    return `hello ${firstName} ${lastName}`;
+  const tahoe = {
+    mountains: ["Freel", "Rose", "Tallac", "Rubicon", "Silver"],
+    print: function (delay = 1000) {
+      setTimeout(() => {
+        console.log(this.mountains.join(", "));
+      }, delay);
+    },
   };
-  return <>{one()}</>;
+
+  return <>{tahoe.print()}</>;
 }
 
 export default App;
