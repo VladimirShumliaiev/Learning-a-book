@@ -7,7 +7,7 @@ function App() {
   const str = ["a", "b", "c"];
 
   const all = [...num, ...str];
-  console.log(all, num, str);
+  console.log(all.reverse(), num.reverse(), str);
 
   const obj = {
     one: 1,
@@ -27,7 +27,7 @@ function App() {
     a,
   };
 
-  console.log(all.join(","));
+  console.log(objAll);
   return <>hello</>;
 }
 
