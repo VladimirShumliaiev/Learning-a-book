@@ -1,12 +1,15 @@
 import "./App.css";
 
 function App() {
-  const name = "billy";
-  const lastName = "klichko";
+  const name = ["billy", "willy"];
 
-  const object = { name, lastName };
+  const nameTwo = ["alex", "petya"];
 
-  console.log(object);
+  const allName = [...name, ...nameTwo];
+
+  const test = [...allName, "xxx"];
+
+  console.log(test.join(","));
 
   return <></>;
 }
