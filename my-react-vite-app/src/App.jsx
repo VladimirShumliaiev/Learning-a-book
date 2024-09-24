@@ -3,18 +3,31 @@ import axios from "axios";
 import "./App.css";
 
 function App() {
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/todos")
-      .then((response) => response.json())
-      .then((json) => console.log(json));
-  }, []);
+  const num = [1, 2, 3, 4, 5];
+  const str = ["a", "b", "c"];
 
-  useEffect(() => {
-    axios("https://jsonplaceholder.typicode.com/todos").then((response) =>
-      console.log(response.data)
-    );
-  }, []);
+  const all = [...num, ...str];
+  console.log(all, num, str);
 
+  const obj = {
+    one: 1,
+    two: 2,
+  };
+
+  const obj2 = {
+    three: 3,
+    four: 4,
+  };
+
+  const a = 5;
+
+  const objAll = {
+    ...obj,
+    ...obj2,
+    a,
+  };
+
+  console.log(objAll);
   return <>hello</>;
 }
 
