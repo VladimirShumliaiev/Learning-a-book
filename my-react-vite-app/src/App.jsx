@@ -1,26 +1,16 @@
+import { useEffect } from "react";
 import "./App.css";
 
 function App() {
-  const obj = {
-    one: "1",
-    two: "2",
-  };
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/todos")
+      .then((response) => response.json())
+      .then((json) => console.log(json));
+  }, []);
 
-  const obj2 = {
-    four: "4",
-  };
-
-  const three = "3";
-
-  const all = {
-    ...obj,
-    three,
-    ...obj2,
-  };
-
-  console.log(all);
-  console.log(obj);
-  console.log(obj2);
+  useEffect(() => {
+    axios
+  }, []);
 
   return <></>;
 }
