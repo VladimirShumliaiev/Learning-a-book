@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import axios from "axios";
 import "./App.css";
 
 function App() {
@@ -9,7 +10,9 @@ function App() {
   }, []);
 
   useEffect(() => {
-    axios
+    axios("https://jsonplaceholder.typicode.com/todos").then((response) =>
+      console.log(response.data)
+    );
   }, []);
 
   return <></>;
