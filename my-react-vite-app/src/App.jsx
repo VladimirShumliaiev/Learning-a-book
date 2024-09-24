@@ -3,31 +3,15 @@ import axios from "axios";
 import "./App.css";
 
 function App() {
-  const num = [1, 2, 3, 4, 5];
-  const str = ["a", "b", "c"];
+  useEffect(() => {
+    axios("https://randomuser.me/api").then((res) => console.log(res.data));
+  });
 
-  const all = [...num, ...str];
-  console.log(all.reverse(), num.reverse(), str);
-
-  const obj = {
-    one: 1,
-    two: 2,
-  };
-
-  const obj2 = {
-    three: 3,
-    four: 4,
-  };
-
-  const a = 5;
-
-  const objAll = {
-    ...obj,
-    ...obj2,
-    a,
-  };
-
-  console.log(objAll);
+  useEffect(() => {
+    fetch("https://randomuser.me/api")
+      .then((res) => res.json())
+      .then((json) => console.log(json));
+  });
   return <>hello</>;
 }
 
