@@ -27,7 +27,7 @@ function App() {
     a,
   };
 
-  console.log(objAll);
+  console.log(all.join(","));
   return <>hello</>;
 }
 
