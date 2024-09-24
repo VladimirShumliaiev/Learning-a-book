@@ -1,15 +1,26 @@
 import "./App.css";
 
 function App() {
-  const name = ["billy", "willy"];
+  const obj = {
+    one: "1",
+    two: "2",
+  };
 
-  const nameTwo = ["alex", "petya"];
+  const obj2 = {
+    four: "4",
+  };
 
-  const allName = [...name, ...nameTwo];
+  const three = "3";
 
-  const test = [...allName, "xxx"];
+  const all = {
+    ...obj,
+    three,
+    ...obj2,
+  };
 
-  console.log(test.join(","));
+  console.log(all);
+  console.log(obj);
+  console.log(obj2);
 
   return <></>;
 }
