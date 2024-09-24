@@ -1,16 +1,14 @@
 import "./App.css";
 
 function App() {
-  let lordify = ({ firstName }) => {
-    return `${firstName} hello`;
-  };
+  const name = "billy";
+  const lastName = "klichko";
 
-  let regularPerson = {
-    firstName: "billy",
-    lastName: "klichko",
-  };
+  const object = { name, lastName };
 
-  return <>{lordify(regularPerson)}</>;
+  console.log(object);
+
+  return <></>;
 }
 
 export default App;
