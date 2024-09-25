@@ -23,12 +23,17 @@ function App() {
     four: "four",
   };
 
+  const arr = [1, 2, 3, 4, 5];
+  const a = "a";
+
   const all = {
     ...obj,
+    ...arr,
     ...obj2,
+    a,
   };
 
-  console.log(all, obj, obj2);
+  console.log(all);
   return <>Hello World!!!</>;
 }
 
