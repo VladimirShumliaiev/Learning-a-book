@@ -12,7 +12,24 @@ function App() {
       .then((res) => res.json())
       .then((json) => console.log(json));
   });
-  return <>hello</>;
+
+  const obj = {
+    one: "one",
+    two: "two",
+  };
+
+  const obj2 = {
+    three: "three",
+    four: "four",
+  };
+
+  const all = {
+    ...obj,
+    ...obj2,
+  };
+
+  console.log(all, obj, obj2);
+  return <>Hello World!!!</>;
 }
 
 export default App;
