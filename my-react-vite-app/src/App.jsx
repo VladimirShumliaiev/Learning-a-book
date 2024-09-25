@@ -17,7 +17,11 @@ function App() {
   messages[5](messages[4]);
   messages[7](messages[6]);
 
-  return <></>;
+  const insideFN = (logger) => logger("REACT");
+
+  insideFN((message) => console.log(message));
+
+  return <>O.REilLY-REACT</>;
 }
 
 export default App;
