@@ -1,9 +1,15 @@
 import "./App.css";
 
 function App() {
-  const log = (message) => console.log(message);
+  const obj = {
+    message: "hello world,hello world",
+    log(message) {
+      console.log(message);
+    },
+  };
 
-  log("Hello World");
+  obj.log(obj.message);
+
   return <>Hello World!!!</>;
 }
 
