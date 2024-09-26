@@ -7,7 +7,7 @@ function App() {
 
   const createScream = function (logger) {
     return function (message) {
-      logger(message.toUpperCase() + "!!!");
+      logger(message.toUpperCase() + "!!");
     };
   };
 
