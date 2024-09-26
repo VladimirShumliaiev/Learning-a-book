@@ -14,7 +14,7 @@ function App() {
   const scream = createScream((message) => console.log(message));
 
   scream("react");
-  scream("redux");
+  scream("Redux");
   scream("JavaScript");
   scream("TypeScript");
 
