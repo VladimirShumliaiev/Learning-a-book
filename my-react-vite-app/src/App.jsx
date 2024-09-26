@@ -13,7 +13,7 @@ function App() {
 
   const scream = createScream((message) => console.log(message));
 
-  scream("react");
+  scream("React");
   scream("Redux");
   scream("JavaScript");
   scream("TypeScript");
