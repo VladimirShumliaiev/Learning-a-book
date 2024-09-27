@@ -3,7 +3,7 @@ import "./App.css";
 function App() {
   const test = (text) => text("abc");
 
-  test((m) => console.log(m));
+  test((message) => console.log(message));
 
   const createScream = function (logger) {
     return function (message) {
