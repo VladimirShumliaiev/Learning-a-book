@@ -1,9 +1,10 @@
 import "./App.css";
 
 function App() {
-  const test = (event) => console.log(event);
+  const test = (text) => text("abc");
 
-  test("xxx");
+  test((m) => console.log(m));
+
   const createScream = function (logger) {
     return function (message) {
       logger(message.toUpperCase() + "!!!");
