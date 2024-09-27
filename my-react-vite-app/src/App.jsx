@@ -5,18 +5,17 @@ function App() {
 
   test((message) => console.log(message));
 
-  const createScream = function (logger) {
-    return function (message) {
-      logger(message.toUpperCase() + "!!!");
+  const text = function (e) {
+    return function (b) {
+      e(b.toUpperCase() + "!!!");
     };
   };
 
-  const scream = createScream((message) => console.log(message));
+  const scream = text((message) => console.log(message));
 
   scream("React");
-  scream("Redux");
   scream("JavaScript");
-  scream("TypeScript");
+  scream("123");
 
   return <>O.REilLY-REACT</>;
 }
