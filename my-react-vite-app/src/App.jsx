@@ -5,17 +5,17 @@ function App() {
 
   test((message) => console.log(message));
 
-  const text = function (e) {
-    return function (b) {
-      e(b.toUpperCase() + "!!!");
+  const text = function (event) {
+    return function (x) {
+      event(x.toUpperCase() + "!!!");
     };
   };
 
-  const scream = text((message) => console.log(message));
+  const title = text((message) => console.log(message));
 
-  scream("React");
-  scream("JavaScript");
-  scream("123");
+  title("hello");
+  title("hi");
+  title("yo");
 
   return <>O.REilLY-REACT</>;
 }
