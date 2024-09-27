@@ -7,15 +7,15 @@ function App() {
 
   const text = function (event) {
     return function (x) {
-      event(x.toUpperCase() + "!!!");
+      event(x.toLowerCase() + "!!!");
     };
   };
 
   const title = text((message) => console.log(message));
 
-  title("hello");
-  title("hi");
-  title("yo");
+  title("HELLO");
+  title("HI");
+  title("YO");
 
   return <>O.REilLY-REACT</>;
 }
