@@ -7,11 +7,11 @@
 
 .logo {
   height: 6em;
-  padding: 1.6rem;
+  padding: 1.6em;
   will-change: filter;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #1b22a3aa);
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
