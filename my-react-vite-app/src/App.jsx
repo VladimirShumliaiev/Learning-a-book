@@ -13,7 +13,7 @@ function App() {
 
   const title = text((message) => console.log(message));
 
-  title("HELLO WoRLD");
+  title("HELLO WORLD");
   title("HI");
   title("YO");
 
