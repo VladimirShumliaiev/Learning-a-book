@@ -4,15 +4,13 @@ function App() {
   const string = "Restaurants in Hanalei";
   let urlFriendly = "";
 
-  for (let i = 0; i < string.length; i++) {
-    if (string[i] === " ") {
-      urlFriendly += "-";
-    } else {
-      urlFriendly += string[i];
-    }
-  }
+  for 
+
+  const string2 = "Restaurants in Hanalei";
+
 
   console.log(urlFriendly);
+  console.log(urlFriendly2);
 
   return <>O.REilLY-REACT {urlFriendly}</>;
 }
