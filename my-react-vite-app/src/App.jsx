@@ -1,21 +1,14 @@
 import "./App.css";
 
 function App() {
-  const test = (text) => text("abc");
-
-  test((message) => console.log(message));
-
-  const text = function (event) {
-    return function (x) {
-      event(x.toLowerCase() + "!!!");
-    };
+  const test = (logger) => (message) => {
+    logger(message + "!!!");
   };
 
-  const title = text((message) => console.log(message));
+  const x = test((m) => console.log(m));
 
-  title("HELLO WORLD");
-  title("HI");
-  title("YO");
+  x("Hello World");
+  x("TEST");
 
   return <>O.REilLY-REACT</>;
 }
