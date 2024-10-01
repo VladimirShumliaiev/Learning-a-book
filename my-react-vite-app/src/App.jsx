@@ -12,8 +12,8 @@ function App() {
     }
   }
 
-  const string2 = "Restaurants2 in2 Hanalei2";
-  const urlFriendly2 = string2.replace(/ /g, "--");
+  const string2 = "Restaurants  in     Hanalei";
+  const urlFriendly2 = string2.replace(/ /g, "-");
 
   console.log(urlFriendly);
   console.log(urlFriendly2);
