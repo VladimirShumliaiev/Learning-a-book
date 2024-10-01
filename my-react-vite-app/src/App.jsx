@@ -1,24 +1,19 @@
 import "./App.css";
 
 function App() {
-  const string = "Restaurants in Hanalei";
-  let urlFriendly = "";
+  let color_lawn = {
+    title: "lawn",
+    color: "yellow",
+    rating: 0,
+  };
 
-  for (var i = 0; i < string.length; i++) {
-    if (string[i] === " ") {
-      urlFriendly += "-";
-    } else {
-      urlFriendly += string[i];
-    }
-  }
-
-  const string2 = "Restaurants  in     Hanalei";
-  const urlFriendly2 = string2.replace(/ /g, "-");
-
-  console.log(urlFriendly);
-  console.log(urlFriendly2);
-
-  return <>O.REilLY-REACT {urlFriendly}</>;
+  const rateColor = (color, rating) => ({
+    ...color,
+    rating,
+  });
+  console.log(rateColor(color_lawn, 5).rating);
+  console.log(color_lawn.rating);
+  return <>O.REilLY-REACT</>;
 }
 
 export default App;
