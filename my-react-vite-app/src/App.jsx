@@ -1,18 +1,13 @@
 import "./App.css";
 
 function App() {
-  let color_lawn = {
-    title: "lawn",
-    color: "yellow",
-    rating: 0,
-  };
+  const list = [{ title: "1" }, { title: "2" }, { title: "3" }];
 
-  const rateColor = (color, rating) => ({
-    ...color,
-    rating,
-  });
-  console.log(rateColor(color_lawn, 5).rating);
-  console.log(color_lawn.rating);
+  const add2 = (title, list) => [...list, { title }];
+
+  console.log(add2("four", list).length);
+  console.log(list.length);
+
   return <>O.REilLY-REACT</>;
 }
 
