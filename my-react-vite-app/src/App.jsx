@@ -1,12 +1,12 @@
 import "./App.css";
 
 function App() {
-  const list = [{ title: "1" }, { title: "2" }, { title: "3" }];
+  const arr = [{ text: "a" }, { text: "b" }, { text: "c" }];
 
-  const add2 = (title, list) => [...list, { title }];
+  const add = (text, arr) => [...arr, { text }];
 
-  console.log(add2("four", list).length);
-  console.log(list.length);
+  console.log(add("d", arr).length);
+  console.log(add.length);
 
   return <>O.REilLY-REACT</>;
 }
