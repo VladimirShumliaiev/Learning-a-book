@@ -1,16 +1,20 @@
 import "./App.css";
 
 function App() {
-  const test = (logger) => (message) => {
-    logger(message + "!!!");
-  };
+  const string = "Restaurants in Hanalei";
+  let urlFriendly = "";
 
-  const x = test((m) => console.log(m));
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === " ") {
+      urlFriendly += "-";
+    } else {
+      urlFriendly += string[i];
+    }
+  }
 
-  x("Hello World");
-  x("TEST");
+  console.log(urlFriendly);
 
-  return <>O.REilLY-REACT</>;
+  return <>O.REilLY-REACT {urlFriendly}</>;
 }
 
 export default App;
