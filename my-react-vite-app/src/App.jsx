@@ -6,7 +6,7 @@ function App() {
   const add = (text, arr) => [...arr, { text }];
 
   console.log(add("d", arr).length);
-  console.log(add.length);
+  console.log(arr.length);
 
   return <>O.REilLY-REACT</>;
 }
