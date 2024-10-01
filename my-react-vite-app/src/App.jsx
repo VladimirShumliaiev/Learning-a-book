@@ -1,13 +1,19 @@
 import "./App.css";
 
 function App() {
-  const arr = [{ text: "a" }, { text: "b" }, { text: "c" }];
+  const frederick = {
+    name: "Frederick",
+    strong: true,
+    fast: true,
+  };
 
-  const add = (text, arr) => [...arr, { text }];
-
-  console.log(add("d", arr).length);
-  console.log(arr.length);
-
+  const reFrederick = (person) => ({
+    ...person,
+    fast: false,
+    strong: false,
+  });
+  console.log(reFrederick(frederick));
+  console.log(frederick);
   return <>O.REilLY-REACT</>;
 }
 
