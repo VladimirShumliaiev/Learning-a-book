@@ -9,8 +9,8 @@ function App() {
 
   const reFrederick = (person) => ({
     ...person,
-    fas: false,
-    stron: false,
+    fast: false,
+    strong: false,
   });
   console.log(reFrederick(frederick));
   console.log(frederick);
