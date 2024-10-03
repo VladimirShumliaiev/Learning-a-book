@@ -7,13 +7,6 @@ function App() {
     fast: true,
   };
 
-  const reFrederick = (person) => ({
-    ...person,
-    fast: false,
-    strong: false,
-  });
-  console.log(reFrederick(frederick));
-  console.log(frederick);
   return <>O.REilLY-REACT</>;
 }
 
