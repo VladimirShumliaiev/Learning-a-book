@@ -7,6 +7,8 @@ function App() {
     fast: true,
   };
 
+  const reFrederick = (person) => ({});
+
   return <>O.REilLY-REACT</>;
 }
 
