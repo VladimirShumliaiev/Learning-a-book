@@ -1,14 +1,12 @@
 import "./App.css";
 
 function App() {
-  const x = (logo) => (message) => {
-    logo(console.log(message.toUpperCase() + "!!!"));
-  };
+  const list = [{ name: "vasya" }, { name: "petya" }, { name: "misha" }];
 
-  const a = x((message) => console.log(message));
+  const x = (name, list) => [...list, { name }];
 
-  a("asdasdsad");
-  b("asdsad");
+  console.log(x("ura", list));
+  console.log(list);
   return <>O.REilLY-REACT</>;
 }
 
