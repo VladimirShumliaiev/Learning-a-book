@@ -1,20 +1,14 @@
 import "./App.css";
 
 function App() {
-  const frederick = {
-    name: "Frederick",
-    strong: true,
-    fast: true,
+  const x = (logo) => (message) => {
+    logo(console.log(message.toUpperCase() + "!!!"));
   };
 
-  const reFrederick = (person) => ({
-    ...person,
-    strong: false,
-    fast: false,
-  });
+  const a = x((message) => console.log(message));
 
-  console.log(frederick);
-  console.log(reFrederick(frederick));
+  a("asdasdsad");
+  b("asdsad");
   return <>O.REilLY-REACT</>;
 }
 
