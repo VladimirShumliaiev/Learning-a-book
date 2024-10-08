@@ -3,7 +3,7 @@ import "./App.css";
 function App() {
   const list = [{ name: "Vasya" }, { name: "Petya" }, { name: "Misha" }];
 
-  const list2 = [{ name: "Igor" }, { name: "misha" }, "111"];
+  const list2 = [{ name: "Igor" }, { name: "Misha" }, "111"];
 
   const all = [...list, ...list2];
 
