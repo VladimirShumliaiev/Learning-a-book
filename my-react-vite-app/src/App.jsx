@@ -9,7 +9,7 @@ function App() {
 
   const x = (name, all) => [...all, { name }];
 
-  console.log(x("urasik", all));
+  console.log(x("Urasik", all));
   console.log(all);
   return <>O.REilLY-REACT</>;
 }
