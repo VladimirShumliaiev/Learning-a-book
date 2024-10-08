@@ -1,7 +1,7 @@
 import "./App.css";
 
 function App() {
-  const list = [{ name: "vasya" }, { name: "petya" }, { name: "misha" }];
+  const list = [{ name: "vasya" }, { name: "petya" }, { name: "Misha" }];
 
   const list2 = [{ name: "igor" }, { name: "misha" }, "111"];
 
