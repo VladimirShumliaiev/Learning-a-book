@@ -11,7 +11,7 @@ function App() {
 
   console.log(x("Urasik", allList));
   console.log(allList);
-  return <>O.REilLY-REACT</>;
+  return <>O.REilLY-REACT Hello World</>;
 }
 
 export default App;
