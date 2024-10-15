@@ -9,6 +9,9 @@ function App() {
 
   const x = (name, all) => [...all, { name }];
 
+  console.log(x("Gora", allList));
+  console.log(allList);
+
   return <>O.REilLY-REACT Hello World</>;
 }
 
