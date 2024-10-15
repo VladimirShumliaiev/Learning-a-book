@@ -9,6 +9,8 @@ function App() {
 
   const x = (name, all) => [...all, { name }];
 
+  console.log(x("Gora", list));
+  console.log(x("Gora", list2));
   console.log(x("Gora", allList));
   console.log(allList);
 
