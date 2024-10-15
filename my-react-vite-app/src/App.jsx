@@ -5,7 +5,7 @@ function App() {
 
   const list2 = [{ name: "Igor" }, { name: "Misha" }, "111", "2342"];
 
-  const all = [...list, ...list2];
+  const allList = [...list, ...list2];
 
   const x = (name, all) => [...all, { name }];
 
