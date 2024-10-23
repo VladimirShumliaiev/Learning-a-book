@@ -44,7 +44,7 @@ button {
   font-family: inherit;
   background-color: #0a0606;
   cursor: pointer;
-  transition: border-color 1.4s;
+  transition: border-color 1.3s;
 }
 button:hover {
   border-color: #1f29ee;
