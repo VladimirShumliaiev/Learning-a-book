@@ -1,4 +1,5 @@
 import "./App.css";
+import Examples from "./components/Examples";
 
 function App() {
   const list = [{ name: "Vasya" }, { name: "Petya" }, { name: "Misha" }];
@@ -14,7 +15,12 @@ function App() {
   console.log(x("jora", allList));
   console.log(allList);
 
-  return <>O.REilLY-REACT Hello World</>;
+  return (
+    <>
+      O.REilLY-REACT Hello World
+      <Examples />
+    </>
+  );
 }
 
 export default App;
