@@ -8,7 +8,7 @@ const Function = () => {
     { number: "37" },
   ];
 
-  const a = ["a", "b", "c", "d", "aa", "bb", "cc", "aaa"];
+  const a = ["1", "2", "3", "4", "5", "6", "55", "555"];
 
   const arr = [{ name: "a" }, { name: "b" }];
   const arr2 = [{ name: "c" }, { name: "d" }, 34];
@@ -16,7 +16,7 @@ const Function = () => {
   const all = [...arr, ...arr2];
 
   const x = (name, allShool) => [...allShool, { name }];
-  const shoolFilter = a.filter((e) => e[0] === "a");
+  const shoolFilter = a.filter((e) => e[0] === "5");
 
   console.log(shool.join(","));
   console.log(shoolFilter);
