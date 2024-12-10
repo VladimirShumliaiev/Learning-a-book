@@ -8,7 +8,7 @@ const Function = () => {
     { number: "37" },
   ];
 
-  const a = ["1", "2", "3", "4", "5", "6", "55", "555"];
+  const a = ["1", "2", "3", "4", "5", "6", "55.346", "5abcd"];
 
   const arr = [{ name: "a" }, { name: "b" }];
   const arr2 = [{ name: "c" }, { name: "d" }, 34];
