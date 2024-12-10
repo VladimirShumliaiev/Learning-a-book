@@ -19,7 +19,7 @@ const Function = () => {
   const shoolFilter = a.filter((e) => e[0] === "5");
 
   const cutNumber = (cut, list) => list.filter((e) => e !== cut);
-  console.log(cutNumber("3", a).join(","));
+  console.log(cutNumber("5", a).join(","));
   console.log(shool.join(","));
   console.log(shoolFilter);
   console.log(x("ura", all));
