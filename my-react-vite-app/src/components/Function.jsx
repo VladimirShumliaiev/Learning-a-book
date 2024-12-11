@@ -8,11 +8,11 @@ const Function = () => {
 
   const addArr = (name, list) => [...list, { name }];
 
-  const filterOne = all.filter((e) => e.name[0] === "S");
+  const filterOne = all.filter((e) => e.name[0] !== "S");
 
   const cutFilter = (cut, list) => list.filter((e) => e.name !== cut);
 
-  console.log(cutFilter("Vasya", all));
+  console.log(cutFilter("Vasya", all).join());
   console.log(filterOne);
   console.log(arr);
   console.log(addArr("Kolya", arr));
