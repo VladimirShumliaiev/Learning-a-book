@@ -10,6 +10,9 @@ const Function = () => {
 
   const filterOne = all.filter((e) => e.name[0] === "S");
 
+  const cutFilter = (cut, list) => list.filter((e) => e.name !== cut);
+
+  console.log(cutFilter("Vasya", all));
   console.log(filterOne);
   console.log(arr);
   console.log(addArr("Kolya", arr));
