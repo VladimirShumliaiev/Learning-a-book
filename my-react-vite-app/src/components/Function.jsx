@@ -2,10 +2,18 @@ import React from "react";
 
 const Function = () => {
   const arr = [{ name: "Borya" }, { name: "Vasya" }, { name: "Ura" }];
+  const arr2 = [{ name: "Seva" }, { name: "Sasha" }, { name: "Oleg" }];
+
+  const all = [...arr, ...arr2];
 
   const addArr = (name, list) => [...list, { name }];
+
+  const filterOne = all.filter((e) => e.name[0] === "S");
+
+  console.log(filterOne);
   console.log(arr);
-  console.log(addArr("kolya", arr));
+  console.log(addArr("Kolya", arr));
+  console.log(all);
 
   return <div></div>;
 };
