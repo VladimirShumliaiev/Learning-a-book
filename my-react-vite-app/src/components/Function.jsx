@@ -1,7 +1,12 @@
 import React from "react";
 
 const Function = () => {
-  const arr = [{ name: "Borya" }, { name: "Vasya" }, { name: "Ura" }];
+  const arr = [
+    { name: "Borya" },
+    { name: "Vasya" },
+    { name: "Ura" },
+    { name: "Slava" },
+  ];
   const arr2 = [{ name: "Seva" }, { name: "Sasha" }, { name: "Oleg" }];
 
   const all = [...arr, ...arr2];
