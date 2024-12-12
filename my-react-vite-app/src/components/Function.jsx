@@ -17,7 +17,7 @@ const Function = () => {
 
   const cutFilter = (cut, list) => list.filter((e) => e.name !== cut);
 
-  console.log(cutFilter("Vasya", all).join());
+  console.log(cutFilter("Borya", all).join());
   console.log(filterOne);
   console.log(arr);
   console.log(addArr("Kolya", arr));
