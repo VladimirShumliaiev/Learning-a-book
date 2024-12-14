@@ -20,7 +20,7 @@ const Function = () => {
   console.log(cutFilter("Vasya", all));
   console.log(filterOne);
   console.log(arr);
-  console.log(addArr("Dima", arr));
+  console.log(addArr("Sasha", arr));
   console.log(all);
 
   return <div></div>;
