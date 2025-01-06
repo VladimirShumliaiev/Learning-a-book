@@ -1,7 +1,11 @@
 import React from "react";
 
 const Objects = () => {
-  return <div>Object</div>;
+  return (
+    <div>
+      <button>yes</button>
+    </div>
+  );
 };
 
 export default Objects;
