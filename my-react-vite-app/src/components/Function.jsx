@@ -4,7 +4,7 @@ const Function = () => {
   const arr = [
     { name: "Borya" },
     { name: "Vasya" },
-    { name: "Ura" },
+    { name: "Uras" },
     { name: "Slava" },
   ];
   const arr2 = [{ name: "Seva" }, { name: "Sasha" }, { name: "Oleg" }];
