@@ -3,7 +3,7 @@ import Examples from "./components/Examples";
 import Function from "./components/Function";
 
 function App() {
-  const list = [{ name: "Vasya" }, { name: "Petya" }, { name: "Misha" }];
+  const list = [{ name: "Vasya" }, { name: "Petya" }, { name: "Mishanya" }];
 
   const list2 = [{ name: "Igor" }, { name: "Mishany" }, "111", "2342"];
 
