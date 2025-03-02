@@ -4,7 +4,7 @@ const Objects = () => {
   const onClickHandle = () => {};
   return (
     <div>
-      <button onClick={onClickHandle}>OK</button>
+      <button onClick={onClickHandle}>Ok</button>
     </div>
   );
 };
