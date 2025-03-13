@@ -1,7 +1,7 @@
 import React from "react";
 
 const Examples = () => {
-  return <div>HI</div>;
+  return <div>HI All</div>;
 };
 
 export default Examples;
