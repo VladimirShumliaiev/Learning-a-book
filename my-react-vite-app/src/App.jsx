@@ -5,7 +5,7 @@ import Function from "./components/Function";
 function App() {
   const list = [{ name: "Vasya" }, { name: "Petya" }, { name: "Misha" }];
 
-  const list2 = [{ name: "Igor" }, { name: "Misha" }, "111", "23425"];
+  const list2 = [{ name: "Igor" }, { name: "Misha" }, "1115", "23425"];
 
   const allList = [...list, ...list2];
 
