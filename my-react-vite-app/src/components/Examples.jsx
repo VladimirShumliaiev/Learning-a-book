@@ -2,19 +2,25 @@ import React from "react";
 
 const Examples = () => {
   const arr = [
-    { city: "Kyev ," },
-    { city: "Rome ," },
-    { city: "Paris ," },
-    { city: "London, " },
+    { city: "Kiev" },
+    { city: "Rome" },
+    { city: "Paris" },
+    { city: "London" },
   ];
 
-  const arr2 = [{ city: "newYork ," }, { city: "Stambul" }];
+  const arr2 = [{ city: "newYork" }, { city: "Stambul" }];
 
   const all = [...arr, ...arr2];
+
+  const cut = (cut, list) => list.filter((e) => e.city !== cut);
+
+  const cityFilter = all.filter((e) => e.city[0] !== "S");
+
+  console.log(cityFilter);
   return (
     <div>
-      {all.map((e) => (
-        <div key={e.city}>e.city</div>
+      {cut("Paris", all).map((e) => (
+        <div key={e.city}>{e.city}</div>
       ))}
     </div>
   );
