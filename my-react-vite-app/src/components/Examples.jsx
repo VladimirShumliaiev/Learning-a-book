@@ -17,6 +17,9 @@ const Examples = () => {
   const cityFilter = all.filter((e) => e.city[0] !== "S");
 
   console.log(cityFilter);
+  console.log(all);
+  console.log(arr);
+  console.log(arr2);
   return (
     <div>
       {cut("Paris", all).map((e) => (
