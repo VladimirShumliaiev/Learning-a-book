@@ -1,7 +1,13 @@
 import React from "react";
 
 const Examples = () => {
-  return <div>HI All</div>;
+  const arr = [
+    { city: "Kyev" },
+    { city: "Rome" },
+    { city: "Paris" },
+    { city: "London" },
+  ];
+  return <div>hi</div>;
 };
 
 export default Examples;
