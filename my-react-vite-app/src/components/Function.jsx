@@ -25,6 +25,8 @@ const Function = () => {
     <div>
       {Header("Hello")}
       {cutShool(37, shools).join(",")}
+      <br />
+      {shools.join("\n")}
     </div>
   );
 };
