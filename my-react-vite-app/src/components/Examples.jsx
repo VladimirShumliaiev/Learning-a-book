@@ -23,7 +23,7 @@ const Examples = () => {
   console.log(allCities);
   console.log(filterCities);
   console.log(cutCities("Odessa", allCities));
-  return <div></div>;
+  return <div>{}</div>;
 };
 
 export default Examples;
