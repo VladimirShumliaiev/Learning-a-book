@@ -23,7 +23,7 @@ const Examples = () => {
   console.log(allCities);
   console.log(filterCities);
   console.log(cutCities("Odessa", allCities));
-  return <div>{}</div>;
+  return <div>{cities.map((e) => e.name).join("\n")}</div>;
 };
 
 export default Examples;
