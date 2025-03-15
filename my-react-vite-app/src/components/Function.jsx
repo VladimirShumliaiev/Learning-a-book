@@ -15,7 +15,9 @@ const Function = () => {
 
   console.log(selfEducate(frederick));
   console.log(frederick);
-  return <div></div>;
+
+  const Header = (props) => <h1>{props}</h1>;
+  return <div>{Header("asd")}</div>;
 };
 
 export default Function;
