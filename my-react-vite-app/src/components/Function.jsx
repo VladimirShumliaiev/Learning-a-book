@@ -1,28 +1,20 @@
 import React from "react";
 
 const Function = () => {
-  // const arr = [
-  //   { name: "Borya" },
-  //   { name: "Vasya" },
-  //   { name: "Uras" },
-  //   { name: "Slava" },
-  // ];
-  // const arr2 = [{ name: "Seva" }, { name: "Sasha" }, { name: "Oleg" }];
+  const frederick = {
+    name: "Frederick Douglass",
+    canRead: false,
+    canWrite: false,
+  };
 
-  // const all = [...arr, ...arr2];
+  const selfEducate = (person) => ({
+    ...person,
+    canRead: true,
+    canWrite: true,
+  });
 
-  // const addArr = (name, list) => [...list, { name }];
-
-  // const filterOne = all.filter((e) => e.name[0] !== "S");
-
-  // const cutFilter = (cut, list) => list.filter((e) => e.name !== cut);
-
-  // console.log(cutFilter("Borya", all));
-  // console.log(filterOne);
-  // console.log(arr);
-  // console.log(addArr("Sasha", arr));
-  // console.log(all);
-
+  console.log(selfEducate(frederick));
+  console.log(frederick);
   return <div></div>;
 };
 
