@@ -9,8 +9,20 @@ const Examples = () => {
     { name: "Madrid" },
   ];
 
-  console.log(cities);
+  const cities2 = [{ name: "Milan" }, { name: "Odessa" }];
 
+  const allCities = [...cities, ...cities2];
+
+  const filterCities = allCities.filter((e) => e.name[0] !== "M");
+
+  const cutCities = (cut, citiesList) =>
+    citiesList.filter((e) => e.name !== cut);
+
+  console.log(cities);
+  console.log(cities2);
+  console.log(allCities);
+  console.log(filterCities);
+  console.log(cutCities("Odessa", allCities));
   return <div></div>;
 };
 
