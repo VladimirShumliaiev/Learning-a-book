@@ -1,6 +1,12 @@
+import React, { FC } from "react";
 import questionList from "./questionList";
 
-const Result = (correct) => {
+type ResultProps = {
+  correct: number
+}
+
+const Result: FC<ResultProps> = (props) => {
+  const { correct } = props
   return (
     <div>
       <img

@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import questionList from "./questionList";
 import Game from "./Game";
@@ -20,7 +21,7 @@ const Quiz = () => {
   return (
     <div>
       {step !== questionList.length ? (
-        <Game question={question} onClickVariants={onClickVariants} />
+        <Game question={question} onClickVariant={onClickVariants} />
       ) : (
         <Result correct={correct} />
       )}
