@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import questionList from "./questionList";
-import {Link, NavLink} from 'react-router-dom'
+import {Link, NavLink, Route, Routes} from 'react-router-dom'
+
 
 type ResultProps = {
   correct: number
@@ -17,10 +18,8 @@ const Result: FC<ResultProps> = (props) => {
       <h3>
         you answered {correct} of {questionList.length} questions
       </h3>
-     <Link to='/'>new Game</Link>
-     <br />
-     <a href="/">new Game</a>
-     
+    <a href="/">new Game</a>
+    
     </div>
   );
 };

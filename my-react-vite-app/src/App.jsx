@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router";
 import "./App.css";
 import Examples from "./components/Examples";
 import Function from "./components/Function";

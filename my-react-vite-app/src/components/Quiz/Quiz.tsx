@@ -3,6 +3,7 @@ import { useState } from "react";
 import questionList from "./questionList";
 import Game from "./Game";
 import Result from "./Result";
+import { Route, Routes } from "react-router-dom";
 
 
 const Quiz = () => {
@@ -26,6 +27,7 @@ const Quiz = () => {
       ) : (
         <Result correct={correct} />
       )}
+     
     </div>
   );
 };
