@@ -1,6 +1,7 @@
 import "./App.css";
 import Examples from "./components/Examples";
 import Function from "./components/Function";
+import Quiz from "./components/Quiz/Quiz";
 
 function App() {
   // const list = [{ name: "Vasya" }, { name: "Petya" }, { name: "Misha" }];
@@ -21,6 +22,7 @@ function App() {
       O.REilLY-REACT Hello World
       <Examples />
       <Function />
+      <Quiz />
     </>
   );
 }
