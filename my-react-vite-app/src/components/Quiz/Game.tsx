@@ -19,7 +19,7 @@ const Game: FC<GameProps> = (props) => {
       <h3>{question.title}</h3>
       {question.variants.map((e, index) => (
         <li key={index}>
-          <button onClick={() => onClickVariant[index]}>{e}</button>
+          <button onClick={() => onClickVariant(index)}>{e}</button>
         </li>
       ))}
     </div>

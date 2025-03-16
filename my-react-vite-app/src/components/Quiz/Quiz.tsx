@@ -8,7 +8,7 @@ const Quiz = () => {
   const [step, setStep] = useState(0);
   const [correct, setCorrect] = useState(0);
 
-  const onClickVariants = (index) => {
+  const onClickVariant = (index: number) => {
     setStep(step + 1);
 
     if (index === question.correct) {
@@ -21,7 +21,7 @@ const Quiz = () => {
   return (
     <div>
       {step !== questionList.length ? (
-        <Game question={question} onClickVariant={onClickVariants} />
+        <Game question={question} onClickVariant={onClickVariant} />
       ) : (
         <Result correct={correct} />
       )}
