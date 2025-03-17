@@ -1,35 +1,13 @@
-import React from "react";
-import { useState } from "react";
-import questionList from "./questionList";
-import Game from "./Game";
-import Result from "./Result";
-import { Route, Routes } from "react-router-dom";
-
+import React, { useState } from 'react'
 
 const Quiz = () => {
-  const [step, setStep] = useState(0);
-  const [correct, setCorrect] = useState(0);
-
-  const onClickVariant = (index: number) => {
-    setStep(step + 1);
-
-    if (index === question.correct) {
-      setCorrect(correct + 1);
-    }
-  };
-
-  const question = questionList[step];
-
+  const [step, setStep] = useState(0)
+  const [correct, setCorrect] = useState(0)
   return (
     <div>
-      {step !== questionList.length ? (
-        <Game question={question} onClickVariant={onClickVariant} />
-      ) : (
-        <Result correct={correct} />
-      )}
-     
+      <Game />
     </div>
-  );
-};
+  )
+}
 
-export default Quiz;
+export default Quiz
