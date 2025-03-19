@@ -13,7 +13,7 @@ const Function = () => {
     canWrite: true,
   });
 
-  const shools = [34, 25, 37];
+  const shool = [34, 25, 37];
 
   const cutShool = (cut, list) => list.filter((e) => e !== cut);
 
@@ -24,9 +24,9 @@ const Function = () => {
   return (
     <div>
       {Header("Hello")}
-      {cutShool(37, shools).join(",")}
+      {cutShool(37, shool).join(",")}
       <br />
-      {shools.join("\n")}
+      {shool.join("\n")}
     </div>
   );
 };
