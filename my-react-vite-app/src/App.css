@@ -12,7 +12,7 @@
   will-change: filter;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 1.4em #1b22a3aa);
+  filter: drop-shadow(0 0 1.4em #0f17b8aa);
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 1.4em #0ebff0aa);
