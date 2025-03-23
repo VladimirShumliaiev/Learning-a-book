@@ -24,7 +24,7 @@ const Function = () => {
   return (
     <div>
       {Header("Hello")}
-      {cutShool(37, shool).join(",")}
+      {cutShool(25, shool).join(",")}
       <br />
       {shool.join("\n")}
     </div>
