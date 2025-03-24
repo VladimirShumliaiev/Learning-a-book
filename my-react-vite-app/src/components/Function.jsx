@@ -14,7 +14,7 @@ const Function = () => {
   });
 
   const shool = [34, 25, 37];
-  const shool2 = [{ num: 34 }, { num: 25 }, { num: 37 }];
+  const shool2 = [{ num: "34" }, { num: "25" }, { num: "37" }];
 
   const cutShool = (cut, list) => list.filter((e) => e !== cut);
   const shoolFilter = shool2.filter((e) => e.num[0] !== "3");
