@@ -20,7 +20,9 @@ function App() {
   return (
     <>
       O.REilLY-REACT Hello World
-      <Examples />
+      <div>
+        <Examples />
+      </div>
       <Function />
       <Quiz />
     </>
