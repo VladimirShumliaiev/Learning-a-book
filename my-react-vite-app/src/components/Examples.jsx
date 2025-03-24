@@ -3,15 +3,23 @@ import React from "react";
 const Examples = () => {
   const names = [{ name: "Ura" }, { name: "Kolya" }, { name: "Petya" }];
   const namesTwo = [{ name: "Oleg" }, { name: "Olya" }];
-  const nameAll = [...names, ...namesTwo];
-  const nameFilter = nameAll.filter((name) => name.name[0] !== "O");
+  const namesAll = [...names, ...namesTwo];
+  const namesFilter = namesAll.filter((name) => name.name[0] !== "O");
+  const namesCut = (cut, list) => list.filter((e) => e.name !== cut);
 
   console.log(names);
   console.log(namesTwo);
-  console.log(nameAll);
-  console.log(nameFilter);
+  console.log(namesAll);
+  console.log(namesFilter);
+  console.log(namesCut("Kolya", namesAll));
 
-  return <>{names.map((e) => e.name).join(",")}</>;
+  return (
+    <h2>
+      {namesCut("Kolya", namesAll)
+        .map((e) => e.name)
+        .join(",")}
+    </h2>
+  );
 };
 
 export default Examples;
