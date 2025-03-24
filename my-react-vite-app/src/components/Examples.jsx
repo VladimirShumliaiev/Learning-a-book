@@ -17,7 +17,7 @@ const Examples = () => {
     <h2>
       {namesCut("Kolya", namesAll)
         .map((e) => e.name)
-        .join(",")}
+        .join("\n")}
     </h2>
   );
 };
