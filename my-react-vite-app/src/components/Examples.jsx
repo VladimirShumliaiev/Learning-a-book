@@ -11,7 +11,7 @@ const Examples = () => {
   console.log(namesTwo);
   console.log(namesAll);
   console.log(namesFilter);
-  console.log(namesCut("Kolya", namesAll));
+  console.log(namesCut("Ura", namesAll));
 
   return (
     <h2>
