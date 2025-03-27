@@ -18,7 +18,7 @@ const Examples = () => {
   console.log(city2);
   console.log(cityAll);
   console.log(cityFilter);
-  console.log(cutCity("London", cityAll));
+  console.log(cutCity("New York", cityAll));
   return <div></div>;
 };
 
