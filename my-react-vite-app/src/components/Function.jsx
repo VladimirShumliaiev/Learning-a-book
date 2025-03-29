@@ -17,7 +17,7 @@ const Function = () => {
   const shool2 = [{ num: "34" }, { num: "25" }, { num: "37" }];
 
   const cutShool = (cut, list) => list.filter((e) => e !== cut);
-  const shoolFilter = shool2.filter((e) => e.num[0] !== "3");
+  const shoolFilter = shool2.filter((e) => e.num[0] === "3");
 
   console.log(selfEducate(frederick));
   console.log(frederick);
