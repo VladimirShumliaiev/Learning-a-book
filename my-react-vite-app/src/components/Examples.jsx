@@ -7,7 +7,11 @@ const Examples = () => {
     { cityName: "Odessa" },
   ];
 
-  const city2 = [{ cityName: "New York" }, { cityName: "Paris" }];
+  const city2 = [
+    { cityName: "New York" },
+    { cityName: "Paris" },
+    { cityName: "Milan" },
+  ];
 
   const cityAll = [...city, ...city2];
 
