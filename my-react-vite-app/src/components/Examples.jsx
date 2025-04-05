@@ -6,6 +6,7 @@ const Examples = () => {
     { cityName: "Nikolaev" },
     { cityName: "Odessa" },
     { cityName: "Lviv" },
+    { cityName: "Rome" },
   ];
 
   const city2 = [
