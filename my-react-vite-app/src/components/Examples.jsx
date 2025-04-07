@@ -17,7 +17,7 @@ const Examples = () => {
 
   const cityAll = [...city, ...city2];
 
-  const cityFilter = cityAll.filter((city) => city.cityName[2] !== "w");
+  const cityFilter = cityAll.filter((city) => city.cityName[0] !== "P");
   const cutCity = (cut, list) => list.filter((e) => e.cityName !== cut);
 
   console.log(city);
