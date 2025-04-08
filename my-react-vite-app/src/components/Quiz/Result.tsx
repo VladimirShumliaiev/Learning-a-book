@@ -12,7 +12,7 @@ const Result: FC<ResultProps> = (props) => {
     <div>
       <h3> you answered {correct} of {questionList.length} questions</h3>
 
-      <a href="/">new Game</a>
+      <a href="/">New game</a>
     </div>
   )
 }
