@@ -33,7 +33,7 @@ const Test = () => {
       <button onClick={onClickMinus}> Minus </button>
       <br />
       <button className={color === 'One' ? "testActivePlus" : ""} onClick={() => onClickButton('One')}>
-        {testList.plus}
+        {'one'}
       </button>
       <button className={color === testList.minus ? "testActiveMinus" : ""} onClick={() => onClickButton(testList.minus)}>
         {testList.minus}
