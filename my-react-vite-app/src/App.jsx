@@ -1,4 +1,5 @@
 import "./App.css";
+import Button from "./components/ButtonColor/Button";
 import Examples from "./components/Examples";
 import Function from "./components/Function";
 import Quiz from "./components/Quiz/Quiz";
@@ -27,6 +28,8 @@ function App() {
       <Function />
       <Test />
       <Quiz />
+      <br />
+      <Button />
     </>
   );
 }
