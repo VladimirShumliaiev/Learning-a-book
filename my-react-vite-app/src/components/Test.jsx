@@ -1,8 +1,16 @@
 import React, { useState } from "react";
-import styles from './Test'
+import styles from "./Test.module.css";
+
+// type IsActiveProps = {
+//   isActive: boolean,
+// };
 
 const Test = () => {
   const [state, setState] = useState(0);
+
+  const isActivePlus = ({ isActivePlus }) => (isActivePlus ? "activePlus" : "");
+  const isActiveMinus = ({ isActiveMinus }) =>
+    isActiveMinus ? "activeMinus" : "";
 
   const onClickPlus = () => {
     setState(state + 1);
@@ -20,9 +28,16 @@ const Test = () => {
     }
   };
   return (
-    <div className={}>
-      <button onClick={onClickPlus}> Plus </button> {state}{" "}
-      <button onClick={onClickMinus}> Minus </button>
+    <div className={styles.item}>
+      <button className={isActivePlus} onClick={onClickPlus}>
+        {" "}
+        Plus{" "}
+      </button>{" "}
+      {state}{" "}
+      <button className={isActiveMinus} onClick={onClickMinus}>
+        {" "}
+        Minus{" "}
+      </button>
     </div>
   );
 };
