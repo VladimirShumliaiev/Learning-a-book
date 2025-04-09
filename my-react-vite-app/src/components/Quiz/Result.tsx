@@ -1,18 +1,9 @@
-import React, { FC } from 'react'
-import questionList from './questionList'
+import React from 'react'
 
-type ResultProps = {
-  correct: number
-}
-
-const Result: FC<ResultProps> = (props) => {
-  const { correct } = props
-
+const Result = () => {
   return (
     <div>
-      <h3> you answered {correct} of {questionList.length} questions</h3>
-
-      <a href="/">New game</a>
+      
     </div>
   )
 }
