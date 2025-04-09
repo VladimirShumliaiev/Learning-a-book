@@ -7,14 +7,14 @@ const Test = () => {
     setState(state + 1);
   };
 
-  const onClickPlus = () => {
+  const onClickMinus = () => {
     setState(state - 1);
   };
   return (
     <div>
-      <button onClick={onClickPlus}>Plus</button>
+      <button onClick={onClickPlus}> Plus </button>
       {state}
-      <button onClick={onClickPlus}>Minus</button>
+      <button onClick={onClickMinus}> Minus </button>
     </div>
   );
 };
