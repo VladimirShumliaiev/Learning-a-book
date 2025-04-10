@@ -1,45 +1,33 @@
-import React, { useState } from "react";
-import { testList } from "./testList";
-import './Test.css'
-
-
+import React, { useState } from 'react'
 
 const Test = () => {
-  const [state, setState] = useState(0);
-  const [color,setColor] = useState('')
+  const [counter, setCounter] = useState(0)
 
-  const onClickButton = (value: string) => {
-      setColor(value)
+  const handlePlus = () => {
+    setCounter(counter + 1)
+
+    if (counter >= 5) {
+      setCounter(0)
+    }
   }
 
-  const onClickPlus = () => {
-    setState(state + 1);
+  const handleMinus = () => {
+    setCounter(counter - 1)
 
-    if (state >= 5) {
-      setState(0);
+    if (counter <= -5) {
+      setCounter(0)
     }
-  };
+  }
 
-  const onClickMinus = () => {
-    setState(state - 1);
 
-    if (state <= -5) {
-      setState(0);
-    }
-  };
   return (
     <div>
-      <button onClick={onClickPlus}> Plus </button> {state}{" "}
-      <button onClick={onClickMinus}> Minus </button>
-      <br />
-      <button className={color === 'One' ? "testActivePlus" : ""} onClick={() => onClickButton('One')}>
-        {'one'}
-      </button>
-      <button className={color === testList.minus ? "testActiveMinus" : ""} onClick={() => onClickButton(testList.minus)}>
-        {testList.minus}
-      </button>
+        <h3>Counter</h3>
+        <button onClick={handlePlus}>+</button>{' '}
+        {counter}
+        {' '}<button onClick={handleMinus}>-</button>
     </div>
-  );
-};
+  )
+}
 
-export default Test;
+export default Test
