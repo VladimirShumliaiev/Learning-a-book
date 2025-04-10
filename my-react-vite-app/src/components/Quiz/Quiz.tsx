@@ -7,6 +7,8 @@ const Quiz = () => {
     const [step, setStep] = useState(0)
     const [correct, setCorrect] = useState(0)
 
+    const question = questionList[step]
+
     const onClickVariant = (index: number) => {
         setStep(step + 1)
 
@@ -15,7 +17,7 @@ const Quiz = () => {
         }
     }
 
-    const question = questionList[step]
+    
 
   return (
     <div>
