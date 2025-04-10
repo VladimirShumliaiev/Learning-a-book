@@ -18,7 +18,6 @@ const Quiz = () => {
     }
 
     
-
   return (
     <div>
         {step !== questionList.length ? <Game question={question} onClickVariant={onClickVariant}/> : <Result correct={correct}/>}
