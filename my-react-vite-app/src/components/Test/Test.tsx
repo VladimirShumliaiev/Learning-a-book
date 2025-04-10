@@ -34,11 +34,11 @@ const Test = () => {
 
         <hr />
           <h3>Colors: </h3>
-        <button className={color === '1' ? 'one' : ''} onClick={() => handleColors('1')}>1</button>
-        <button className={color === '2' ? 'one' : ''} onClick={() => handleColors('1')}>2</button>
-        <button className={color === '3' ? 'one' : ''}>3</button>
-        <button className={color === '4' ? 'one' : ''}>4</button>
-        <button className={color === '5' ? 'one' : ''}>5</button>
+        <button className={color === '1' ? 'one-color' : ''} onClick={() => handleColors('1')}>1</button>
+        <button className={color === '2' ? 'two-color' : ''} onClick={() => handleColors('2')}>2</button>
+        <button className={color === '3' ? 'tree-color' : ''} onClick={() => handleColors('3')}>3</button>
+        <button className={color === '4' ? 'four-color' : ''} onClick={() => handleColors('4')}>4</button>
+        <button className={color === '5' ? 'five-color' : ''} onClick={() => handleColors('5')}>5</button>
 
     </div>
   )
