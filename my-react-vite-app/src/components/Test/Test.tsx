@@ -20,6 +20,10 @@ const Test = () => {
     }
   }
 
+  const handleColors = (value: string) => {
+      setColor(value)
+  }
+
 
   return (
     <div>
@@ -30,11 +34,11 @@ const Test = () => {
 
         <hr />
           <h3>Colors: </h3>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>4</button>
-        <button>5</button>
+        <button className={color === '1' ? 'one' : ''} onClick={() => handleColors('1')}>1</button>
+        <button className={color === '2' ? 'one' : ''} onClick={() => handleColors('1')}>2</button>
+        <button className={color === '3' ? 'one' : ''}>3</button>
+        <button className={color === '4' ? 'one' : ''}>4</button>
+        <button className={color === '5' ? 'one' : ''}>5</button>
 
     </div>
   )
