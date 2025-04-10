@@ -9,7 +9,7 @@ type Question = {
 
 type GamePros = {
    question: Question
-   onClickVariant: (i: number) => void
+   onClickVariant: (index: number) => void
 }
 
 const Game: FC<GamePros> = (props) => {
@@ -18,6 +18,7 @@ const Game: FC<GamePros> = (props) => {
     const list = question
   return (
     <div>
+        <h3>{list.title}</h3>
         {list.variants.map((e, index) => <li key={index}><button onClick={() => onClickVariant(index)}>{e}</button></li>)}
     </div>
   )

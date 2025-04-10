@@ -7,10 +7,10 @@ const Quiz = () => {
     const [step, setStep] = useState(0)
     const [correct, setCorrect] = useState(0)
 
-    const onClickVariant = (i: number) => {
+    const onClickVariant = (index: number) => {
         setStep(step + 1)
 
-        if (correct === question.correct) {
+        if (index === question.correct) {
             setCorrect(correct + 1)
         }
     }

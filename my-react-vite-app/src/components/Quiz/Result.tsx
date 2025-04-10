@@ -10,6 +10,8 @@ const Result: FC<ResultProps> = (props) => {
   return (
     <div>
             <h3> you answered {correct} of {questionList.length} answers</h3>
+
+            <a href="/">New Game</a>
     </div>
   )
 }
