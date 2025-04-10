@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './Test.css'
 
 const Test = () => {
   const [counter, setCounter] = useState(0)
@@ -27,7 +28,8 @@ const Test = () => {
 
   return (
     <div>
-        <h3>Counter</h3>
+      <hr />
+        <h3>Counter:</h3>
         <button onClick={handlePlus}>+</button>{' '}
         {counter}
         {' '}<button onClick={handleMinus}>-</button>
@@ -36,10 +38,10 @@ const Test = () => {
           <h3>Colors: </h3>
         <button className={color === '1' ? 'one-color' : ''} onClick={() => handleColors('1')}>1</button>
         <button className={color === '2' ? 'two-color' : ''} onClick={() => handleColors('2')}>2</button>
-        <button className={color === '3' ? 'tree-color' : ''} onClick={() => handleColors('3')}>3</button>
+        <button className={color === '3' ? 'three-color' : ''} onClick={() => handleColors('3')}>3</button>
         <button className={color === '4' ? 'four-color' : ''} onClick={() => handleColors('4')}>4</button>
         <button className={color === '5' ? 'five-color' : ''} onClick={() => handleColors('5')}>5</button>
-
+        <hr />
     </div>
   )
 }
