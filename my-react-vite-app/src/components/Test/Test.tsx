@@ -21,9 +21,10 @@ const Test = () => {
     }
   }
 
-  const handleColors = (value: string) => {
+  const handleOnClickColor = (value: string) => {
       setColor(value)
   }
+
 
 
   return (
@@ -36,11 +37,11 @@ const Test = () => {
 
         <hr />
           <h3>Colors: </h3>
-        <button className={color === '1' ? 'one-color' : ''} onClick={() => handleColors('1')}>1</button>
-        <button className={color === '2' ? 'two-color' : ''} onClick={() => handleColors('2')}>2</button>
-        <button className={color === '3' ? 'three-color' : ''} onClick={() => handleColors('3')}>3</button>
-        <button className={color === '4' ? 'four-color' : ''} onClick={() => handleColors('4')}>4</button>
-        <button className={color === '5' ? 'five-color' : ''} onClick={() => handleColors('5')}>5</button>
+        <button className={ color === '1' ? 'one-color' : ''} onClick={() => handleOnClickColor('1')}>one</button>
+        <button className={ color === '2' ? 'one-color' : ''} onClick={() => handleOnClickColor('2')}>two</button>
+        <button className={ color === '3' ? 'one-color' : ''} onClick={() => handleOnClickColor('3')}></button>
+        <button className={ color === '4' ? 'one-color' : ''} onClick={() => handleOnClickColor('4')}></button>
+        <button className={ color === '5' ? 'one-color' : ''} onClick={() => handleOnClickColor('5')}></button>
         <hr />
     </div>
   )
