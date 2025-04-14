@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { FC } from 'react'
 
-const Result = () => {
+type ResultProps = {
+  correct: number
+}
+
+const Result: FC<ResultProps> = (props) => {
+    const {correct} = props
   return (
     <div>
-      
+        <h3></h3>
     </div>
   )
 }
