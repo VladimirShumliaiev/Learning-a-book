@@ -20,7 +20,7 @@ const Quiz = () => {
   
   return (
     <div>
-        { step === questionList.length ? <Game question={question} handleOnClickButton={handleOnClickButton}/> : <Result correct={correct}/>}
+        { step !== questionList.length ? <Game question={question} handleOnClickButton={handleOnClickButton}/> : <Result correct={correct}/>}
     </div>
   )
 }

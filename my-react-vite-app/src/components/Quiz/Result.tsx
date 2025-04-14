@@ -8,7 +8,8 @@ type ResultProps = {
 const Result: FC<ResultProps> = (props) => {
     const {correct} = props
   return (
-    <div>
+    <div> 
+        <h1>Congratulations:</h1>
         <h3>you answered {correct} of {questionList.length} questions</h3>
         <a href="/">New Game</a>
     </div>
