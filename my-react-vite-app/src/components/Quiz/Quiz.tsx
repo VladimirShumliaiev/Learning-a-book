@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import questionList from './questionList'
+import Game from './Game'
+import Result from './Result'
 
 const Quiz = () => {
   const [step, setStep] = useState(0)
@@ -18,7 +20,7 @@ const Quiz = () => {
   
   return (
     <div>
-      
+        { step === questionList.length ? <Game question={question} handleOnClickButton={handleOnClickButton}/> : <Result correct={correct}/>}
     </div>
   )
 }
