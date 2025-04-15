@@ -14,12 +14,15 @@ const Examples = () => {
 
   const nameFilter = nameListAll.filter((e) => e.name[0] !== "K");
 
-  const cutName = (cut, name) => console.log(nameList);
+  const cutName = (cut, list) => list.filter((e) => e.name !== cut);
+
+  console.log(nameList);
   console.log(nameListTwo);
   console.log(nameListAll);
   console.log(nameFilter);
+  console.log(cutName("Ina", nameListAll));
 
-  return <div></div>;
+  return <div>{nameListAll.map((e) => e.name).join("\n")}</div>;
 };
 
 export default Examples;
