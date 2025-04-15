@@ -18,6 +18,7 @@ const Game: FC<GameProps> = (props) => {
   const list = question
   return (
     <div>
+      <h1>Round:{list.id}</h1>
         <h3>{list.title}</h3>
         {list.variants.map((e, index) => <li key={index}><button onClick={() => handleOnClickButton(index)}>{e}</button></li>)}
     </div>
