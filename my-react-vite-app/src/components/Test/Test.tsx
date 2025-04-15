@@ -2,47 +2,40 @@ import React, { useState } from 'react'
 import './Test.css'
 
 const Test = () => {
-  const [counter, setCounter] = useState(0)
+  const [count, setCount] = useState(0)
   const [color, setColor] = useState('')
 
-  const handlePlus = () => {
-    setCounter(counter + 1)
+  const handleCountPlus = () => {
+      setCount(count + 1)
 
-    if (counter >= 5) {
-      setCounter(0)
-    }
+        if (count >= 5) {
+          setCount(0)
+        }
   }
 
-  const handleMinus = () => {
-    setCounter(counter - 1)
+  
+  const handleCountMinus = () => {
+    setCount(count - 1)
 
-    if (counter <= -5) {
-      setCounter(0)
-    }
-  }
+      if (count <= -5) {
+        setCount(0)
+      }
+}
 
-  const handleOnClickColor = (value: string) => {
-      setColor(value)
-  }
-
-
-
+const handleColor = (value) => {
+  setColor(value)
+}
   return (
     <div>
-      <hr />
-        <h3>Counter:</h3>
-        <button onClick={handlePlus}>+</button>{' '}
-        {counter}
-        {' '}<button onClick={handleMinus}>-</button>
-
+        <button onClick={handleCountMinus}>-</button>{' '}
+        {count}
+        {' '}<button onClick={handleCountPlus}>+</button>
         <hr />
-          <h3>Colors: </h3>
-        <button className={ color === '1' ? 'one-color' : ''} onClick={() => handleOnClickColor('1')}>one</button>{' '}
-        <button className={ color === '2' ? 'two-color' : ''} onClick={() => handleOnClickColor('2')}>two</button>{' '}
-        <button className={ color === '3' ? 'three-color' : ''} onClick={() => handleOnClickColor('3')}>three</button>{' '}
-        <button className={ color === '4' ? 'four-color' : ''} onClick={() => handleOnClickColor('4')}>four</button>{' '}
-        <button className={ color === '5' ? 'five-color' : ''} onClick={() => handleOnClickColor('5')}>five</button>
-        <hr />
+        <button className={color === 'one' ? 'one-color' : ''} onClick={() => handleColor('one')}>1</button>
+        <button className={color === 'two' ? 'two-color' : ''} onClick={() => handleColor('two')}>2</button>
+        <button className={color === 'three' ? 'three-color' : ''} onClick={() => handleColor('three')}>3</button>
+        <button className={color === 'four' ? 'four-color' : ''} onClick={() => handleColor('four')}>4</button>
+        <button className={color === 'five' ? 'five-color' : ''} onClick={() => handleColor('five')}>5</button>
     </div>
   )
 }
