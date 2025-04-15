@@ -1,4 +1,5 @@
 import "./App.css";
+import ClockFromABook from "./components/ClockFromABook";
 import Examples from "./components/Examples";
 import Function from "./components/Function";
 import Quiz from "./components/Quiz/Quiz";
@@ -28,6 +29,8 @@ function App() {
       <Test />
       <Quiz />
       <br />
+      <hr />
+      <ClockFromABook />
     </>
   );
 }
