@@ -61,7 +61,7 @@ const ClockFromABook = () => {
       oneSecond()
     );
   startTicking();
-  return <div>{startTicking}</div>;
+  return <div></div>;
 };
 
 export default ClockFromABook;
