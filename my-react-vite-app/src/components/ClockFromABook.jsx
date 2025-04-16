@@ -5,6 +5,7 @@ const ClockFromABook = () => {
     (...fns) =>
     (arg) =>
       fns.reduce((composed, f) => f(composed), arg);
+
   const oneSecond = () => 1000;
   const getCurrentTime = () => new Date();
   const clear = () => console.clear();
@@ -60,7 +61,7 @@ const ClockFromABook = () => {
       oneSecond()
     );
   startTicking();
-  return <div></div>;
+  return <div>{startTicking}</div>;
 };
 
 export default ClockFromABook;
