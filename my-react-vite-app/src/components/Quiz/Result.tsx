@@ -1,5 +1,7 @@
 import React, { FC } from 'react'
 import questionList from './questionList'
+import { NavLink, Route, Routes } from 'react-router'
+import App from '../../App'
 
 type ResultProps = {
   correct: number

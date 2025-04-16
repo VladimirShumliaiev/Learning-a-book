@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router";
 import "./App.css";
 import ClockFromABook from "./components/ClockFromABook";
 import Examples from "./components/Examples";
@@ -27,8 +28,8 @@ function App() {
       </div>
       <Function />
       <Test />
-      <Quiz />
       <br />
+      <Quiz />
       <hr />
       <ClockFromABook />
     </>
