@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router";
 import "./App.css";
-import ClockFromABook from "./components/ClockFromABook";
-import Examples from "./components/Examples";
-import Function from "./components/Function";
+import ClockFromABook from "./components/Clock-from-a-book/ClockFromABook";
+import Examples from "./components/Example/Examples";
+import Function from "./components/Function/Function";
 import Quiz from "./components/Quiz/Quiz";
-import Test from "./components/Test/Test";
+import Test from "./components/Test1/Test";
 
 function App() {
   // const list = [{ name: "Vasya" }, { name: "Petya" }, { name: "Misha" }];
