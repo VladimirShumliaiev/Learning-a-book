@@ -7,6 +7,7 @@ import Quiz from "../components/Main/Quiz/Quiz";
 import Test from "../components/Main/Test1/Test";
 import Objects from "../components/Main/Object/Objects";
 import Function from "../components/Main/Function/Function";
+import ClockFromABook from "../components/Main/Clock-from-a-book/ClockFromABook";
 
 const Layout = () => {
   return (
@@ -19,6 +20,7 @@ const Layout = () => {
           <Route path="test" element={<Test />} />
           <Route path="object" element={<Objects />} />
           <Route path="function" element={<Function />} />
+          <Route path="clock" element={<ClockFromABook />} />
         </Route>
       </Routes>
     </div>
