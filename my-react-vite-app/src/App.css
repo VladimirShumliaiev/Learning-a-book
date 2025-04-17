@@ -1,44 +1,21 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 3rem;
+.App {
+  display: grid;
+  grid-template-areas: "h h" "n m";
+  grid-template-columns: 200px 1600px;
+  grid-template-rows: 60px;
+}
+
+.Heder {
+  grid-area: h;
   text-align: center;
-  background: rgb(221, 223, 230);
-  color: rgb(65, 26, 212);
-  text-decoration: none;
 }
 
-.logo {
-  height: 5em;
-  padding: 1.2em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 1.6em #0f17b8aa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 1.5em #0ebff0aa);
+.Nav {
+  grid-area: n;
+  padding: 2px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(3) .logo {
-    animation: logo-spin infinite 18s linear;
-  }
-}
-
-.card {
-  padding: 4em;
-}
-
-.read-the-docs {
-  color: #fdfcfc;
+.Mind {
+  grid-area: m;
+  text-align: center;
 }
