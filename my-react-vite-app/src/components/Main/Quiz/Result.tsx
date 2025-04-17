@@ -14,6 +14,9 @@ const Result: FC<ResultProps> = (props) => {
         <h1>Congratulations:</h1>
         <h3>you answered {correct} of {questionList.length} questions</h3>
         <a href="/quiz">New Game</a>
+        <div>
+        <a href="/">back to homePage</a>
+        </div>
     </div>
   )
 }

@@ -61,7 +61,11 @@ const ClockFromABook = () => {
       oneSecond()
     );
   startTicking();
-  return <div></div>;
+  return (
+    <div>
+      <a href="/">back to homePage</a>
+    </div>
+  );
 };
 
 export default ClockFromABook;

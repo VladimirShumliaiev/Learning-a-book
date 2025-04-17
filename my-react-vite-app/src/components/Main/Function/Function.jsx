@@ -32,6 +32,9 @@ const Function = () => {
       {shool.join("\n")}
       <br />
       {shoolFilter.num}
+      <div>
+        <a href="/">back to homePage</a>
+      </div>
     </div>
   );
 };

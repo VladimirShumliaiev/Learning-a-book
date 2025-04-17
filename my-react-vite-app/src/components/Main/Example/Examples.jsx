@@ -22,7 +22,12 @@ const Examples = () => {
   console.log(nameFilter);
   console.log(cutName("Ina", nameListAll));
 
-  return <div>{nameListAll.map((e) => e.name).join("\n")}</div>;
+  return (
+    <div>
+      {nameListAll.map((e) => e.name).join("\n")}{" "}
+      <a href="/">back to homePage</a>
+    </div>
+  );
 };
 
 export default Examples;

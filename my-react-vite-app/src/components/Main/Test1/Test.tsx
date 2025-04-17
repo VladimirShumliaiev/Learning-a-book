@@ -38,6 +38,9 @@ const handleColor = (value) => {
         <button className={color === 'three' ? 'three-color' : ''} onClick={() => handleColor('three')}>3</button>
         <button className={color === 'four' ? 'four-color' : ''} onClick={() => handleColor('four')}>4</button>
         <button className={color === 'five' ? 'five-color' : ''} onClick={() => handleColor('five')}>5</button>
+        <div>
+        <a href="/">back to homePage</a>
+        </div>
     </div>
   )
 }
