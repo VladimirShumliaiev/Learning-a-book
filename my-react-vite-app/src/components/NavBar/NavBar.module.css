@@ -1,8 +1,12 @@
 .item {
+  color: blue;
+}
+
+.item a {
   text-decoration: none;
   color: blue;
 }
 
-.item :active {
+.a-item-active-link {
   color: darkorange;
 }
