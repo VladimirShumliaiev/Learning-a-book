@@ -6,7 +6,7 @@ import { Outlet } from "react-router";
 
 const LayoutApp = () => {
   return (
-    <>
+    <div className="App">
       <div className="Header">
         <Header />
       </div>
@@ -16,7 +16,7 @@ const LayoutApp = () => {
       <div className="Main">
         <Outlet />
       </div>
-    </>
+    </div>
   );
 };
 
