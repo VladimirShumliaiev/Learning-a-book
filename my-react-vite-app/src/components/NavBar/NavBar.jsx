@@ -1,11 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router";
-import style from "./NavBar.module.css";
+import "./NavBar.css";
 
 const NavBar = () => {
-  const isActive = ({ isActive }) => (isActive ? "item-active-link" : "");
+  const isActive = ({ isActive }) => (isActive ? "navItem-active-link" : "");
   return (
-    <div className={style.item}>
+    <div className={"navItem"}>
       <div>
         <NavLink className={isActive} to={"quiz"}>
           {" "}
@@ -13,19 +13,31 @@ const NavBar = () => {
         </NavLink>
       </div>
       <div>
-        <NavLink to={"test"}> Test</NavLink>
+        <NavLink className={isActive} to={"test"}>
+          {" "}
+          Test
+        </NavLink>
       </div>
       <div>
-        <NavLink to={"object"}> Object</NavLink>
+        <NavLink className={isActive} to={"object"}>
+          {" "}
+          Object
+        </NavLink>
       </div>
       <div>
-        <NavLink to={"function"}> Function</NavLink>
+        <NavLink className={isActive} to={"function"}>
+          {" "}
+          Function
+        </NavLink>
       </div>
       <div>
-        <NavLink to={"clock"}> Clock</NavLink>
+        <NavLink className={isActive} to={"clock"}>
+          {" "}
+          Clock
+        </NavLink>
       </div>
       <div>
-        <NavLink className={style.item} to={"example"}>
+        <NavLink className={isActive} to={"example"}>
           {" "}
           Example
         </NavLink>

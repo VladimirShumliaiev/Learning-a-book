@@ -1,12 +1,11 @@
-.item {
-  color: blue;
+.navItem {
 }
 
-.item a {
+.navItem a {
   text-decoration: none;
   color: blue;
 }
 
-.a-item-active-link {
+a.navItem-active-link {
   color: darkorange;
 }
