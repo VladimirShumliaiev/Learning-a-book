@@ -1,10 +1,11 @@
 import { Route, Routes } from "react-router";
 import "./App.css";
-import ClockFromABook from "./components/Clock-from-a-book/ClockFromABook";
-import Examples from "./components/Example/Examples";
-import Function from "./components/Function/Function";
-import Quiz from "./components/Quiz/Quiz";
-import Test from "./components/Test1/Test";
+import ClockFromABook from "./components/Main/Clock-from-a-book/ClockFromABook";
+import Examples from "./components/Main/Example/Examples";
+import Function from "./components/Main/Function/Function";
+import Quiz from "./components/Main/Quiz/Quiz";
+import Test from "./components/Main/Test1/Test";
+import Layout from "./AppLayout/Layout";
 
 function App() {
   // const list = [{ name: "Vasya" }, { name: "Petya" }, { name: "Misha" }];
@@ -22,16 +23,7 @@ function App() {
 
   return (
     <>
-      O.REilLY-REACT Hello World
-      <div>
-        <Examples />
-      </div>
-      <Function />
-      <Test />
-      <br />
-      <Quiz />
-      <hr />
-      <ClockFromABook />
+      <Layout />
     </>
   );
 }
