@@ -1,10 +1,4 @@
-import { Route, Routes } from "react-router";
 import "./App.css";
-import ClockFromABook from "./components/Main/Clock-from-a-book/ClockFromABook";
-import Examples from "./components/Main/Example/Examples";
-import Function from "./components/Main/Function/Function";
-import Quiz from "./components/Main/Quiz/Quiz";
-import Test from "./components/Main/Test1/Test";
 import Layout from "./AppLayout/Layout";
 
 function App() {
