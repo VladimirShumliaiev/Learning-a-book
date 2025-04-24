@@ -41,6 +41,10 @@ const NavBar = () => {
           {" "}
           Example
         </NavLink>
+        <div>
+          {""}
+          <NavLink>Hello</NavLink>
+        </div>
       </div>
     </div>
   );
