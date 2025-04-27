@@ -21,7 +21,7 @@ const Layout = () => {
           <Route path="object" element={<Objects />} />
           <Route path="function" element={<Function />} />
           <Route path="clock" element={<ClockFromABook />} />
-          <Route path="hello" element={<button>hello</button>} />
+          <Route path="hello" element={"Hello World!!!"} />
         </Route>
       </Routes>
     </div>
