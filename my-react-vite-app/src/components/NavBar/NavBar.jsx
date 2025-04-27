@@ -3,47 +3,47 @@ import { NavLink } from "react-router";
 import "./NavBar.css";
 
 const NavBar = () => {
-  const active = ({ isActive }) => (isActive ? "navItem-active-link" : "");
+  const isActive = ({ isActive }) => (isActive ? "navItem-active-link" : "");
   return (
     <div className={"navItem"}>
       <div>
-        <NavLink className={active} to={"quiz"}>
+        <NavLink className={isActive} to={"quiz"}>
           {" "}
           Quiz
         </NavLink>
       </div>
       <div>
-        <NavLink className={active} to={"test"}>
+        <NavLink className={isActive} to={"test"}>
           {" "}
           Test
         </NavLink>
       </div>
       <div>
-        <NavLink className={active} to={"object"}>
+        <NavLink className={isActive} to={"object"}>
           {" "}
           Object
         </NavLink>
       </div>
       <div>
-        <NavLink className={active} to={"function"}>
+        <NavLink className={isActive} to={"function"}>
           {" "}
           Function
         </NavLink>
       </div>
       <div>
-        <NavLink className={active} to={"clock"}>
+        <NavLink className={isActive} to={"clock"}>
           {" "}
           Clock
         </NavLink>
       </div>
       <div>
-        <NavLink className={active} to={"example"}>
+        <NavLink className={isActive} to={"example"}>
           {" "}
           Example
         </NavLink>
         <div>
           {""}
-          <NavLink className={active} to={"hello"}>
+          <NavLink className={isActive} to={"hello"}>
             Hello World
           </NavLink>
         </div>
