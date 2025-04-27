@@ -44,7 +44,7 @@ const NavBar = () => {
         <div>
           {""}
           <NavLink className={isActive} to={"hello"}>
-            Hello World!!!
+            Hello World
           </NavLink>
         </div>
       </div>
