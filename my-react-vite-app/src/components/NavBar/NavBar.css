@@ -1,7 +1,7 @@
-.item a {
+.NavBarItem a {
   text-decoration: none;
 }
 
-a.navBar-link {
+a.navBarItem-link {
   color: rgb(255, 255, 255);
 }
