@@ -4,6 +4,7 @@ import "./NavBar.css";
 const NavBar = () => {
   const activeNavBar = ({ isActive }) =>
     isActive ? "NavBarItem-active-link" : "";
+
   return (
     <div className={"NavBarItem"}>
       <div>
