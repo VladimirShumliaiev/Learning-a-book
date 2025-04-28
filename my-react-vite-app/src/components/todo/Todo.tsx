@@ -4,7 +4,7 @@ import { useAppDispatch } from "../hooks/hooks";
 import Input from "./Input";
 import List from "./List";
 
-const todo = () => {
+const Todo = () => {
   const [text, setText] = useState("");
   const dispatch = useAppDispatch()
 
@@ -22,4 +22,4 @@ const todo = () => {
   </div>;
 };
 
-export default todo;
+export default Todo;

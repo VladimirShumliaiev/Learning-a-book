@@ -1,4 +1,3 @@
-import React from "react";
 import { Route, Routes } from "react-router";
 import LayoutApp from "./LayoutApp";
 import Home from "../components/Main/HomePage/Home";
@@ -8,6 +7,7 @@ import Test from "../components/Main/Test1/Test";
 import Objects from "../components/Main/Object/Objects";
 import Function from "../components/Main/Function/Function";
 import ClockFromABook from "../components/Main/Clock-from-a-book/ClockFromABook";
+import Todo from "../components/todo/Todo";
 
 const Layout = () => {
   return (
@@ -21,7 +21,7 @@ const Layout = () => {
           <Route path="object" element={<Objects />} />
           <Route path="function" element={<Function />} />
           <Route path="clock" element={<ClockFromABook />} />
-          <Route path="hello" element={"Hello World!!!"} />
+          <Route path="hello" element={<Todo />} />
         </Route>
       </Routes>
     </div>
