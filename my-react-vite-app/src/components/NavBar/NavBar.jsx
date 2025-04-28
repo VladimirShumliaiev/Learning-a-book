@@ -2,9 +2,9 @@ import { NavLink } from "react-router";
 import "./NavBar.css";
 
 const NavBar = () => {
-  const activeNavBar = ({ isActive }) => (isActive ? style.activeNavBar : "");
+  const activeNavBar = ({ isActive }) => (isActive ? "NavBarItem-link" : "");
   return (
-    <div className={style.item}>
+    <div className={"NavBarItem"}>
       <div>
         <NavLink className={activeNavBar} to={"quiz"}>
           {" "}
