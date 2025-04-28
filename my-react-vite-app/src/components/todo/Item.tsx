@@ -17,11 +17,11 @@ const Item: FC<ItemProps> = (props) => {
   }
 
   const buttonHandle = () => {
-      if (window.confirm('delete todo?'))
+      // if (window.confirm('delete todo?'))
         dispatch(deleteTodo((id)))
   }
   return <div>
-    <input type="checkbox" onChange={inputHandle} />
+    <input type="checkbox" checked={completed} onChange={inputHandle} />
     {title}
     <button onClick={buttonHandle}>X</button>
   </div>;

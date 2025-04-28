@@ -57,15 +57,13 @@ export const addTodo = createAsyncThunk<Todo, string, { rejectValue: string }>(
 export const toggleTodo = createAsyncThunk<
   Todo,
   string,
-  { rejectValue: string; todo: TodoState }
+  { rejectValue: string; state: { todo: TodoState } }
 >("Todo/toggleTodo", async (id, { getState, rejectWithValue }) => {
-  const toggle = (getState() as { todo: TodoState }).todo.list.find(
-    (e) => e.id === id
-  );
+  const toggle = getState().todo.list.find((e) => e.id === id);
 
   if (toggle) {
     const response = await axios.patch(
-      `https://jsonplaceholder.typicode.com/todos${id}`
+      `https://jsonplaceholder.typicode.com/todos/${id}`
     );
     if (!response) {
       return rejectWithValue("error toggle todo");
@@ -80,8 +78,8 @@ export const deleteTodo = createAsyncThunk<
   string,
   { rejectValue: string }
 >("Todo/deleteTodo", async (id, { rejectWithValue }) => {
-  const response = axios.delete(
-    `https://jsonplaceholder.typicode.com/todos${id}`
+  const response = await axios.delete(
+    `https://jsonplaceholder.typicode.com/todos/${id}`
   );
 
   if (!response) {
