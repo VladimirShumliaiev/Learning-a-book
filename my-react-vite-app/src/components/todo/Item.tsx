@@ -17,7 +17,7 @@ const Item: FC<ItemProps> = (props) => {
   }
 
   const buttonHandle = () => {
-      // if (window.confirm('delete todo?'))
+      if (window.confirm('delete todo?'))
         dispatch(deleteTodo((id)))
   }
   return <div>
