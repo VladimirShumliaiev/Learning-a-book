@@ -21,9 +21,9 @@ const Item: FC<ItemProps> = (props) => {
         dispatch(deleteTodo((id)))
   }
   return <div>
-    <input type="checkbox" onChange={inputHandle} />
-    {title}
-    <button onClick={buttonHandle}>X</button>
+    <input type="checkbox" checked={completed} onChange={inputHandle}/>{' '}
+    {title}{' '}
+    <button onClick={buttonHandle}> X </button>
   </div>;
 };
 
