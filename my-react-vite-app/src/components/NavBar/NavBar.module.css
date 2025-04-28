@@ -1,0 +1,7 @@
+.item a {
+  text-decoration: none;
+}
+
+a.navBar-link {
+  color: rgb(255, 255, 255);
+}

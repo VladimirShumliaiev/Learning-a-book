@@ -1,48 +1,48 @@
 import { NavLink } from "react-router";
-import "./NavBar.css";
+import style from "./NavBar.module.css";
 
 const NavBar = () => {
-
+  const activeNavBar = ({ isActive }) => (isActive ? "navBar-link" : "");
   return (
-    <div className={"navItem"}>
+    <div className={style.item}>
       <div>
-        <NavLink className={} to={"quiz"}>
+        <NavLink className={activeNavBar} to={"quiz"}>
           {" "}
           Quiz
         </NavLink>
       </div>
       <div>
-        <NavLink className={isActive} to={"test"}>
+        <NavLink className={activeNavBar} to={"test"}>
           {" "}
           Test
         </NavLink>
       </div>
       <div>
-        <NavLink className={isActive} to={"object"}>
+        <NavLink className={activeNavBar} to={"object"}>
           {" "}
           Object
         </NavLink>
       </div>
       <div>
-        <NavLink className={isActive} to={"function"}>
+        <NavLink className={activeNavBar} to={"function"}>
           {" "}
           Function
         </NavLink>
       </div>
       <div>
-        <NavLink className={isActive} to={"clock"}>
+        <NavLink className={activeNavBar} to={"clock"}>
           {" "}
           Clock
         </NavLink>
       </div>
       <div>
-        <NavLink className={isActive} to={"example"}>
+        <NavLink className={activeNavBar} to={"example"}>
           {" "}
           Example
         </NavLink>
         <div>
           {""}
-          <NavLink className={isActive} to={"hello"}>
+          <NavLink className={activeNavBar} to={"hello"}>
             Todo
           </NavLink>
         </div>
