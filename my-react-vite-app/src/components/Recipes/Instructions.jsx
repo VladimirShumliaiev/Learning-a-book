@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
-const Instructions = () => {
+const Instructions = ({ steps }) => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <>
+      {steps.map((steps, i) => (
+        <p key={i}>{steps}</p>
+      ))}
+    </>
+  );
+};
 
-export default Instructions
+export default Instructions;

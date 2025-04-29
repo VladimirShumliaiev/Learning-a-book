@@ -1,6 +1,7 @@
-import React, { FC } from "react";
+import React from "react";
 import style from "./Menu.module.css";
 import Ingredients from "./Ingredients";
+import Instructions from "./Instructions";
 
 const Recipe = (props) => {
   const { name, ingredients, steps } = props;
@@ -18,9 +19,7 @@ const Recipe = (props) => {
       </section>
       <section>
         <h1>Cooking Instructions</h1>
-        {steps.map((steps, i) => (
-          <p key={i}>{steps}</p>
-        ))}
+        <Instructions steps={steps} />
       </section>
     </div>
   );
