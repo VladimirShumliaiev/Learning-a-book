@@ -44,9 +44,16 @@ const NavBar = () => {
         </NavLink>
         <div>
           {""}
-          <NavLink className={activeNavBar} to={"hello"}>
-            Todo
-          </NavLink>
+          <div>
+            <NavLink className={activeNavBar} to={"todo"}>
+              Todo
+            </NavLink>
+          </div>
+          <div>
+            <NavLink className={activeNavBar} to={"recipes"}>
+              Recipes
+            </NavLink>
+          </div>
         </div>
       </div>
     </div>
