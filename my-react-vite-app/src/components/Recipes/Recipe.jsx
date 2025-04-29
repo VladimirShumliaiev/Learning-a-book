@@ -9,8 +9,8 @@ const Recipe = (props) => {
   return (
     <div className={style.item}>
       <section>
-        <h1>{name}</h1>
-        <IngredientList list={ingredients} />
+        <h2>{name}</h2>
+        <IngredientList title="Cooking Instructions" list={ingredients} />
       </section>
       <section className={style.instructions}>
         <Instructions steps={steps} />

@@ -1,10 +1,10 @@
 import React from "react";
 import Ingredients from "./Ingredients";
 
-const IngredientList = ({ list }) => {
+const IngredientList = ({ title, list }) => {
   return (
     <>
-      <h1>Cooking Instructions</h1>
+      <h1>{title}</h1>
       <ul>
         {list.map((ingredients, i) => (
           <Ingredients key={i} {...ingredients} />
