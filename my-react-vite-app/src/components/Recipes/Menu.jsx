@@ -1,15 +1,7 @@
-import Recipe from "./Recipe";
-import recipeObject from "./recipeObject";
-import style from "./Menu.module.css";
+import React from "react";
 
 const Menu = () => {
-  return (
-    <div className={style.item}>
-      {recipeObject.map((recipe, i) => (
-        <Recipe key={i} {...recipe} />
-      ))}
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Menu;
