@@ -1,4 +1,4 @@
-const recipeObject = [
+const data = [
   {
     name: "Baked Salmon",
     ingredients: [
@@ -35,4 +35,4 @@ const recipeObject = [
   },
 ];
 
-export default recipeObject;
+export default data;
