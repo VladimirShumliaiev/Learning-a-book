@@ -1,4 +1,4 @@
-export const data = [
+const data = [
   {
     name: "Baked Salmon",
     ingredients: [
@@ -34,3 +34,5 @@ export const data = [
     ],
   },
 ];
+
+export default data;
