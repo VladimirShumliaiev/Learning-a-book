@@ -1,9 +1,9 @@
 .item {
   text-align: left;
-  padding: 5px;
   background-color: aliceblue;
+  padding: 2px;
 }
 
 .instructions {
-  background-color: rgb(173, 170, 160);
+  background-color: rgb(185, 185, 185);
 }
