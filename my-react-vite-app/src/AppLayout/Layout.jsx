@@ -8,7 +8,7 @@ import Objects from "../components/Main/Object/Objects";
 import Function from "../components/Main/Function/Function";
 import ClockFromABook from "../components/Main/Clock-from-a-book/ClockFromABook";
 import Todo from "../components/todo/Todo";
-import Recipe from "../components/Recipes/Recipe";
+import Menu from "../components/Recipes/Menu";
 
 const Layout = () => {
   return (
@@ -23,7 +23,7 @@ const Layout = () => {
           <Route path="function" element={<Function />} />
           <Route path="clock" element={<ClockFromABook />} />
           <Route path="todo" element={<Todo />} />
-          <Route path="recipes" element={<Recipe />} />
+          <Route path="recipes" element={<Menu />} />
         </Route>
       </Routes>
     </div>
