@@ -8,9 +8,25 @@ const NavBar = () => {
   return (
     <div className={"NavBarItem"}>
       <div>
+        <NavLink className={activeNavBar} to={"recipes"}>
+          Recipes
+        </NavLink>
+      </div>{" "}
+      <div>
+        <NavLink className={activeNavBar} to={"todo"}>
+          Todo
+        </NavLink>
+      </div>{" "}
+      <div>
         <NavLink className={activeNavBar} to={"quiz"}>
           {" "}
           Quiz
+        </NavLink>
+      </div>
+      <div>
+        <NavLink className={activeNavBar} to={"clock"}>
+          {" "}
+          Clock
         </NavLink>
       </div>
       <div>
@@ -32,29 +48,11 @@ const NavBar = () => {
         </NavLink>
       </div>
       <div>
-        <NavLink className={activeNavBar} to={"clock"}>
-          {" "}
-          Clock
-        </NavLink>
-      </div>
-      <div>
         <NavLink className={activeNavBar} to={"example"}>
           {" "}
           Example
         </NavLink>
-        <div>
-          {""}
-          <div>
-            <NavLink className={activeNavBar} to={"todo"}>
-              Todo
-            </NavLink>
-          </div>
-          <div>
-            <NavLink className={activeNavBar} to={"recipes"}>
-              Recipes
-            </NavLink>
-          </div>
-        </div>
+        <div>{""}</div>
       </div>
     </div>
   );

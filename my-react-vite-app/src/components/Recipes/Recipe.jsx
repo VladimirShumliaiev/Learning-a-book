@@ -17,7 +17,7 @@ const Recipe = (props) => {
           ))}
         </ul>
       </section>
-      <section>
+      <section className={style.instructions}>
         <h1>Cooking Instructions</h1>
         <Instructions steps={steps} />
       </section>

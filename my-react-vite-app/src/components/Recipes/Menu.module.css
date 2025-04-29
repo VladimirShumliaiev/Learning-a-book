@@ -1,4 +1,9 @@
 .item {
   text-align: left;
   padding: 5px;
+  background-color: aliceblue;
+}
+
+.instructions {
+  background-color: rgb(143, 140, 131);
 }
