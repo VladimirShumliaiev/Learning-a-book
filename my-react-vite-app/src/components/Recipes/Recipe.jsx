@@ -1,20 +1,12 @@
 import React from "react";
-import style from "./Menu.module.css";
-
+import IngredientsList from "./IngredientList";
 import Instructions from "./Instructions";
-import IngredientList from "./IngredientList";
-
-const Recipe = (props) => {
-  const { name, ingredients, steps } = props;
+const Recipe = ({ name, ingredients, steps }) => {
   return (
-    <div className={style.item}>
-      <section>
-        <h2>{name}</h2>
-        <IngredientList title="Cooking Instructions" list={ingredients} />
-      </section>
-      <section className={style.instructions}>
-        <Instructions steps={steps} />
-      </section>
+    <div>
+      <h3>{name}</h3>
+      <IngredientsList title="Ingredients" list={ingredients} />
+      <Instructions instructions={steps} />
     </div>
   );
 };

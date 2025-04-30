@@ -3,7 +3,7 @@ import React from "react";
 const Ingredients = ({ name, amount, measurement }) => {
   return (
     <div>
-      {name} {amount}, {measurement}
+      {name} {amount} {measurement}
     </div>
   );
 };

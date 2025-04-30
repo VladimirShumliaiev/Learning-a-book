@@ -1,13 +1,13 @@
 import React from "react";
 
-const Instructions = ({ steps }) => {
+const Instructions = ({ instructions }) => {
   return (
-    <>
-      <h1>Cooking Instructions</h1>
-      {steps.map((steps, i) => (
-        <p key={i}>{steps}</p>
+    <div>
+      <h3>Instructions</h3>
+      {instructions.map((instructions, i) => (
+        <p key={i}>{instructions}</p>
       ))}
-    </>
+    </div>
   );
 };
 

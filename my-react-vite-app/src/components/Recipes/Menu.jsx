@@ -1,16 +1,15 @@
 import React from "react";
 import data from "./data";
 import Recipe from "./Recipe";
-import style from "./Menu.module.css";
 
 const Menu = () => {
   return (
-    <div className={style.item}>
+    <div>
       <header>
-        <h2>Delicious Recipes</h2>
+        <h3>Delicious Recipes</h3>
       </header>
-      {data.map((recipes, i) => (
-        <Recipe key={i} {...recipes} />
+      {data.map((recipe, i) => (
+        <Recipe key={i} {...recipe} />
       ))}
     </div>
   );
