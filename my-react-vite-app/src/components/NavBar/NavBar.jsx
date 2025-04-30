@@ -7,9 +7,11 @@ const NavBar = () => {
 
   return (
     <div className={"NavBarItem"}>
-      <NavLink className={activeNavBar} to={"starRating"}>
-        Star Rating
-      </NavLink>
+      <div>
+        <NavLink className={activeNavBar} to={"starRating"}>
+          Star Rating
+        </NavLink>
+      </div>{" "}
       <div>
         <NavLink className={activeNavBar} to={"recipes"}>
           Recipes
