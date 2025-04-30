@@ -1,9 +1,8 @@
 import React from "react";
-import { FaStar } from "react-icons/fa";
 import Star from "./Star";
 import { useState } from "react";
 
-const StarRating = ({ totalStars = 5 }) => {
+const StarRating = ({ totalStars = 10 }) => {
   const [selectedStar, setSelectedStar] = useState(0);
   const createArray = (length) => [...Array(length)];
   return (
