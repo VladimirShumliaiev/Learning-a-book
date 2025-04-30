@@ -1,12 +1,12 @@
-import React from "react";
-import { FaStar } from "react-icons/fa";
+import React from 'react'
+import {FaStar} from 'react-icons/fa'
 
-const Star = ({ selected = false, onSelect = (f) => f }) => {
+const Star = ( {selected = false, onSelect = f => f}) => {
   return (
     <>
-      <FaStar color={selected ? "red" : "gray"} onClick={onSelect} />
+        <FaStar color={selected ? 'red' : 'gray'} onClick={onSelect}/>
     </>
-  );
-};
+  )
+}
 
-export default Star;
+export default Star
