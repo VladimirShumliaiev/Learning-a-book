@@ -5,9 +5,11 @@ const IngredientList = ({ list, title }) => {
   return (
     <div>
       <h3>{title}</h3>
-      {list.map((ingredients, i) => (
-        <Ingredients key={i} {...ingredients} />
-      ))}
+      <ul>
+        {list.map((ingredients, i) => (
+          <Ingredients key={i} {...ingredients} />
+        ))}
+      </ul>
     </div>
   );
 };

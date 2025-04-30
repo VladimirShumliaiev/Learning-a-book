@@ -6,7 +6,7 @@ const Recipe = ({ name, ingredients, steps }) => {
     <div>
       <h3>{name}</h3>
       <IngredientsList title="Ingredients" list={ingredients} />
-      <Instructions instructions={steps} />
+      <Instructions title="Instructions" instructions={steps} />
     </div>
   );
 };
