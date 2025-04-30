@@ -6,16 +6,18 @@ const StarRating = ({ totalStar = 10 }) => {
   const createArray = (length) => [...Array(length)];
   return (
     <div>
-    {createArray(totalStar).map((n, i) => (
+      <h2>
+        {createArray(totalStar).map((n, i) => (
           <Star
             key={i}
             selected={selectStar > i}
             onSelect={() => setSelectStar(i + 1)}
           />
         ))}
-      <p>
-        {selectStar} of {totalStar} star
-      </p>
+        <p>
+          {selectStar} of {totalStar} star
+        </p>
+      </h2>
     </div>
   );
 };
