@@ -2,16 +2,14 @@ import React from "react";
 import { FaStar } from "react-icons/fa";
 import Star from "./Star";
 
-const StarRating = () => {
+const StarRating = ({ totalStars = 5 }) => {
+  const createArray = (length) => [...Array(length)];
   return (
-    <div>
-      <Star />
-      {/* <FaStar color={"red"} />
-      <FaStar color={"red"} />
-      <FaStar color={"red"} />
-      <FaStar color={"gray"} />
-      <FaStar color={"gray"} /> */}
-    </div>
+    <h3>
+      {createArray(totalStars).map((n, i) => (
+        <Star key={i} />
+      ))}
+    </h3>
   );
 };
 
