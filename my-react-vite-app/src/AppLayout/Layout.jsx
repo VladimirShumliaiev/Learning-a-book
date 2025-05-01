@@ -8,8 +8,8 @@ import Objects from "../components/Main/Object/Objects";
 import Function from "../components/Main/Function/Function";
 import ClockFromABook from "../components/Main/Clock-from-a-book/ClockFromABook";
 import Todo from "../components/todo/Todo";
-import Menu from "../components/Recipes/Menu";
-import StarRating from "../components/star Rating/StarRating";
+import Menu from "../components/Main/Recipes/Menu";
+import StarRating from "../components/Main/star Rating/StarRating";
 
 const Layout = () => {
   return (
