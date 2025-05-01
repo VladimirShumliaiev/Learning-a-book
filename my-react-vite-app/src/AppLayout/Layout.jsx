@@ -10,7 +10,6 @@ import ClockFromABook from "../components/Main/Clock-from-a-book/ClockFromABook"
 import Todo from "../components/todo/Todo";
 import Menu from "../components/Recipes/Menu";
 import StarRating from "../components/star Rating/StarRating";
-import ColorApp from "../components/star Rating/ColorApp";
 
 const Layout = () => {
   return (
@@ -26,7 +25,7 @@ const Layout = () => {
           <Route path="test" element={<Test />} />
           <Route path="object" element={<Objects />} />
           <Route path="function" element={<Function />} />
-          <Route path="starRating" element={<ColorApp />} />
+          <Route path="starRating" element={<StarRating />} />
         </Route>
       </Routes>
     </div>
