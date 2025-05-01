@@ -10,8 +10,8 @@ const Objects = () => {
 
   return (
     <div>
-      <Input text={text} setText={setText} />
-      <Input text={nameText} setText={setNameText} />
+      <Input text={text} setText={setText} placeholder="...one" />
+      <Input text={nameText} setText={setNameText} placeholder="...two" />
       <Button setAdd={setAdd} setText={setText} text={text}>
         add
       </Button>
