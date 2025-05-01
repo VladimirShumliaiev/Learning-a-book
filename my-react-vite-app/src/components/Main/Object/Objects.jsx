@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "./Button";
 
 const Objects = () => {
   const [text, setText] = useState("");
@@ -16,7 +17,7 @@ const Objects = () => {
   return (
     <div>
       <input onChange={handleOnChange} value={text} />
-      <button onClick={onClickHandle}>add </button>
+      <Button onClick={onClickHandle}>add</Button>
       <div>{add}</div>
       <a href="/">back to homePage</a>
     </div>
