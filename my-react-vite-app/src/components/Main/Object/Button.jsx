@@ -1,9 +1,14 @@
 import React from "react";
 
-const Button = ({ onClick, children }) => {
+const Button = ({ text, setText, setAdd, children }) => {
+  const onClickHandle = () => {
+    setAdd(text);
+    setText("");
+  };
+
   return (
     <div>
-      <button onClick={onClick}>{children}</button>
+      <button onClick={onClickHandle}>{children}</button>
     </div>
   );
 };
