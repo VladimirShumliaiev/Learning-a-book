@@ -4,6 +4,7 @@ const Input = ({ text, setText }) => {
   const handleOnChange = (e) => {
     setText(e.target.value);
   };
+
   return (
     <div>
       <input type="text" value={text} onChange={handleOnChange} />

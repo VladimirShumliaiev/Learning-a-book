@@ -2,8 +2,10 @@ import React from "react";
 
 const Button = ({ text, setText, setAdd, children }) => {
   const onClickHandle = () => {
-    setAdd(text);
-    setText("");
+    if (text.trim().length) {
+      setAdd(text);
+      setText("");
+    }
   };
 
   return (
