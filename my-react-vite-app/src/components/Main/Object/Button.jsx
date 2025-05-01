@@ -1,16 +1,14 @@
 import React from "react";
 
-const Button = ({ text, setText, setAdd, children }) => {
-  const onClickHandle = () => {
-    if (text.trim().length) {
-      setAdd(text);
-      setText("");
-    }
+const Button = ({ title, setTitle, setAddTitle, children }) => {
+  const handleOnClick = (e) => {
+    // e.preventDefault();
+    setAddTitle(title);
+    setTitle("");
   };
-
   return (
     <div>
-      <button onClick={onClickHandle}>{children}</button>
+      <button onClick={handleOnClick}>{children}</button>
     </div>
   );
 };

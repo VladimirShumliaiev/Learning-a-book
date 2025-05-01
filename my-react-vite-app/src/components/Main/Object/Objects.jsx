@@ -1,27 +1,17 @@
 import React, { useState } from "react";
-import Button from "./Button";
 import Input from "./Input";
+import Button from "./Button";
 
 const Objects = () => {
-  const [text, setText] = useState("");
-  const [name, setName] = useState("");
-  const [nameText, setNameText] = useState("");
-  const [add, setAdd] = useState("");
-
+  const [title, setTitle] = useState("");
+  const [addTitle, setAddTitle] = useState("");
   return (
     <div>
-      <Input text={text} setText={setText} placeholder="...one" />
-      <Input text={nameText} setText={setNameText} placeholder="...two" />
-      <Button setAdd={setAdd} setText={setText} text={text}>
-        add
+      <Input title={title} setTitle={setTitle} />
+      <Button setAddTitle={setAddTitle} title={title} setTitle={setTitle}>
+        add Title
       </Button>
-      <Button setAdd={setName} setText={setNameText} text={nameText}>
-        name
-      </Button>
-
-      <div>{add}</div>
-      <div>{name}</div>
-      <a href="/">back to homePage</a>
+      <div>{addTitle}</div>
     </div>
   );
 };
