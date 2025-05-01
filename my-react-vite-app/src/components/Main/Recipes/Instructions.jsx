@@ -1,10 +1,10 @@
 import React from "react";
 import style from "./Menu.module.css";
 
-const Instructions = ({ title, list }) => {
+const Instructions = ({ list, title }) => {
   return (
     <div className={style.instructions}>
-      <h3>{title}</h3>
+      <h2>{title}</h2>
       {list.map((instructions, i) => (
         <p key={i}>{instructions}</p>
       ))}

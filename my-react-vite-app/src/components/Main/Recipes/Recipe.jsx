@@ -1,12 +1,13 @@
 import React from "react";
-import IngredientsList from "./IngredientList";
-import Instructions from "./Instructions";
+import IngredientList from "./IngredientList.jsx";
+import Instructions from "./Instructions.jsx";
+
 const Recipe = ({ name, ingredients, steps }) => {
   return (
     <div>
-      <h3>{name}</h3>
-      <IngredientsList title="Ingredients" list={ingredients} />
-      <Instructions title="Instructions" list={steps} />
+      <h2>{name}</h2>
+      <IngredientList title="Ingredients" list={ingredients} />
+      <Instructions title="Cooking Instructions" list={steps} />
     </div>
   );
 };
