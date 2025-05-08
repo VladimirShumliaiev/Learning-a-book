@@ -1,11 +1,11 @@
 import React from 'react'
 import {FaStar} from 'react-icons/fa'
 
-const Star = ({selectedStar = false,onSelected = f => f}) => {
+const Star = ({selectedStar = false,onSelect = f => f}) => {
   return (
-    <div>
-      <FaStar color={selectedStar ? 'blue' : 'grey'} onClick={() => onSelected}/>
-    </div>
+    <>
+      <FaStar color={selectedStar ? 'blue' : 'grey'} onClick={onSelect}/>
+    </>
   )
 }
 
