@@ -3,10 +3,10 @@ import Star from './Star'
 
 const StarRating = ({totalStar = 5}) => {
   const [selectedStar,setSelectedStar] = useState(0)
-  const createArray = ({length}) => [...Array(length)]
+  const createArray = (length) => [...Array(length)]
   return (
     <div>
-        {createArray(totalStar).map((n,i) => <Star key={i} selectedStar={selectedStar} setSelectedStar={setSelectedStar}/>)}
+        {createArray(totalStar).map((n,i) => <Star key={i} selectedStar={selectedStar > i} onSelected={() => setSelectedStar(i + 1)}/>)}
     </div>
   )
 }
