@@ -7,10 +7,12 @@ const Objects = () => {
   const [display, setDisplay] = useState("");
   return (
     <div>
-      <Input text={title} setText={setTitle} />
+      <div>
+      <Input title={title} setTitle={setTitle} />
       <Button title={title} setDisplay={setDisplay} setText={setTitle}>
         add Title
       </Button>
+      </div>
       <div>{display}</div>
     </div>
   );
