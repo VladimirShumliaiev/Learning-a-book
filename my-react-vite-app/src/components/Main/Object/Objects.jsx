@@ -1,13 +1,19 @@
 import React, { useState } from "react";
 import Input from "./Input";
+import Button from "./Button";
 
 const Objects = () => {
-  const [text, setText] = useState("");
+  const [title, setTitle] = useState("");
   const [display, setDisplay] = useState("");
-  return <div>
-    <Input/>
-    <
-  </div>;
+  return (
+    <div>
+      <Input text={title} setText={setTitle} />
+      <Button display={display} setDisplay={setDisplay} setText={setTitle}>
+        add Title
+      </Button>
+      <div>{display}</div>
+    </div>
+  );
 };
 
 export default Objects;
