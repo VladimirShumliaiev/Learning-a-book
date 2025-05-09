@@ -1,16 +1,7 @@
 import React from "react";
 
-const Button = ({ title, setTitle, setAddTitle, children }) => {
-  const handleOnClick = (e) => {
-    // e.preventDefault();
-    setAddTitle(title);
-    setTitle("");
-  };
-  return (
-    <div>
-      <button onClick={handleOnClick}>{children}</button>
-    </div>
-  );
+const Button = () => {
+  return <div></div>;
 };
 
 export default Button;
