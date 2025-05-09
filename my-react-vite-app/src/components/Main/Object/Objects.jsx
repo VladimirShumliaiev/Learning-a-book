@@ -8,7 +8,7 @@ const Objects = () => {
   return (
     <div>
       <Input text={title} setText={setTitle} />
-      <Button display={display} setDisplay={setDisplay} setText={setTitle}>
+      <Button title={title} setDisplay={setDisplay} setText={setTitle}>
         add Title
       </Button>
       <div>{display}</div>

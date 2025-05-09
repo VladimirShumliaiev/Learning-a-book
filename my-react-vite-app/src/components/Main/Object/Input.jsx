@@ -5,9 +5,9 @@ const Input = ({ text, setText }) => {
     setText(e.target.value);
   };
   return (
-    <>
+    <div>
       <input type="text" value={text} onChange={handleOnChange} />
-    </>
+    </div>
   );
 };
 
