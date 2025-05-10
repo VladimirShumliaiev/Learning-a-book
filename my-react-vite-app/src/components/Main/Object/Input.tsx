@@ -1,16 +1,11 @@
-import React from "react";
+import React from 'react'
 
-
-
-const Input = ({ title, setTitle }) => {
-  const handleOnChange = (e) => {
-    setTitle(e.target.value);
-  };
+const Input = ({title,setTitle}) => {
   return (
-    <>
-      <input type="text" value={title} onChange={handleOnChange} />
-    </>
-  );
-};
+    <div>
+      <input type="text" value={title} onChange={() => setTitle()} />
+    </div>
+  )
+}
 
-export default Input;
+export default Input
