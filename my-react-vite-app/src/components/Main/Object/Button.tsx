@@ -1,10 +1,16 @@
 import React from 'react'
 
 const Button = ({title,setDisplay,setTitle,children}) => {
-  const
+  
+  const handleButton = () => {
+    setDisplay(title)
+    setTitle('')
+  }
+      
+  
   return (
     <div>
-      <button>{children}</button>
+      <button onClick={handleButton}>{children}</button>
     </div>
   )
 }
