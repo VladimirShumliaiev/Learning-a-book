@@ -1,12 +1,10 @@
 import React from "react";
 
-const Ingredients = ({ name, amount, measurement }) => {
+const Ingredients = ({ name, amount }) => {
   return (
-    <li>
-      {name}
-      {amount}
-      {measurement}
-    </li>
+    <div>
+      <li></li>
+    </div>
   );
 };
 

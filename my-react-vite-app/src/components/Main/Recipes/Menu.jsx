@@ -1,11 +1,10 @@
 import React from "react";
-import data from "./data.js";
-import Recipe from "./Recipe.jsx";
-import style from "./Menu.module.css";
+import data from "./data";
+import Recipe from "./Recipe";
 
 const Menu = () => {
   return (
-    <div className={style.item}>
+    <div>
       <header>
         <h2>Delicious Recipes</h2>
       </header>

@@ -1,14 +1,15 @@
 import React from "react";
 import Ingredients from "./Ingredients";
 
-const IngredientList = ({ list, title }) => {
+const IngredientList = ({ list }) => {
   return (
-    <ul>
-      <h3>{title}</h3>
-      {list.map((ingredients, i) => (
-        <Ingredients key={i} {...ingredients} />
-      ))}
-    </ul>
+    <div>
+      <ul>
+        {list.map((ingredients, i) => (
+          <Ingredients key={i} {...ingredients} />
+        ))}
+      </ul>
+    </div>
   );
 };
 
