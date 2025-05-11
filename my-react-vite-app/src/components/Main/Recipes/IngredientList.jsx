@@ -4,7 +4,7 @@ import Ingredients from "./Ingredients";
 const IngredientList = ({ list, title }) => {
   return (
     <div>
-      <h2>{title}</h2>
+      <h3>{title}</h3>
       <ul>
         {list.map((ingredients, i) => (
           <Ingredients key={i} {...ingredients} />
