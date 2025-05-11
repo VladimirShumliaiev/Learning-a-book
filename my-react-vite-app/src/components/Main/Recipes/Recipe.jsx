@@ -5,9 +5,10 @@ import Instruction from "./Instructions";
 const Recipe = ({ name, ingredients, steps }) => {
   return (
     <div>
-      {name}
-      <IngredientList list={ingredients} />
-      <Instruction list={steps} />
+      <h2>{name}</h2>
+
+      <IngredientList title={"Ingredients"} list={ingredients} />
+      <Instruction title={"Cooking instructions"} list={steps} />
     </div>
   );
 };

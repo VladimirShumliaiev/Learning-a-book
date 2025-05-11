@@ -1,9 +1,11 @@
 import React from "react";
 
-const Ingredients = ({ name, amount }) => {
+const Ingredients = ({ name, amount, measurement }) => {
   return (
     <div>
-      <li></li>
+      <li>
+        {name}-{amount},{measurement}
+      </li>
     </div>
   );
 };
