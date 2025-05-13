@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import Star from "./Star";
 
-const totalStar = 5;
-
-const StarRating = (totalStar) => {
+const StarRating = ({ totalStar = 5 }) => {
   const [selectedStar, setSelectedStar] = useState(0);
   const createArray = (length) => [...Array(length)];
   return (
-    <div>
+    <>
       <h2>
         {createArray(totalStar).map((n, i) => (
           <Star
@@ -17,7 +15,7 @@ const StarRating = (totalStar) => {
           />
         ))}
       </h2>
-    </div>
+    </>
   );
 };
 
