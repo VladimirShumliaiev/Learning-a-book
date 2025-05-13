@@ -14,6 +14,9 @@ const StarRating = ({ totalStar = 5 }) => {
             setSelect={() => setSelectedStar(i + 1)}
           />
         ))}
+        <p>
+          {selectedStar} of {totalStar} stars
+        </p>
       </h2>
     </>
   );
