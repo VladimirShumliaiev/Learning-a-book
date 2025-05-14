@@ -9,7 +9,10 @@ const Objects = () => {
   return (
     <div>
       <Input title={title} setTitle={setTitle} />
-      <Button title={title}>add</Button>
+      <Button title={title} setTitle={setTitle} setDisplay={setDisplay}>
+        add
+      </Button>
+      <div>{display}</div>
     </div>
   );
 };
