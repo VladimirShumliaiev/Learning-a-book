@@ -2,8 +2,10 @@ import React from "react";
 
 const Button = ({ title, setTitle, setDisplay, children }) => {
   const handleOnClick = () => {
-    setDisplay(title);
-    setTitle("");
+    if (title.trim().length) {
+      setDisplay(title);
+      setTitle("");
+    }
   };
   return (
     <div>
