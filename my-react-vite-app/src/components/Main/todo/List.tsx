@@ -3,7 +3,7 @@ import { useAppSelector } from "../../hooks/hooks";
 import Item from "./Item";
 
 const List = () => {
-  const list = useAppSelector((state) => state.todo.list);
+  const list = useAppSelector((state) => state.todo.listTodo);
   return (
     <div>
       {list.map((e) => (
