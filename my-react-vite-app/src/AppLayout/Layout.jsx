@@ -7,9 +7,9 @@ import Test from "../components/Main/Test1/Test";
 import Objects from "../components/Main/Object/Objects";
 import Function from "../components/Main/Function/Function";
 import ClockFromABook from "../components/Main/Clock-from-a-book/ClockFromABook";
-import Todo from "../components/todo/Todo";
 import Menu from "../components/Main/Recipes/Menu";
 import StarRating from "../components/Main/star Rating/StarRating";
+import Todo from "../components/Main/todo/Todo";
 
 const Layout = () => {
   return (
