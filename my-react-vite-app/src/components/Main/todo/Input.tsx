@@ -1,33 +1,40 @@
-import React, { FC } from 'react'
+import React, { FC } from "react";
 
 type InputProps = {
-  title: string
-  setTitle: (text: string) => void
-  addTodo: () => void
-}
+  title: string;
+  setTitle: (text: string) => void;
+  addTodo: () => void;
+};
 
 const Input: FC<InputProps> = (props) => {
-  const {title, setTitle, addTodo} = props
+  const { title, setTitle, addTodo } = props;
 
-  const handleOnChange:React.ChangeEventHandler<HTMLInputElement> = (event) => {
-    setTitle(event.target.value)
-  }
+  const handleOnChange: React.ChangeEventHandler<HTMLInputElement> = (
+    event
+  ) => {
+    setTitle(event.target.value);
+  };
 
-  const handleOnSubmit:React.FormEventHandler<HTMLFormElement> = (event) => {
-      event.preventDefault()
-      if (title.trim().length) {
-        addTodo()
-        setTitle('')
-      }
-  }
+  const handleOnSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
+    event.preventDefault();
+    if (title.trim().length) {
+      addTodo();
+      setTitle("");
+    }
+  };
   return (
     <div>
-        <form onSubmit={handleOnSubmit}>
-              <input type="text" value={title} onChange={handleOnChange} placeholder='add Task...'/>
-              <button>add</button>
-        </form>
+      <form onSubmit={handleOnSubmit}>
+        <input
+          type="text"
+          value={title}
+          onChange={handleOnChange}
+          placeholder="add Task..."
+        />
+        <button>add</button>
+      </form>
     </div>
-  )
-}
+  );
+};
 
-export default Input
+export default Input;
