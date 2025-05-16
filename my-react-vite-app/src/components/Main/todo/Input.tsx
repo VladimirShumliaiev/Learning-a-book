@@ -4,10 +4,11 @@ type InputProps = {
   title: string;
   setTitle: (text: string) => void;
   addTodo: () => void;
+  children: string;
 };
 
 const Input: FC<InputProps> = (props) => {
-  const { title, setTitle, addTodo } = props;
+  const { title, setTitle, addTodo, children } = props;
 
   const handleOnChange: React.ChangeEventHandler<HTMLInputElement> = (
     event
@@ -31,7 +32,7 @@ const Input: FC<InputProps> = (props) => {
           onChange={handleOnChange}
           placeholder="add Task..."
         />
-        <button>add</button>
+        <button>{children}</button>
       </form>
     </div>
   );
