@@ -17,13 +17,15 @@ const Item: FC<ItemProps> = (props) => {
   };
 
   const handlerOnClick = () => {
-    dispatch(deleteTodo(id));
+    if (window.confirm("delete todo ?")) {
+      dispatch(deleteTodo(id));
+    }
   };
   return (
     <div>
-      <input type={"checkbox"} checked={completed} onChange={} />
+      <input type={"checkbox"} checked={completed} onChange={handlerOnChange} />
       {title}
-      <button onClick={}>X</button>
+      <button onClick={handlerOnClick}>X</button>
     </div>
   );
 };
