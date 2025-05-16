@@ -5,10 +5,11 @@ type InputProps = {
   setTitle: (text: string) => void;
   addTodo: () => void;
   children: string;
+  placeHolder: string;
 };
 
 const Input: FC<InputProps> = (props) => {
-  const { title, setTitle, addTodo, children } = props;
+  const { title, setTitle, addTodo, children, placeHolder } = props;
 
   const handleOnChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
     setTitle(e.target.value);
@@ -28,7 +29,7 @@ const Input: FC<InputProps> = (props) => {
           type="text"
           value={title}
           onChange={handleOnChange}
-          placeholder="add todo"
+          placeholder={placeHolder}
         />
         <button>{children}</button>
       </form>

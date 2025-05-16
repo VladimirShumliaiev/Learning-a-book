@@ -20,6 +20,7 @@ const Todo = () => {
     <div>
       <Input
         children={"add"}
+        placeHolder={"...todo"}
         title={title}
         setTitle={setTitle}
         addTodo={addTask}
