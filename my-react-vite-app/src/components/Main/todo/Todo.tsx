@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useAppDispatch } from "../../hooks/hooks";
-import { fetchTodo } from "../../../redux/Slices/TodoSlice";
+import { addTodo, fetchTodo } from "../../../redux/Slices/TodoSlice";
 import List from "./List";
 import Input from "./Input";
 
@@ -11,6 +11,10 @@ const Todo = () => {
   useEffect(() => {
     dispatch(fetchTodo());
   }, [dispatch]);
+
+  const addTask = () => {
+    dispatch(addTodo(title));
+  };
 
   return (
     <div>
