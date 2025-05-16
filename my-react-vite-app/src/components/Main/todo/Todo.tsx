@@ -18,7 +18,12 @@ const Todo = () => {
 
   return (
     <div>
-      <Input />
+      <Input
+        children={"add"}
+        title={title}
+        setTitle={setTitle}
+        addTodo={addTask}
+      />
       <List />
     </div>
   );
