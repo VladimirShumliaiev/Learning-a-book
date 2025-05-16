@@ -1,32 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { addTodo, fetchTodo } from "../../../redux/Slices/TodoSlice";
 import { useAppDispatch } from "../../hooks/hooks";
-import Input from "./Input";
-import List from "./List";
 
 const Todo = () => {
-  const [text, setText] = useState("");
+  const [title, setTitle] = useState("");
   const dispatch = useAppDispatch();
 
-  useEffect(() => {
-    dispatch(fetchTodo());
-  }, [dispatch]);
-
-  const addTask = () => {
-    dispatch(addTodo(text));
-  };
-
-  return (
-    <div>
-      <Input
-        children={"add Todo"}
-        title={text}
-        setTitle={setText}
-        addTodo={addTask}
-      />
-      <List />
-    </div>
-  );
+  useEffect(() => {}, []);
+  return <div></div>;
 };
 
 export default Todo;
