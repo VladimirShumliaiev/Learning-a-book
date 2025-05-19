@@ -14,7 +14,7 @@ const Test = () => {
 
   const handlerMinus = () => {
     setCount(count - 1);
-    if (count <= -10) {
+    if (count <= -12) {
       window.confirm("rest 0");
       setCount(0);
     }
