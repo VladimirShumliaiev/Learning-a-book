@@ -15,6 +15,9 @@ const StarRating = ({ totalStar = 5 }) => {
             setStarRating={() => setStarRating(i + 1)}
           />
         ))}
+        <p>
+          {starRating} of {totalStar} stars
+        </p>
       </h2>
     </>
   );
