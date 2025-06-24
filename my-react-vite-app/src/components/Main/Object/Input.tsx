@@ -11,7 +11,7 @@ const Input = ({ title, setTitle }) => {
         type="text"
         value={title}
         onChange={handleOnChange}
-        placeholder="...text"
+        placeholder="...title"
       />
     </div>
   );
