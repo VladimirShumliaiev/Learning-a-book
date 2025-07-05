@@ -24,8 +24,8 @@ const Test = () => {
     <div>
       Counter:
       <div>
-        <button onClick={handlerMinus}>plus +</button> {count}{" "}
-        <button onClick={handlerPlus}>- minus</button>
+        <button onClick={handlerPlus}>plus +</button> {count}{" "}
+        <button onClick={handlerMinus}>- minus</button>
       </div>
       Color active:
       <div>
