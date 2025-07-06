@@ -7,7 +7,7 @@ const Test = () => {
 
   const handlerPlus = () => {
     setCount(count + 1);
-    if (count >= 15) {
+    if (count >= 10) {
       setCount(0);
     }
   };
