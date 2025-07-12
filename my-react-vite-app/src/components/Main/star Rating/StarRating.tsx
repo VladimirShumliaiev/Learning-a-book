@@ -11,12 +11,12 @@ const StarRating = ({ totalStar = 10 }) => {
         <Star
           key={index}
           starRating={starRating > index}
-          onClick={() => setStarRating(index + 1)}
+          setStarRating={() => setStarRating(index + 1)}
         ></Star>
       ))}
-      <p>
-        Rating: {starRating} out of {totalStar}
-      </p>
+      <h3>
+        {starRating} of {totalStar} stars
+      </h3>
     </div>
   );
 };
