@@ -1,12 +1,10 @@
 import React from "react";
-import { FaStar } from "react-icons/fa";
+import StarRating from "./StarRating";
 
-const Star = ({ starRating = false, setStarRating = (f) => f }) => {
-  return (
-    <>
-      {<FaStar color={starRating ? "blue" : "gray"} onClick={setStarRating} />}
-    </>
-  );
+const Star = (starRating, onclick = f => f}) => {
+  return <div>
+    
+  </div>;
 };
 
 export default Star;
