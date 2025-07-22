@@ -15,7 +15,7 @@ const StarRating = ({ totalStar = 10 }) => {
         ></Star>
       ))}
       <h3>
-        {starRating} of {totalStar} stars
+        {starRating} of {totalStar} stars.
       </h3>
     </div>
   );
