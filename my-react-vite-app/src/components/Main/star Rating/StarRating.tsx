@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Star from "./Star";
 
-const StarRating = ({ totalStar = 10 }) => {
+const StarRating = ({ totalStar = 15 }) => {
   const [starRating, setStarRating] = useState(0);
 
   const createStars = (length) => [...Array(length)];
