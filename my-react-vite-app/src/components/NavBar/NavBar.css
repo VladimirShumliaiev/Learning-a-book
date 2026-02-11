@@ -1,6 +1,6 @@
 .NavBarItem a {
   text-decoration: none;
-  color: blue;
+  color: rgb(6, 6, 252);
 }
 
 a.NavBarItem-active-link {
