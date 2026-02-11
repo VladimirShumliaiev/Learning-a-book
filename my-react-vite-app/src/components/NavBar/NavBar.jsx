@@ -19,7 +19,7 @@ const NavBar = () => {
       </div>{" "}
       <div>
         <NavLink className={activeNavBar} to={"todo"}>
-          Todo
+          Todo list
         </NavLink>
       </div>{" "}
       <div>
