@@ -17,10 +17,10 @@ const Examples = () => {
   console.log(nameListMan);
   console.log(nameListAll);
   console.log(nameListFilter);
-  console.log(nameListCut("Oksana", nameListAll));
+  console.log(nameListCut("Olya", nameListAll));
   return (
     <div>
-      {nameListAll.map((e) => e.name).join("\n")}
+      <pre>{nameListAll.map((e) => e.name).join("\n")}</pre>
       <div>
         <a href="/">back to homePage</a>
       </div>
