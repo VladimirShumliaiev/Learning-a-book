@@ -20,11 +20,7 @@ const Examples = () => {
   console.log(nameListCut("Oksana", nameListAll));
   return (
     <div>
-      {nameListAll
-        .map((e) => {
-          e.name;
-        })
-        .join("\n")}
+      {nameListAll.map((e) => e.name).join("\n")}
       <div>
         <a href="/">back to homePage</a>
       </div>
