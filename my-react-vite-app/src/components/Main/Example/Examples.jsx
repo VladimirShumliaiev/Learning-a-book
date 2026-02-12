@@ -17,9 +17,14 @@ const Examples = () => {
   console.log(nameListMan);
   console.log(nameListAll);
   console.log(nameListFilter);
-  console.log(nameListCut("Olya", nameListAll));
+  console.log(nameListCut("Oksana", nameListAll));
   return (
     <div>
+      {nameListAll
+        .map((e) => {
+          e.name;
+        })
+        .join("\n")}
       <div>
         <a href="/">back to homePage</a>
       </div>
