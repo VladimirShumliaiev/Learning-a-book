@@ -2,30 +2,23 @@ import React from "react";
 
 const Examples = () => {
   const nameList = [
+    { name: "Ira" },
     { name: "Olya" },
-    { name: "Olya" },
-    { name: "Olesya" },
+    { name: "Natasha" },
     { name: "Oksana" },
   ];
 
-  const nameListTwo = [{ name: "Ira" }, { name: "Ina" }, { name: "Katya" }];
-
-  const nameListAll = [...nameList, ...nameListTwo];
-
-  const nameFilter = nameListAll.filter((e) => e.name[0] !== "K");
-
-  const cutName = (cut, list) => list.filter((e) => e.name !== cut);
+  const nameListMan = [{ name: "Vasya" }, { name: "Kolya" }, { name: "Petya" }];
+  const nameListAll = [...nameList, ...nameListMan];
 
   console.log(nameList);
-  console.log(nameListTwo);
+  console.log(nameListMan);
   console.log(nameListAll);
-  console.log(nameFilter);
-  console.log(cutName("Ina", nameListAll));
-
   return (
     <div>
-      {nameListAll.map((e) => e.name).join("\n")}{" "}
-      <a href="/">back to homePage</a>
+      <div>
+        <a href="/">back to homePage</a>
+      </div>
     </div>
   );
 };
