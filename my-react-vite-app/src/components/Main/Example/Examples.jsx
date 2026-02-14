@@ -6,6 +6,7 @@ const Examples = () => {
     { name: "Olya" },
     { name: "Natasha" },
     { name: "Oksana" },
+    { name: "Oleg" },
   ];
 
   const nameListMan = [{ name: "Vasya" }, { name: "Kolya" }, { name: "Petya" }];
