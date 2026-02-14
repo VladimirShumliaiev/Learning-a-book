@@ -10,7 +10,7 @@ const Examples = () => {
 
   const nameListMan = [{ name: "Vasya" }, { name: "Kolya" }, { name: "Petya" }];
   const nameListAll = [...nameList, ...nameListMan];
-  const nameListFilter = nameListAll.filter((e) => e.name[1] !== "a");
+  const nameListFilter = nameListAll.filter((e) => e.name[0] !== "O");
   const nameListCut = (cut, list) => list.filter((e) => e.name !== cut);
 
   console.log(nameList);
