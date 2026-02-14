@@ -18,7 +18,7 @@ const Examples = () => {
   console.log(nameListMan);
   console.log(nameListAll);
   console.log(nameListFilter);
-  console.log(nameListCut("Vasya", nameListAll));
+  console.log(nameListCut("Oleg", nameListAll));
   return (
     <div>
       <pre>{nameListAll.map((e) => e.name).join("\n")}</pre>
