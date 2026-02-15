@@ -14,8 +14,16 @@ const Examples = () => {
     { name: "Dima" },
   ];
 
+  const allFirstName = [...firstName, ...firstNameTwo];
+  const nameFilter = allFirstName.filter((e) => e.name[0] === "S");
+  const nameCut = (cut, list) => list.filter((e) => e.name !== cut);
+
   console.log(firstName);
   console.log(firstNameTwo);
+  console.log(allFirstName);
+  console.log(nameFilter);
+  console.log(nameCut("Dima", allFirstName));
+
   return (
     <div>
       <div>
