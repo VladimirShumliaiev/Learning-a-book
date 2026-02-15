@@ -15,7 +15,7 @@ const Examples = () => {
   ];
 
   const allFirstName = [...firstName, ...firstNameTwo];
-  const nameFilter = allFirstName.filter((e) => e.name[0] === "S");
+  const nameFilter = allFirstName.filter((e) => e.name[1] === "S");
   const nameCut = (cut, list) => list.filter((e) => e.name !== cut);
 
   console.log(firstName);
