@@ -4,9 +4,11 @@ const Examples = () => {
   const firstName = [
     { name: "Oleg" },
     { name: "Petya" },
-    { name: "Oleg" },
-    { name: "Oleg" },
+    { name: "Ura" },
+    { name: "Sasha" },
   ];
+
+  console.log(firstName);
   return (
     <div>
       <div>
