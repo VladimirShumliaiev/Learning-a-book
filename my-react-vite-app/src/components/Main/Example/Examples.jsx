@@ -26,6 +26,7 @@ const Examples = () => {
 
   return (
     <div>
+      <pre>{allFirstName.map((e) => e.name).join("\n")}</pre>
       <div>
         <a href="/">back to homePage</a>
       </div>
