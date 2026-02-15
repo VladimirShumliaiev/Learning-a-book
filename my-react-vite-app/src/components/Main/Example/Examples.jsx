@@ -8,7 +8,14 @@ const Examples = () => {
     { name: "Sasha" },
   ];
 
+  const firstNameTwo = [
+    { name: "Borya" },
+    { name: "Serega" },
+    { name: "Dima" },
+  ];
+
   console.log(firstName);
+  console.log(firstNameTwo);
   return (
     <div>
       <div>
