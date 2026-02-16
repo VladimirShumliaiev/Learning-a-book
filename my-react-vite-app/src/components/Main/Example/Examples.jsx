@@ -22,7 +22,7 @@ const Examples = () => {
   console.log(firstNameTwo);
   console.log(allFirstName);
   console.log(nameFilter);
-  console.log(nameCut("Dima", allFirstName));
+  console.log(nameCut("Borya", allFirstName));
 
   return (
     <div>
