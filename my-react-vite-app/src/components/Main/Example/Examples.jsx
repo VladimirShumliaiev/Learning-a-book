@@ -24,7 +24,7 @@ const Examples = () => {
   console.log(nameFilter);
   console.log(cutNameFilter("Vasya", allFirstName));
 
-  return <div>{allFirstName.map((e) => e.name).join("\n")}</div>;
+  return <pre>{allFirstName.map((e) => e.name).join("\n")}</pre>;
 };
 
 export default Examples;
