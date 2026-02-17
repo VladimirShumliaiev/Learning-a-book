@@ -46,7 +46,7 @@ const Test = () => {
           3
         </button>
         <button
-          className={color === "f" ? "four-color" : ""}
+          className={color === "four" ? "four-color" : ""}
           onClick={() => setColor("f")}
         >
           4
