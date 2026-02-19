@@ -21,19 +21,19 @@ const Test = () => {
         className={color === "three" ? "three-color" : ""}
         onClick={() => setColor("three")}
       >
-        3
+        c
       </button>
       <button
         className={color === "four" ? "four-color" : ""}
         onClick={() => setColor("four")}
       >
-        4
+        d
       </button>
       <button
         className={color === "five" ? "five-color" : ""}
         onClick={() => setColor("five")}
       >
-        5
+        f
       </button>
     </div>
   );
