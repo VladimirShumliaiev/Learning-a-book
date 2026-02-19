@@ -9,7 +9,7 @@ const Test = () => {
         className={color === "one" ? "one-color" : ""}
         onClick={() => setColor("one")}
       >
-        1
+        a
       </button>
       <button
         className={color === "two" ? "two-color" : ""}
