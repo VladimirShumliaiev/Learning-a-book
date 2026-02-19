@@ -51,8 +51,8 @@ const Test = () => {
       </button>
       <div>
         Count:
-        <button onChange={plusHandle}>-</button> {count}{" "}
-        <button onChange={minusHandle}>+</button>
+        {/* <button onChange={plusHandle}>-</button> {count}{" "}
+        <button onChange={minusHandle}>+</button> */}
       </div>
     </div>
   );
