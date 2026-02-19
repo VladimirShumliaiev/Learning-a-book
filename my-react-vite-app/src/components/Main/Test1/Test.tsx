@@ -5,18 +5,18 @@ const Test = () => {
   const [color, setColor] = useState("three");
   const [count, setCount] = useState(0);
 
-  const plusHandle = () => {
-    setCount(count + 1);
-    if (count >= 5) {
-      setCount(0);
-    }
+  // const plusHandle = () => {
+  //   setCount(count + 1);
+  //   if (count >= 5) {
+  //     setCount(0);
+  //   }
 
-      const minusHandle = () => {
-    setCount(count - 1);
-    if (count < -5) {
-      setCount(0);
-    }
-  };
+  // const minusHandle = () => {
+  //   setCount(count - 1);
+  //   if (count < -5) {
+  //     setCount(0);
+  //   }
+
   return (
     <div>
       <button
@@ -51,10 +51,10 @@ const Test = () => {
       </button>
       <div>
         Count:
-        <button>-</button> {count} <button>+</button>
+        <button onChange={plusHandle}>-</button> {count}{" "}
+        <button onChange={minusHandle}>+</button>
       </div>
     </div>
   );
 };
-
 export default Test;
