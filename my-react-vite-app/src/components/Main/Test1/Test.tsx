@@ -13,7 +13,7 @@ const Test = () => {
 
       const minusHandle = () => {
     setCount(count - 1);
-    if (count >= 5) {
+    if (count < -5) {
       setCount(0);
     }
   };
