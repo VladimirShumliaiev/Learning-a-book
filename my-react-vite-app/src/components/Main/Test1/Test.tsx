@@ -3,6 +3,7 @@ import "./Test.css";
 
 const Test = () => {
   const [color, setColor] = useState("three");
+  const [count, setCount] = useState(0);
   return (
     <div>
       <button
@@ -35,6 +36,12 @@ const Test = () => {
       >
         f
       </button>
+      <div>
+        Count:
+        <button>-</button>
+        {count}
+        <button>+</button>
+      </div>
     </div>
   );
 };
