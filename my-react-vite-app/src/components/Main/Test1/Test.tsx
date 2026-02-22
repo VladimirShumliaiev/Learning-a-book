@@ -2,7 +2,15 @@ import React, { useState } from "react";
 import "./Test.css";
 
 const Test = () => {
-  const [color, setColor] = useState("");
+  const [color, setColor] = useState("five");
+  const [count, setCount] = useState(0);
+
+  const handlePlus = () => {
+    setCount(count + 1);
+  };
+  const handleMinus = () => {
+    setCount(count - 1);
+  };
 
   return (
     <div>
@@ -36,6 +44,11 @@ const Test = () => {
       >
         5
       </button>
+
+      <div>
+        count: <button onClick={handlePlus}>+</button> {count}
+        <button onClick={handleMinus}>-</button>
+      </div>
     </div>
   );
 };
