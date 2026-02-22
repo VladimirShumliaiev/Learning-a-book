@@ -7,9 +7,17 @@ const Test = () => {
 
   const handlePlus = () => {
     setCount(count + 1);
+    if (count >= 5) {
+      window.alert("!");
+      setCount(0);
+    }
   };
   const handleMinus = () => {
     setCount(count - 1);
+    if (count <= -5) {
+      window.alert("!");
+      setCount(0);
+    }
   };
 
   return (
@@ -46,7 +54,9 @@ const Test = () => {
       </button>
 
       <div>
-        count: <button onClick={handlePlus}>+</button> {count}
+        count:
+        <div></div>
+        <button onClick={handlePlus}>+</button> {count}{" "}
         <button onClick={handleMinus}>-</button>
       </div>
     </div>
