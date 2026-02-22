@@ -1,5 +1,3 @@
-import React from "react";
-
 const Examples = () => {
   const firstName = [
     { name: "Petya" },
@@ -26,7 +24,7 @@ const Examples = () => {
   console.log(nameFilter);
   console.log(cutNameFilter("Vasya", allFirstName));
 
-  return <div></div>;
+  return <pre>{allFirstName.map((name) => name.name).join("\n")}</pre>;
 };
 
 export default Examples;
