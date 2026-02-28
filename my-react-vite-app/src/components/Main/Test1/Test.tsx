@@ -5,7 +5,7 @@ const Test = () => {
   return (
     <div>
       <button>Plus</button> {count}
-      <button>Minus</button>
+      <button> Minus</button>
     </div>
   );
 };
