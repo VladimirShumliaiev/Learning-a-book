@@ -25,25 +25,25 @@ const Test = () => {
           a
         </button>
         <button
-          className={colorButton === "a" ? "two-color" : ""}
+          className={colorButton === "b" ? "two-color" : ""}
           onClick={() => setColorButton("b")}
         >
           b
         </button>
         <button
-          className={colorButton === "a" ? "three-color" : ""}
+          className={colorButton === "c" ? "three-color" : ""}
           onClick={() => setColorButton("c")}
         >
           c
         </button>
         <button
-          className={colorButton === "a" ? "four-color" : ""}
+          className={colorButton === "d" ? "four-color" : ""}
           onClick={() => setColorButton("d")}
         >
           d
         </button>
         <button
-          className={colorButton === "a" ? "five-color" : ""}
+          className={colorButton === "f" ? "five-color" : ""}
           onClick={() => setColorButton("f")}
         >
           f
