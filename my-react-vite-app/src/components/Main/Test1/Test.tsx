@@ -17,11 +17,36 @@ const Test = () => {
       <button onClick={handleMinus}> Minus</button>
       <div>
         color:
-        <button className={colorButton === 'a' ? } onClick={() => setColorButton('a')}>a</button>
-        <button  onClick={() => setColorButton('b')}>b</button>
-        <button  onClick={() => setColorButton('c')}>c</button>
-        <button  onClick={() => setColorButton('d')}>d</button>
-        <button  onClick={() => setColorButton('f')}>f</button>
+        <button
+          className={colorButton === "a" ? "one-color" : ""}
+          onClick={() => setColorButton("a")}
+        >
+          a
+        </button>
+        <button
+          className={colorButton === "a" ? "two-color" : ""}
+          onClick={() => setColorButton("b")}
+        >
+          b
+        </button>
+        <button
+          className={colorButton === "a" ? "three-color" : ""}
+          onClick={() => setColorButton("c")}
+        >
+          c
+        </button>
+        <button
+          className={colorButton === "a" ? "four-color" : ""}
+          onClick={() => setColorButton("d")}
+        >
+          d
+        </button>
+        <button
+          className={colorButton === "a" ? "five-color" : ""}
+          onClick={() => setColorButton("f")}
+        >
+          f
+        </button>
       </div>
     </div>
   );
