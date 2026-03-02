@@ -46,7 +46,7 @@ const Test = () => {
           className={colorButton === "f" ? "five-color" : ""}
           onClick={() => setColorButton("f")}
         >
-          f
+          F
         </button>
       </div>
     </div>
