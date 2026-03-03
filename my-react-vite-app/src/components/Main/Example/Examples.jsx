@@ -15,11 +15,12 @@ const Examples = () => {
   ];
 
   const allName = [...firstName, ...firstNameTwo];
-  com;
+  const cutName = (cut, list) => list.filter((e) => e.name !== cut);
 
   console.log(firstName);
   console.log(firstNameTwo);
   console.log(allName);
+  console.log(cutName("Olya", allName));
 
   return <pre></pre>;
 };
