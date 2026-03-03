@@ -14,17 +14,7 @@ const Examples = () => {
     { name: "Ira" },
   ];
 
-  const allFirstName = [...firstName, ...firstNameTwo];
-  const nameFilter = allFirstName.filter((e) => e.name[0] !== "P");
-  const cutNameFilter = (cut, list) => list.filter((e) => e.name !== cut);
-
-  console.log(firstName);
-  console.log(firstNameTwo);
-  console.log(allFirstName);
-  console.log(nameFilter);
-  console.log(cutNameFilter("Vasya", allFirstName));
-
-  return <pre>{allFirstName.map((name) => name.name).join("\n")}</pre>;
+  return <pre></pre>;
 };
 
 export default Examples;
