@@ -14,6 +14,8 @@ const Examples = () => {
     { name: "Ira" },
   ];
 
+  console.log(firstName);
+
   return <pre></pre>;
 };
 
