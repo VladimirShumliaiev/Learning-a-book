@@ -14,7 +14,12 @@ const Examples = () => {
     { name: "Ira" },
   ];
 
+  const allName = [...firstName, ...firstNameTwo];
+  com;
+
   console.log(firstName);
+  console.log(firstNameTwo);
+  console.log(allName);
 
   return <pre></pre>;
 };
