@@ -1,4 +1,4 @@
 export const testList = {
-  plus: "plus",
+  plus: "plus+",
   minus: "minus",
 };
