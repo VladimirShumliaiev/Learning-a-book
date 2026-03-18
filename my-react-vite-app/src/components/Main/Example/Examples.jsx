@@ -1,30 +1,10 @@
-const Examples = () => {
-  const firstName = [
-    { name: "Petya" },
-    { name: "Vasya" },
-    { name: "Pasha" },
-    { name: "Sasha" },
-    { name: "Oleg" },
-  ];
+import React from "react";
 
-  const firstNameTwo = [
-    { name: "Natasha" },
-    { name: "Olya" },
-    { name: "Nastya" },
-    { name: "Ira" },
-  ];
+export default function Examples() {
+  const num = [{ n: 1 }, { n: 2 }, { n: 3 }, { n: 4 }, { n: 5 }];
+  const numTwo = [{ n: 20 }, { n: 21 }, { n: 22 }];
 
-  const allName = [...firstName, ...firstNameTwo];
-  const cutName = (cut, list) => list.filter((e) => e.name !== cut);
-  const nameFilter = allName.filter((e) => e.name[0] !== "O");
-
-  console.log(firstName);
-  console.log(firstNameTwo);
-  console.log(allName);
-  console.log(nameFilter);
-  console.log(cutName("Olya", allName));
-
-  return <pre></pre>;
-};
-
-export default Examples;
+  console.log(num);
+  console.log(numTwo);
+  return <div></div>;
+}
