@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 export default function Test() {
   const [count, setCount] = useState(0);
+  const [color, setColor] = useState("");
 
   const handlePlus = () => {
     setCount(count + 1);
@@ -19,9 +20,20 @@ export default function Test() {
   };
   return (
     <div>
-      <button onClick={handleMinus}>-</button>
-      {count}
-      <button onClick={handlePlus}>+</button>
+      <div>
+        <button onClick={handleMinus}>-</button>
+        {count}
+        <button onClick={handlePlus}>+</button>
+      </div>
+
+      <div>
+        color:
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+      </div>
     </div>
   );
 }
