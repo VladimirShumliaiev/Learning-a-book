@@ -5,9 +5,17 @@ export default function Test() {
 
   const handlePlus = () => {
     setCount(count + 1);
+    if (count >= 5) {
+      window.alert("!");
+      setCount(0);
+    }
   };
   const handleMinus = () => {
     setCount(count - 1);
+    if (count <= -5) {
+      window.alert("!!");
+      setCount(0);
+    }
   };
   return (
     <div>
