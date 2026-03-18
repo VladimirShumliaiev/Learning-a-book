@@ -35,10 +35,30 @@ export default function Test() {
         >
           1
         </button>
-        <button className={color === "two" ? "two-color" : ""}>2</button>
-        <button className={color === "three" ? "three-color" : ""}>3</button>
-        <button className={color === "four" ? "four-color" : ""}>4</button>
-        <button className={color === "five" ? "five-color" : ""}>5</button>
+        <button
+          className={color === "two" ? "two-color" : ""}
+          onClick={() => setColor("two")}
+        >
+          2
+        </button>
+        <button
+          className={color === "three" ? "three-color" : ""}
+          onClick={() => setColor("three")}
+        >
+          3
+        </button>
+        <button
+          className={color === "four" ? "four-color" : ""}
+          onClick={() => setColor("four")}
+        >
+          4
+        </button>
+        <button
+          className={color === "five" ? "five-color" : ""}
+          onClick={() => setColor("five")}
+        >
+          5
+        </button>
       </div>
     </div>
   );
