@@ -11,9 +11,9 @@ export default function Test() {
   };
   return (
     <div>
-      <button>+</button>
+      <button onClick={handleMinus}>-</button>
       {count}
-      <button>-</button>
+      <button onClick={handlePlus}>+</button>
     </div>
   );
 }
