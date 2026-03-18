@@ -6,10 +6,12 @@ export default function Examples() {
   const numAll = [...num, ...numTwo];
 
   const numFilter = numAll.filter((e) => e.n[0] !== "2");
+  const cutNum = (cut, list) => list.filter((e) => e.n !== cut);
 
   console.log(num);
   console.log(numTwo);
   console.log(numAll);
   console.log(numFilter);
+  console.log(cutNum(5, numAll));
   return <div></div>;
 }
