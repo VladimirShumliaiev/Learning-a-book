@@ -27,12 +27,12 @@ export default function Test() {
       </div>
 
       <div>
-        color:
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>4</button>
-        <button>5</button>
+        <div>color:</div>
+        <button className={color === "one" ? "one-color" : ""}>1</button>
+        <button className={color === "two" ? "two-color" : ""}>2</button>
+        <button className={color === "three" ? "three-color" : ""}>3</button>
+        <button className={color === "four" ? "four-color" : ""}>4</button>
+        <button className={color === "five" ? "five-color" : ""}>5</button>
       </div>
     </div>
   );
