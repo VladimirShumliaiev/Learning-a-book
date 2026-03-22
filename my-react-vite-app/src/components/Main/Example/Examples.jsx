@@ -5,7 +5,7 @@ export default function Examples() {
   const numTwo = [{ n: "20" }, { n: "21" }, { n: "12" }];
   const numAll = [...num, ...numTwo];
 
-  const numFilter = numAll.filter((e) => e.n[0] !== "2");
+  const numFilter = numAll.filter((e) => e.n[0] !== "1");
   const cutNum = (cut, list) => list.filter((e) => e.n !== cut);
 
   console.log(num);
