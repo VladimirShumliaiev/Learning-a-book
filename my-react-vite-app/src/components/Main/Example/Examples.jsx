@@ -12,6 +12,6 @@ export default function Examples() {
   console.log(numTwo);
   console.log(numAll);
   console.log(numFilter);
-  console.log(cutNum(4, numAll));
+  console.log(cutNum(5, numAll));
   return <div></div>;
 }
