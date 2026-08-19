@@ -10,10 +10,16 @@ const user = {
   age: 38,
   city,
 };
+const users = [
+  { name: "Alex", age: 20 },
+  { name: "Vasya", age: 20 },
+  { name: "Petya", age: 20 },
+];
 
 console.log(number.map((e) => e * 2));
 console.log(numbers.filter((e) => e > 10));
 console.log(user);
+console.log(users.map((e) => e.name));
 export default function Examples() {
   return <div> 111 </div>;
 }
