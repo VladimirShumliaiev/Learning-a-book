@@ -16,10 +16,18 @@ const users = [
   { name: "Petya", age: 20 },
 ];
 
+async function getUser() {
+  await fetch("https://jsonplaceholder.typicode.com/users/1")
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+}
+
 console.log(number.map((e) => e * 2));
 console.log(numbers.filter((e) => e > 10));
 console.log(user);
 console.log(users.map((e) => e.name));
+getUser();
+
 export default function Examples() {
-  return <div> 111 </div>;
+  return <div></div>;
 }
