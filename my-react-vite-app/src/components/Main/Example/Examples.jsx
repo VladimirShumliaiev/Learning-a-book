@@ -23,7 +23,7 @@ async function getUsers() {
       throw new Error("Ошибка HTTP");
     }
     const json = await response.json();
-    console.log(json);
+    console.log(jso);
   } catch (error) {
     console.log("Ошибка:", error.message);
   }
