@@ -17,9 +17,15 @@ const users = [
 ];
 
 async function getUsers() {
-  const response = await fetch("https://jsonplaceholder.typicode.com/users/1");
-  const json = await response.json();
-  console.log(json);
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/users");
+    const json = await response.json();
+    if (json) {
+      console.log(json);
+    }
+  } catch (error) {
+    console.log("Ошибка:", error);
+  }
 }
 
 console.log(number.map((e) => e * 2));
