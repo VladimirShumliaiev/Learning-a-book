@@ -81,12 +81,10 @@ getUser(5);
 getUserTwo(5).then((name) => {
   console.log(name.name);
 });
-
-// getUserPosts(5).then((result) => {
-//   console.log(result);
-// });
-
 main();
+getUserPosts(5).then((result) => {
+  console.log(result);
+});
 
 export default function Examples() {
   return <div></div>;
