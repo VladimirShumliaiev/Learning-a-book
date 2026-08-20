@@ -31,11 +31,29 @@ async function getUser(id) {
   }
 }
 
+async function getUserTwo(id) {
+  try {
+    const response = await fetch(
+      `https://jsonplaceholder.typicode.com/users/${id}`,
+    );
+    if (!response.ok) {
+      throw new Error("Ошибка HTTP");
+    }
+    const json = await response.json();
+    return json.name;
+  } catch (error) {
+    console.log("", error.message);
+  }
+}
+
 console.log(number.map((e) => e * 2));
 console.log(numbers.filter((e) => e > 10));
 console.log(user);
 console.log(users.map((e) => e.name));
 getUser(5);
+getUserTwo(4).then((name) => {
+  console.log(name);
+});
 export default function Examples() {
   return <div></div>;
 }
