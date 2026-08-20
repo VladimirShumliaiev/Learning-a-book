@@ -16,16 +16,18 @@ const users = [
   { name: "Petya", age: 20 },
 ];
 
-async function getUsers() {
+async function getUsers(id) {
   try {
-    const response = await fetch("https://jsonplaceholder.typicode.com/users");
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/users/4",
+    );
     if (!response.ok) {
       throw new Error("Ошибка HTTP");
     }
-    const json = await response.json();
-    console.log(jso);
+    const json = await response.json(id);
+    console.log(json);
   } catch (error) {
-    console.log("Ошибка:", error.message);
+    console.log("", error.message);
   }
 }
 
@@ -33,7 +35,7 @@ console.log(number.map((e) => e * 2));
 console.log(numbers.filter((e) => e > 10));
 console.log(user);
 console.log(users.map((e) => e.name));
-getUsers();
+getUsers(5);
 export default function Examples() {
   return <div></div>;
 }
