@@ -19,13 +19,13 @@ const users = [
 async function getUsers(id) {
   try {
     const response = await fetch(
-      "https://jsonplaceholder.typicode.com/users/4",
+      `https://jsonplaceholder.typicode.com/users/${id}`,
     );
     if (!response.ok) {
       throw new Error("Ошибка HTTP");
     }
-    const json = await response.json(id);
-    console.log(json);
+    const json = await response.json();
+    console.log(json.name);
   } catch (error) {
     console.log("", error.message);
   }
