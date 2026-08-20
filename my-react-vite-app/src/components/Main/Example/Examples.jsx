@@ -46,25 +46,23 @@ async function getUserTwo(id) {
   }
 }
 
-async function getUserPosts(userId) {
+async function getUserPosts(userID) {
   try {
-    const userResponse = await fetch(
-      `https://jsonplaceholder.typicode.com/users/${userId}`,
+    const response = await fetch(
+      `https://jsonplaceholder.typicode.com/users/${userID}`,
     );
-
-    if (!userResponse.ok) {
-      throw new Error("ERROR!!!");
+    if (!response.ok) {
+      throw new Error("Error!!!http");
     }
-    const json = await userResponse.json();
+    const json = response.json();
 
-    const responsePosts = await fetch(
-      `https://jsonplaceholder.typicode.com/posts?userId=${json.id}`,
+    const responsePost = await fetch(
+      `https://jsonplaceholder.typicode.com/users?userID=${json.id}`,
     );
-
-    const jsonPost = await responsePosts.json();
+    const jsonPost = await responsePost.json();
     return jsonPost.length;
   } catch (error) {
-    console.log("Ошибка:", error.message);
+    console.log("Oshibka", error.message);
   }
 }
 
@@ -77,15 +75,19 @@ console.log(number.map((e) => e * 2));
 console.log(numbers.filter((e) => e > 10));
 console.log(user);
 console.log(users.map((e) => e.name));
+
 getUser(5);
-getUserTwo(4).then((name) => {
+
+getUserTwo(5).then((name) => {
   console.log(name.name);
 });
 
-getUserPosts(5).then((result) => {
-  console.log(result);
-});
+// getUserPosts(5).then((result) => {
+//   console.log(result);
+// });
+
 main();
+
 export default function Examples() {
   return <div></div>;
 }
