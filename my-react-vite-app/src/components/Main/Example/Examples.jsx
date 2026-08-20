@@ -40,11 +40,36 @@ async function getUserTwo(id) {
       throw new Error("Ошибка HTTP");
     }
     const json = await response.json();
-    return json.name;
+    return json;
   } catch (error) {
     console.log("", error.message);
   }
 }
+
+async function getUserPosts(userId) {
+  try {
+    const userResponse = await fetch(
+      `https://jsonplaceholder.typicode.com/users/${userId}`,
+    );
+
+    if (!userResponse.ok) {
+      throw new Error("ERROR!!!");
+    }
+    const json = await userResponse.json();
+
+    const responsePosts = await fetch(
+      ` https://jsonplaceholder.typicode.com/posts/${json.id}`,
+    );
+
+    const jsonPost = await responsePosts.json();
+    return jsonPost;
+  } catch (error) {
+    console.log("Ошибка:", error.message);
+  }
+  return jsonPost;
+}
+
+getUserPosts(5);
 
 console.log(number.map((e) => e * 2));
 console.log(numbers.filter((e) => e > 10));
@@ -52,7 +77,11 @@ console.log(user);
 console.log(users.map((e) => e.name));
 getUser(5);
 getUserTwo(4).then((name) => {
-  console.log(name);
+  console.log(name.name);
+});
+
+getUserPosts(4).then((name) => {
+  console.log(name.id);
 });
 export default function Examples() {
   return <div></div>;
