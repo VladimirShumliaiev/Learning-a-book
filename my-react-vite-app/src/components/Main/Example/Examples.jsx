@@ -1,22 +1,28 @@
 import React from "react";
 
-function delay(message) {
-  return new Promise((resolve) => {
+function delay(message, shouldFail) {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(message);
+      if (shouldFail) {
+        reject(new Error("Oshibka"));
+      } else {
+        resolve(message);
+      }
     }, 1000);
   });
 }
 
 async function getData() {
-  const one = await delay("One");
-  console.log(one);
-  const two = await delay("Two");
-  console.log(two);
-  const three = await delay("Three");
-  console.log(three);
+  try {
+    const result = await delay("Hello", true);
+    console.log(result);
+  } catch (error) {
+    console.log(error.message);
+  }
 }
+
 getData();
+
 export default function Examples() {
   return <div></div>;
 }
