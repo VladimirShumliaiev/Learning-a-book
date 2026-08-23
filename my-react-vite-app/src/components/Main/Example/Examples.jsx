@@ -3,14 +3,17 @@ import React from "react";
 function delay() {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(500);
-    }, 2000);
+      resolve("Hello");
+    }, 1000);
   });
 }
 
 async function getData() {
   const result = await delay();
   console.log(result);
+  setTimeout(() => {
+    console.log(`World`);
+  }, 1000);
 }
 
 getData();
