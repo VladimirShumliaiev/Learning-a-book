@@ -9,8 +9,12 @@ function delay(message) {
 }
 
 async function getData() {
-  const one = await delay();
-  console.log(one("One"));
+  const one = await delay("One");
+  console.log(one);
+  const two = await delay("Two");
+  console.log(two);
+  const three = await delay("Three");
+  console.log(three);
 }
 getData();
 export default function Examples() {
