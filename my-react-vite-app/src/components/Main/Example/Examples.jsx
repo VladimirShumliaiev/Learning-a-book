@@ -23,25 +23,26 @@ import React from "react";
 
 // getData();
 
-async function getUser() {
+async function getUsers() {
   try {
-    const response = await fetch(`https://jsonplaceholder.typicode.com/users`);
+    const response = await fetch("https://jsonplaceholder.typicode.com/users");
+
     if (!response.ok) {
-      throw new Error("Error http");
+      throw new Error(`Error http.`);
     }
 
-    const json = await response.json();
+    const jsonUsers = await response.json();
 
-    const names = json.map(({ name }) => name);
+    const users = jsonUsers
+      .filter((users) => users.username.includes("A"))
+      .map(({ name, username }) => ({ name, username }));
 
-    console.log(names);
+    console.log(users);
   } catch (error) {
     console.log(error.message);
   }
 }
-
-getUser();
-
+getUsers();
 export default function Examples() {
   return <div></div>;
 }
