@@ -32,7 +32,9 @@ async function getUser() {
 
     const json = await response.json();
 
-    console.log(json.map((e) => e.name));
+    const names = json.map(({ name }) => name);
+
+    console.log(names);
   } catch (error) {
     console.log(error.message);
   }
