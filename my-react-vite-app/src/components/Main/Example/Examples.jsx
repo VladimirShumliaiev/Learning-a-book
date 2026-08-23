@@ -9,15 +9,10 @@ function delay(message) {
 }
 
 async function getData() {
-  const hello = await delay("Hello");
-  console.log(hello);
-
-  const world = await delay("World");
-  console.log(world);
+  const one = await delay();
+  console.log(one("One"));
 }
-
 getData();
-
 export default function Examples() {
   return <div></div>;
 }
