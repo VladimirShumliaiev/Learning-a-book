@@ -1,9 +1,9 @@
 import React from "react";
 
-async function delay() {
+function delay() {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(`Hello`);
+      resolve(100);
     }, 1000);
   });
 }
@@ -12,8 +12,8 @@ async function getData() {
   const result = await delay();
   console.log(result);
 }
-getData();
 
+getData();
 export default function Examples() {
   return <div></div>;
 }
