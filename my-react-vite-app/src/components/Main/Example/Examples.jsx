@@ -3,8 +3,8 @@ import React from "react";
 function delay() {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(100);
-    }, 1000);
+      resolve(500);
+    }, 2000);
   });
 }
 
@@ -14,6 +14,7 @@ async function getData() {
 }
 
 getData();
+
 export default function Examples() {
   return <div></div>;
 }
