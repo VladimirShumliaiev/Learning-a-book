@@ -8,11 +8,11 @@ async function delay() {
   });
 }
 
-async function getDate() {
+async function getData() {
   const result = await delay();
   console.log(result);
 }
-getDate();
+getData();
 
 export default function Examples() {
   return <div></div>;
