@@ -1,19 +1,19 @@
 import React from "react";
 
-function delay() {
+function delay(message) {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve("Hello");
+      resolve(message);
     }, 1000);
   });
 }
 
 async function getData() {
-  const result = await delay();
-  console.log(result);
-  setTimeout(() => {
-    console.log(`World`);
-  }, 1000);
+  const hello = await delay("Hello");
+  console.log(hello);
+
+  const world = await delay("World");
+  console.log(world);
 }
 
 getData();
