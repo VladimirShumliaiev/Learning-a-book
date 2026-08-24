@@ -46,16 +46,15 @@ import React from "react";
 
 async function getUser() {
   try {
-    const response = await fetch(
-      `https://jsonplaceholder.typicode.com/users/1`,
-    );
+    const response = await fetch(`https://jsonplaceholder.typicode.com/users`);
 
     if (!response.ok) {
       throw new Error("error http");
     }
 
     const user = await response.json();
-    console.log(user.name);
+    const result = user.map(({ name }) => name);
+    console.log(result);
   } catch (error) {
     console.log(error.message);
   }
