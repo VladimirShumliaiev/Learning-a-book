@@ -43,7 +43,7 @@ import React from "react";
 //   }
 // }
 // getUsers();
-async function getUserPost(id) {
+async function getUserPosts(id) {
   try {
     const response = await fetch(
       `https://jsonplaceholder.typicode.com/users/${id}`,
@@ -53,7 +53,7 @@ async function getUserPost(id) {
       throw new Error("error http");
     }
 
-    const { user } = await response.json();
+    const user = await response.json();
     console.log(user);
 
     const postResponse = await fetch(
@@ -70,7 +70,7 @@ async function getUserPost(id) {
   }
 }
 
-getUserPost(3);
+getUserPosts(3);
 export default function Examples() {
   return <div></div>;
 }
