@@ -43,26 +43,29 @@ import React from "react";
 //   }
 // }
 // getUsers();
-async function getUsers() {
-  try {
-    const response = await Promise.all([
-      fetch("https://jsonplaceholder.typicode.com/users/1"),
-      fetch("https://jsonplaceholder.typicode.com/users/2"),
-      fetch("https://jsonplaceholder.typicode.com/users/3"),
-    ]);
 
-    if (response.some((response) => !response.ok)) {
-      throw new Error("error http");
-    }
+// Promise all
+// async function getUsers() {
+//   try {
+//     const response = await Promise.all([
+//       fetch("https://jsonplaceholder.typicode.com/users/1"),
+//       fetch("https://jsonplaceholder.typicode.com/users/2"),
+//       fetch("https://jsonplaceholder.typicode.com/users/3"),
+//     ]);
 
-    const data = await Promise.all(response.map((response) => response.json()));
-    console.log(data.map(({ name }) => name));
-  } catch (error) {
-    console.log(error.message);
-  }
-}
+//     if (response.some((response) => !response.ok)) {
+//       throw new Error("error http");
+//     }
 
-getUsers();
+//     const data = await Promise.all(response.map((response) => response.json()));
+//     console.log(data.map(({ name }) => name));
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// }
+
+// getUsers();
+
 export default function Examples() {
   return <div></div>;
 }
