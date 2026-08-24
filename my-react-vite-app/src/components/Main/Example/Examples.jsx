@@ -43,15 +43,24 @@ import React from "react";
 //   }
 // }
 // getUsers();
-const users = [
-  { name: "Alex", age: 30 },
-  { name: "Mike", age: 17 },
-  { name: "John", age: 25 },
-  { name: "Bob", age: 16 },
-];
 
-const result = users.filter(({ age }) => age >= 18).map(({ name }) => name);
-console.log(result);
+async function getUsers() {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/users");
+
+    if (!response.ok) {
+      throw new Error("error http");
+    }
+
+    const users = await response.json();
+
+    const result = users.filter(({ id }) => id <= 5).map(({ name }) => name);
+    console.log(result);
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+getUsers();
 export default function Examples() {
   return <div></div>;
 }
