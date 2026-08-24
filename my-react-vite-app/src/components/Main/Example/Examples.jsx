@@ -23,26 +23,32 @@ import React from "react";
 
 // getData();
 
-async function getUsers() {
-  try {
-    const response = await fetch("https://jsonplaceholder.typicode.com/users");
+// async function getUsers() {
+//   try {
+//     const response = await fetch("https://jsonplaceholder.typicode.com/users");
 
-    if (!response.ok) {
-      throw new Error(`Error http.`);
-    }
+//     if (!response.ok) {
+//       throw new Error(`Error http.`);
+//     }
 
-    const jsonUsers = await response.json();
+//     const jsonUsers = await response.json();
 
-    const users = jsonUsers
-      .filter((users) => users.username.includes("A"))
-      .map(({ name, username }) => ({ name, username }));
+//     const users = jsonUsers
+//       .filter((users) => users.username.includes("a"))
+//       .map(({ name, username }) => ({ name, username }));
 
-    console.log(users);
-  } catch (error) {
-    console.log(error.message);
-  }
-}
-getUsers();
+//     console.log(users);
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// }
+// getUsers();
+
+const numbers = [5, 10, 15, 20];
+
+const result = numbers.map((number) => number * 3);
+
+console.log(result);
 export default function Examples() {
   return <div></div>;
 }
