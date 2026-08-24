@@ -43,24 +43,36 @@ import React from "react";
 //   }
 // }
 // getUsers();
-async function getUser() {
+async function getUserPost(id) {
   try {
     const response = await fetch(
-      `https://jsonplaceholder.typicode.com/users/999`,
+      `https://jsonplaceholder.typicode.com/users/${id}`,
     );
 
     if (!response.ok) {
-      throw new Error("User not found");
+      throw new Error("Error");
     }
 
     const { name } = await response.json();
     console.log(name);
+
+    const postResponse = await fetch(
+      `https://jsonplaceholder.typicode.com/posts?userid=${id}`,
+    );
+
+    if (!postResponse.ok) {
+      throw new Error("post error");
+    }
+
+    const posts = await postResponse.json();
+    console.log(posts.length);
   } catch (error) {
     console.log(error.message);
   }
 }
 
-getUser();
+getUserPost(3);
+
 export default function Examples() {
   return <div></div>;
 }
