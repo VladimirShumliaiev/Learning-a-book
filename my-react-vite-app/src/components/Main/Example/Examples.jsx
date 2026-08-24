@@ -55,15 +55,11 @@ async function getUser() {
     }
 
     const user = await response.json();
-
-    const result = user.map(({ name }) => name);
-
-    console.log(result);
+    console.log(user.name);
   } catch (error) {
     console.log(error.message);
   }
 }
-
 getUser();
 export default function Examples() {
   return <div></div>;
