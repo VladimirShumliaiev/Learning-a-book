@@ -46,19 +46,23 @@ import React from "react";
 async function getUserPost(id) {
   try {
     const response = await fetch(
-      `https://jsonplaceholder.typicode.com/posts/${id}`,
+      `https://jsonplaceholder.typicode.com/users/${id}`,
     );
 
     if (!response.ok) {
       throw new Error("error http");
     }
 
-    const user = await response.json();
+    const { user } = await response.json();
     console.log(user);
 
     const postResponse = await fetch(
-      `https://jsonplaceholder.typicode.com/posts?userId=2`,
+      `https://jsonplaceholder.typicode.com/posts?userId=${id}`,
     );
+
+    if (!postResponse.ok) {
+      throw new Error("error post");
+    }
     const result = await postResponse.json();
     console.log(result.map(({ title }) => title));
   } catch (error) {
@@ -66,7 +70,7 @@ async function getUserPost(id) {
   }
 }
 
-getUserPost(2);
+getUserPost(3);
 export default function Examples() {
   return <div></div>;
 }
