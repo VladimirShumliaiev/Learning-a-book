@@ -44,7 +44,7 @@ import React from "react";
 // }
 // getUsers();
 
-// Promise all
+//TITLE Promise all
 // async function getUsers() {
 //   try {
 //     const response = await Promise.all([
@@ -65,6 +65,29 @@ import React from "react";
 // }
 
 // getUsers();
+
+async function getUsers() {
+  try {
+    const response = await Promise.allSettled([
+      fetch("https://jsonplaceholder.typicode.com/users/1"),
+      fetch("https://jsonplaceholder.typicode.com/users/99999"),
+      fetch("https://jsonplaceholder.typicode.com/users/3"),
+    ]);
+
+    if (response.some((response) => !response.value.ok)) {
+      throw new Error("error http");
+    }
+
+    const data = await Promise.all(
+      response.map((response) => response.value.json()),
+    );
+    console.log(data.map(({ name }) => name));
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+getUsers();
 
 export default function Examples() {
   return <div></div>;
