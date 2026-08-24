@@ -52,7 +52,7 @@ async function getUsers() {
     }
 
     const user = await response.json();
-    const result = user.filer(({ id }) => id <= 5).map(({ name }) => name);
+    const result = user.filter(({ id }) => id <= 5).map(({ name }) => name);
     console.log(result);
   } catch (error) {
     console.log(error.message);
