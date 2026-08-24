@@ -43,22 +43,24 @@ import React from "react";
 //   }
 // }
 // getUsers();
-async function getUserName() {
+async function getUsers() {
   try {
-    const response = await fetch(
-      `https://jsonplaceholder.typicode.com/users/1`,
-    );
+    const response = await fetch(`https://jsonplaceholder.typicode.com/users`);
+
     if (!response.ok) {
-      throw new Error("error http");
+      throw new Error("error");
     }
 
-    const userName = await response.json();
-    console.log(userName.name);
+    const user = await response.json();
+    const userList = user.map(({ name }) => name);
+
+    console.log(userList);
   } catch (error) {
     console.log(error.message);
   }
 }
-getUserName();
+
+getUsers();
 export default function Examples() {
   return <div></div>;
 }
