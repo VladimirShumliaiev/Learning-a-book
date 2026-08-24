@@ -44,16 +44,13 @@ import React from "react";
 // }
 // getUsers();
 
-const users = [
-  { name: "Alex", age: 30 },
-  { name: "Bob", age: 17 },
-  { name: "Mike", age: 25 },
-  { name: "John", age: 16 },
-];
+const prices = [100, 250, 50, 300];
 
-const result = users.filter((user) => user.age >= 18);
+const result = prices.reduce((sum, price) => {
+  return sum + price;
+}, 0);
+
 console.log(result);
-
 export default function Examples() {
   return <div></div>;
 }
