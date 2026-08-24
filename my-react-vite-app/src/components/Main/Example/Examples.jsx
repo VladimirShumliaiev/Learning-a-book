@@ -43,16 +43,15 @@ import React from "react";
 //   }
 // }
 // getUsers();
-const user = {
-  name: "Mike",
-  age: 25,
-  city: "Odessa",
-};
+const users = [
+  { name: "Alex", age: 30 },
+  { name: "Mike", age: 17 },
+  { name: "John", age: 25 },
+  { name: "Bob", age: 16 },
+];
 
-const { name, age } = user;
-
-console.log(user);
-
+const result = users.filter(({ age }) => age >= 18).map(({ name }) => name);
+console.log(result);
 export default function Examples() {
   return <div></div>;
 }
