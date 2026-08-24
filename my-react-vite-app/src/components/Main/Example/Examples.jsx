@@ -44,11 +44,16 @@ import React from "react";
 // }
 // getUsers();
 
-const numbers = [5, 10, 15, 20];
+const users = [
+  { name: "Alex", age: 30 },
+  { name: "Bob", age: 17 },
+  { name: "Mike", age: 25 },
+  { name: "John", age: 16 },
+];
 
-const result = numbers.map((number) => number * 3);
-
+const result = users.filter((user) => user.age >= 18);
 console.log(result);
+
 export default function Examples() {
   return <div></div>;
 }
