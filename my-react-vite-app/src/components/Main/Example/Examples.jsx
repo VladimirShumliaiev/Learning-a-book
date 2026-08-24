@@ -45,20 +45,18 @@ import React from "react";
 // getUsers();
 async function getUsers() {
   try {
-    const responses = await Promise.all([
+    const response = await Promise.all([
       fetch("https://jsonplaceholder.typicode.com/users/1"),
-      fetch(`https://jsonplaceholder.typicode.com/users/2`),
-      fetch(`https://jsonplaceholder.typicode.com/users/3`),
+      fetch("https://jsonplaceholder.typicode.com/users/2"),
+      fetch("https://jsonplaceholder.typicode.com/users/3"),
     ]);
 
-    if (responses.some((response) => !response.ok)) {
-      throw new Error("error");
+    if (response.some((response) => !response.ok)) {
+      throw new Error("error http");
     }
-    const users = await Promise.all(
-      responses.map((response) => response.json()),
-    );
 
-    console.log(users.map(({ name }) => name));
+    const data = await Promise.all(response.map((response) => response.json()));
+    console.log(data.map(({ name }) => name));
   } catch (error) {
     console.log(error.message);
   }
