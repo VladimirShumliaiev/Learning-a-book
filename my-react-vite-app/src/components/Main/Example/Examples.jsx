@@ -43,14 +43,16 @@ import React from "react";
 //   }
 // }
 // getUsers();
+const user = {
+  name: "Mike",
+  age: 25,
+  city: "Odessa",
+};
 
-const prices = [100, 250, 50, 300];
+const { name, age } = user;
 
-const result = prices.reduce((sum, price) => {
-  return sum + price;
-}, 0);
+console.log(user);
 
-console.log(result);
 export default function Examples() {
   return <div></div>;
 }
