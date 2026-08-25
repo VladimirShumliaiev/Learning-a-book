@@ -73,7 +73,7 @@ async function getUsers() {
   }
 
   const users = await response.json();
-  console.log(users);
+  return users;
 }
 
 async function getPosts() {
@@ -84,12 +84,12 @@ async function getPosts() {
   }
 
   const posts = await response.json();
-  console.log(posts);
+  return posts;
 }
 
 async function main() {
   try {
-    const [users, posts] = await Promise.all(getUsers(), getPosts());
+    const [users, posts] = await Promise.all([getUsers(), getPosts()]);
 
     console.log(users);
     console.log(posts);
