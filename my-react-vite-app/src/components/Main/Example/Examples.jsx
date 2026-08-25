@@ -74,13 +74,13 @@ async function getUser() {
   }
 
   const user = await response.json();
-  console.log(user);
+  return user;
 }
 
 async function main() {
   try {
-    const data = await getUser;
-    return data;
+    const data = await getUser();
+    console.log(data);
   } catch (error) {
     console.log(error.message);
   }
