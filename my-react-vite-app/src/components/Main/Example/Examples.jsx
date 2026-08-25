@@ -65,50 +65,47 @@ import React from "react";
 // }
 
 // getUsers();
-
-async function getPosts() {
-  const response = await fetch(`https://jsonplaceholder.typicode.com/posts`);
-
-  if (!response.ok) {
-    throw new Error("Error http users");
-  }
-
-  const post = await response.json();
-  return post;
-}
-
-async function getUsers() {
-  const response = await fetch(`https://jsonplaceholder.typicode.com/users`);
+async function Users(id) {
+  const response = await fetch(
+    `https://jsonplaceholder.typicode.com/users/${id}`,
+  );
 
   if (!response.ok) {
-    throw new Error("Error http users");
+    throw new Error("error http user");
   }
 
-  const user = await response.json();
-  return user;
+  const data = await response.json();
+  return data;
 }
 
-async function getData() {
+async function Posts(userId) {
+  const response = await fetch(
+    `https://jsonplaceholder.typicode.com/posts?userId=${userId}`,
+  );
+
+  if (!response.ok) {
+    throw new Error("error http post");
+  }
+
+  const data = await response.json();
+  return data;
+}
+
+async function getUserWithPosts(userId) {
   try {
-    const results = await Promise.allSettled([getPosts(), getUsers()]);
-    const successful = results.filter(
-      (result) => result.status === "fulfilled",
-    ).length;
-    const failed = results.filter(
-      (result) => result.status === "rejected",
-    ).length;
-
-    console.log(`successful : ${successful}`);
-    console.log(`failed : ${failed}`);
+    const [user, posts] = await Promise.all([Users(userId), Posts(userId)]);
+    console.log(user);
+    console.log(posts);
     return {
-      results,
+      user,
+      post,
     };
   } catch (error) {
     console.log(error.message);
   }
 }
 
-getData();
+getUserWithPosts(1);
 export default function Examples() {
   return <div></div>;
 }
