@@ -74,8 +74,8 @@ async function getUserNames() {
   }
 
   const users = await response.json();
-  const names = users.find(({ id }) => id === 3);
-  console.log(names.name);
+  const user = users.find(({ id }) => id === 3);
+  console.log(user.name);
 }
 
 getUserNames();
