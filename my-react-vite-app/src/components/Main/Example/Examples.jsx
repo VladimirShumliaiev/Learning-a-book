@@ -103,15 +103,13 @@ async function getUser() {
 
   const user = await response.json();
 
-  const {
-    name,
-    address: { city },
-    company: { name: companyName },
-  } = user;
-
-  console.log(name);
-  console.log(city);
-  console.log(companyName);
+  const newUser = {
+    ...user,
+    name: "Vladimir",
+    isAdmin: true,
+  };
+  console.log(user);
+  console.log(newUser);
 }
 getUser();
 export default function Examples() {
