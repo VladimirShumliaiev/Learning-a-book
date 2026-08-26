@@ -83,8 +83,8 @@ async function getData() {
 
 async function main() {
   try {
-    const response = await getData();
-    return response;
+    const user = await getData();
+    return user;
   } catch (error) {
     console.log(error.message);
   }
