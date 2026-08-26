@@ -65,14 +65,15 @@ import React from "react";
 // }
 
 // getUsers();
-async function getUsers(id) {
+async function getUser(id) {
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/users/${id}`,
   );
 
   if (!response.ok) {
-    throw new Error("error http users");
+    throw new Error("error http user");
   }
+
   const user = await response.json();
   return user;
 }
@@ -85,27 +86,24 @@ async function getPosts(userId) {
   if (!response.ok) {
     throw new Error("error http posts");
   }
+
   const posts = await response.json();
   return posts;
 }
 
 async function getData(id) {
   try {
-    const [user, userTwo, userThree, posts] = await Promise.all([
-      getUsers(1),
-      getUsers(2),
-      getUsers(3),
-      getPosts(id),
-    ]);
-    console.log(user.name);
-    console.log(userTwo.name);
-    console.log(userThree.name);
-    console.log(posts.length);
+    // const [user, posts] = await Promise.all([getUser(id), getPosts(id)]);
+    const user = await getUser(id);
+    const posts = await getPosts(user);
+    console.log(user);
+    console.log(posts);
   } catch (error) {
     console.log(error.message);
   }
 }
-getData(1);
+
+getData(2);
 export default function Examples() {
   return <div></div>;
 }
