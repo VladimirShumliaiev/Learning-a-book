@@ -98,9 +98,14 @@ const users = [
   { name: "Bob", age: 25 },
 ];
 
-const newUsers = [...users];
+const newUsers = users.map((user) => {
+  return {
+    ...user,
+    age: user.age + 1,
+  };
+});
 
-console.log(newUsers.map(({ age }) => age + 1));
+console.log(newUsers);
 export default function Examples() {
   return <div></div>;
 }
