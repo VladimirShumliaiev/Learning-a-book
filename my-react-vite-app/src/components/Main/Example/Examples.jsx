@@ -84,15 +84,15 @@ async function getPosts(userId) {
   if (!response.ok) {
     throw new Error("error http posts");
   }
-  const post = await response.json();
-  return post;
+  const posts = await response.json();
+  return posts;
 }
 
 async function getData(id) {
   try {
-    const [user, post] = await Promise.all([getUsers(id), getPosts(id)]);
+    const [user, posts] = await Promise.all([getUsers(id), getPosts(id)]);
     console.log(user.name);
-    console.log(post.length);
+    console.log(posts.length);
   } catch (error) {
     console.log(error.message);
   }
