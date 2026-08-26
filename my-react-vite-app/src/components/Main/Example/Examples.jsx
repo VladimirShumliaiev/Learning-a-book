@@ -77,17 +77,6 @@ async function getUsers(id) {
   return user;
 }
 
-async function getTwoUsers(id) {
-  const response = await fetch(
-    `https://jsonplaceholder.typicode.com/users/${id}`,
-  );
-
-  if (!response.ok) {
-    throw new Error("error http users");
-  }
-  const user = await response.json();
-  return user;
-}
 async function getPosts(userId) {
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/posts?userId=${userId}`,
@@ -102,13 +91,15 @@ async function getPosts(userId) {
 
 async function getData(id) {
   try {
-    const [user, userTwo, posts] = await Promise.all([
+    const [user, userTwo, userThree, posts] = await Promise.all([
       getUsers(1),
-      getTwoUsers(2),
+      getUsers(2),
+      getUsers(3),
       getPosts(id),
     ]);
     console.log(user.name);
     console.log(userTwo.name);
+    console.log(userThree.name);
     console.log(posts.length);
   } catch (error) {
     console.log(error.message);
