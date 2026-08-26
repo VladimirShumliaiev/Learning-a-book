@@ -93,24 +93,22 @@ import React from "react";
 // }
 
 // main();
+const users = [
+  { name: "Alex", age: 20 },
+  { name: "Bob", age: 30 },
+  { name: "John", age: 25 },
+];
 
-const user = {
-  name: "Alex",
-  age: 30,
-  city: "Kyiv",
-  job: "Developer",
-};
+const result = users.reduce(
+  (sum, user) => {
+    sum.totalAge += user.age;
+    return sum;
+  },
+  { totalAge: 0 },
+);
 
-const { name, ...other } = user;
+console.log(result);
 
-console.log(name);
-console.log(other);
-
-const newUser = {
-  ...other,
-  name: "Vladimir",
-};
-console.log(newUser);
 export default function Examples() {
   return <div></div>;
 }
