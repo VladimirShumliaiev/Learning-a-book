@@ -75,8 +75,10 @@ async function getData() {
 
   const data = await response.json();
 
-  Object.entries(data).forEach(([key, value]) =>
-    console.log(`${key}: ${value} `),
+  Object.entries(data).forEach(
+    ([key, value]) => console.log(`${key}: ${value} `),
+    Object.values(data).forEach((e) => console.log(`${e}`)),
+    Object.keys(data).forEach((e) => console.log(`${e}`)),
   );
   return data;
 }
