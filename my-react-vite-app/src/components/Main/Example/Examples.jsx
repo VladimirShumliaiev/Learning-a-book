@@ -94,20 +94,13 @@ import React from "react";
 
 // main();
 const users = [
-  { name: "Alex", age: 20 },
-  { name: "Bob", age: 30 },
-  { name: "John", age: 25 },
+  { name: "Alex", city: "Kyiv" },
+  { name: "Bob", city: "Lviv" },
+  { name: "John", city: "Kyiv" },
+  { name: "Mike", city: "Odesa" },
 ];
 
-const result = users.reduce(
-  (sum, user) => {
-    sum.totalAge += user.age;
-    return sum;
-  },
-  { totalAge: 0 },
-);
-
-console.log(result);
+const result = users.reduce((sum, user) => sum);
 
 export default function Examples() {
   return <div></div>;
