@@ -65,7 +65,7 @@ import React from "react";
 // }
 
 // getUsers();
-async function Users(id) {
+async function getUsers(id) {
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/users/${id}`,
   );
@@ -78,7 +78,7 @@ async function Users(id) {
   return data;
 }
 
-async function Posts(userId) {
+async function getPosts(userId) {
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/posts?userId=${userId}`,
   );
@@ -93,9 +93,12 @@ async function Posts(userId) {
 
 async function getUserWithPosts(userId) {
   try {
-    const [user, posts] = await Promise.all([Users(userId), Posts(userId)]);
+    const [user, post] = await Promise.all([
+      getUsers(userId),
+      getPosts(userId),
+    ]);
     console.log(user);
-    console.log(posts);
+    console.log(post);
     return {
       user,
       post,
