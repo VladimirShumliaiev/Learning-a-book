@@ -94,14 +94,13 @@ import React from "react";
 
 // main();
 const users = [
-  { name: "Alex", city: "Kyiv" },
-  { name: "Bob", city: "Lviv" },
-  { name: "John", city: "Kyiv" },
-  { name: "Mike", city: "Odesa" },
+  { name: "Alex", age: 30 },
+  { name: "Bob", age: 25 },
 ];
 
-const result = users.reduce((sum, user) => sum);
+const newUsers = [...users];
 
+console.log(newUsers.map(({ age }) => age + 1));
 export default function Examples() {
   return <div></div>;
 }
