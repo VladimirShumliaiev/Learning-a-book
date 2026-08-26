@@ -101,9 +101,16 @@ const user = {
   job: "Developer",
 };
 
+const { name, ...other } = user;
 
+console.log(name);
+console.log(other);
 
-console.log(user);
+const newUser = {
+  ...other,
+  name: "Vladimir",
+};
+console.log(newUser);
 export default function Examples() {
   return <div></div>;
 }
