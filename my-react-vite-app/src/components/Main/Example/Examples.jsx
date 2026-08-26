@@ -66,34 +66,49 @@ import React from "react";
 
 // getUsers();
 
-async function getData() {
-  const response = await fetch("https://jsonplaceholder.typicode.com/users/1");
+// async function getData() {
+//   const response = await fetch("https://jsonplaceholder.typicode.com/users/1");
+
+//   if (!response.ok) {
+//     throw new Error("error http");
+//   }
+
+//   const data = await response.json();
+
+//   Object.entries(data).forEach(
+//     ([key, value]) => console.log(`${key}: ${value} `),
+//     Object.values(data).forEach((e) => console.log(`${e}`)),
+//     Object.keys(data).forEach((e) => console.log(`${e}`)),
+//   );
+//   return data;
+// }
+
+// async function main() {
+//   try {
+//     const user = await getData();
+//     return user;
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// }
+
+// main();
+
+async function getUser() {
+  const response = await fetch(`https://jsonplaceholder.typicode.com/users/1`);
 
   if (!response.ok) {
     throw new Error("error http");
   }
 
-  const data = await response.json();
+  const user = await response.json();
 
-  Object.entries(data).forEach(
-    ([key, value]) => console.log(`${key}: ${value} `),
-    Object.values(data).forEach((e) => console.log(`${e}`)),
-    Object.keys(data).forEach((e) => console.log(`${e}`)),
-  );
-  return data;
+  const { name } = user;
+
+  console.log(name);
+  console.log(city);
 }
-
-async function main() {
-  try {
-    const user = await getData();
-    return user;
-  } catch (error) {
-    console.log(error.message);
-  }
-}
-
-main();
-
+getUser();
 export default function Examples() {
   return <div></div>;
 }
