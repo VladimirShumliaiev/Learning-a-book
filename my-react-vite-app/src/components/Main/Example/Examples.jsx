@@ -66,19 +66,14 @@ import React from "react";
 
 // getUsers();
 
-async function getCity() {
-  const response = await fetch(`https://jsonplaceholder.typicode.com/users`);
+const user = {
+  name: "Alex",
+  age: 30,
+  city: "Kyiv",
+};
 
-  if (!response.ok) {
-    throw new Error("error http");
-  }
+Object.entries(user).forEach(([key, value]) => console.log(`${key} ${value}`));
 
-  const users = await response.json();
-  const city = users.find(({ id }) => id === 5);
-  console.log(city.address.city);
-}
-
-getCity();
 export default function Examples() {
   return <div></div>;
 }
