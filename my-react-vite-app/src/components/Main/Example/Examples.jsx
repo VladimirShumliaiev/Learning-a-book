@@ -73,6 +73,8 @@ const user = {
 };
 
 Object.entries(user).forEach(([key, value]) => console.log(`${key} ${value}`));
+console.log(Object.keys(user));
+console.log(Object.values(user));
 
 export default function Examples() {
   return <div></div>;
