@@ -66,7 +66,7 @@ import React from "react";
 
 // getUsers();
 
-async function getUserNames() {
+async function getCity() {
   const response = await fetch(`https://jsonplaceholder.typicode.com/users`);
 
   if (!response.ok) {
@@ -74,11 +74,11 @@ async function getUserNames() {
   }
 
   const users = await response.json();
-  const user = users.find(({ id }) => id === 3);
-  console.log(user.name);
+  const city = users.find(({ id }) => id === 5);
+  console.log(city.address.city);
 }
 
-getUserNames();
+getCity();
 export default function Examples() {
   return <div></div>;
 }
