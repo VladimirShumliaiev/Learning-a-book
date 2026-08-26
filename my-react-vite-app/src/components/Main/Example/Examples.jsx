@@ -66,15 +66,31 @@ import React from "react";
 
 // getUsers();
 
-const user = {
-  name: "Alex",
-  age: 30,
-  city: "Kyiv",
-};
+async function getData() {
+  const response = await fetch("https://jsonplaceholder.typicode.com/users/1");
 
-Object.entries(user).forEach(([key, value]) => console.log(`${key} ${value}`));
-console.log(Object.keys(user));
-console.log(Object.values(user));
+  if (!response.ok) {
+    throw new Error("error http");
+  }
+
+  const data = await response.json();
+
+  Object.entries(data).forEach(([key, value]) =>
+    console.log(`${key}: ${value} `),
+  );
+  return data;
+}
+
+async function main() {
+  try {
+    const response = await getData();
+    return response;
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+main();
 
 export default function Examples() {
   return <div></div>;
