@@ -95,17 +95,21 @@ import React from "react";
 // main();
 const users = [
   { name: "Alex", age: 30 },
-  { name: "Bob", age: 25 },
+  { name: "Bob", age: 17 },
+  { name: "John", age: 25 },
+  { name: "Mike", age: 16 },
 ];
 
-const newUsers = users.map((user) => {
-  return {
-    ...user,
-    age: user.age + 1,
-  };
-});
+const newUser = users
+  .filter(({ age }) => age >= 18)
+  .map((user) => {
+    return {
+      ...user,
+      age: user.age + 1,
+    };
+  });
 
-console.log(newUsers);
+console.log(newUser);
 export default function Examples() {
   return <div></div>;
 }
