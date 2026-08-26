@@ -71,44 +71,33 @@ async function getUsers(id) {
   );
 
   if (!response.ok) {
-    throw new Error("error http user");
+    throw new Error("error http users");
   }
-
-  const data = await response.json();
-  return data;
+  const user = await response.json();
+  return user;
 }
-
 async function getPosts(userId) {
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/posts?userId=${userId}`,
   );
 
   if (!response.ok) {
-    throw new Error("error http post");
+    throw new Error("error http posts");
   }
-
-  const data = await response.json();
-  return data;
+  const post = await response.json();
+  return post;
 }
 
-async function getUserWithPosts(userId) {
+async function getData(id) {
   try {
-    const [user, post] = await Promise.all([
-      getUsers(userId),
-      getPosts(userId),
-    ]);
-    console.log(user);
-    console.log(post);
-    return {
-      user,
-      post,
-    };
+    const [user, post] = await Promise.all([getUsers(id), getPosts(id)]);
+    console.log(user.name);
+    console.log(post.length);
   } catch (error) {
     console.log(error.message);
   }
 }
-
-getUserWithPosts(1);
+getData(1);
 export default function Examples() {
   return <div></div>;
 }
