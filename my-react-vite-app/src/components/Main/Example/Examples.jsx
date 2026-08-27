@@ -94,13 +94,6 @@ import React from "react";
 
 // main();
 
-const title = document.getElementById("title");
-title.textContent = "Hello Javascript";
-console.log(title);
 export default function Examples() {
-  return (
-    <div>
-      <h1 id="title">Старый текст</h1>
-    </div>
-  );
+  return <div></div>;
 }
