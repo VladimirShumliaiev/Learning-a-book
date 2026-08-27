@@ -93,12 +93,14 @@ import React from "react";
 // }
 
 // main();
-let i = 2;
 
-do {
-  console.log(i);
-  i += 2;
-} while (i <= 10);
+const title = document.getElementById("title");
+title.textContent = "Hello Javascript";
+console.log(title);
 export default function Examples() {
-  return <div></div>;
+  return (
+    <div>
+      <h1 id="title">Старый текст</h1>
+    </div>
+  );
 }
