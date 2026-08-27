@@ -96,10 +96,9 @@ import React from "react";
 let i = 10;
 
 while (i >= 1) {
-  console.log(i);
-  i++;
+  i--;
 }
-console.log(i);
+
 export default function Examples() {
   return <div></div>;
 }
