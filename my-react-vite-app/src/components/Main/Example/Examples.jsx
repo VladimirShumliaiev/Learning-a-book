@@ -93,13 +93,13 @@ import React from "react";
 // }
 
 // main();
-let i = 1;
+let i = 10;
 
-while (i <= 10) {
+while (i >= 1) {
   console.log(i);
   i++;
 }
-
+console.log(i);
 export default function Examples() {
   return <div></div>;
 }
