@@ -93,16 +93,12 @@ import React from "react";
 // }
 
 // main();
-const users = [
-  { name: "Alex", age: 30 },
-  { name: "John", age: 25 },
-  { name: "Mike", age: 35 },
-  { name: "Bob", age: 20 },
-];
+const numbers = [10, 20, 30, 40];
 
-const newUsers = users.filter(({ age }) => age > 25).map(({ name }) => name);
-
-console.log(newUsers);
+const newNumbers = numbers.reduce((sum, num) => {
+  return sum + num;
+}, 0);
+console.log(newNumbers);
 export default function Examples() {
   return <div></div>;
 }
