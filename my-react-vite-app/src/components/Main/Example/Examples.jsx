@@ -4,7 +4,7 @@ import React from "react";
 //   return new Promise((resolve, reject) => {
 //     setTimeout(() => {
 //       if (shouldFail) {
-//         reject(new Error("Oshibka"));
+//         reject(new Error("Error));
 //       } else {
 //         resolve(message);
 //       }
@@ -93,12 +93,12 @@ import React from "react";
 // }
 
 // main();
-let i = 10;
+let i = 2;
 
-while (i >= 1) {
-  i--;
-}
-
+do {
+  console.log(i);
+  i += 2;
+} while (i <= 10);
 export default function Examples() {
   return <div></div>;
 }
