@@ -93,12 +93,24 @@ import React from "react";
 // }
 
 // main();
-const numbers = [10, 20, 30, 40];
+async function getUser() {
+  try {
+    const response = await fetch(
+      `https://jsonplaceholder.typicode.com/users/1`,
+    );
 
-const newNumbers = numbers.reduce((sum, num) => {
-  return sum + num;
-}, 0);
-console.log(newNumbers);
+    if (!response.ok) {
+      throw new Error("Http error");
+    }
+
+    const user = await response.json;
+    console.log(user);
+    return user;
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+getUser();
 export default function Examples() {
   return <div></div>;
 }
