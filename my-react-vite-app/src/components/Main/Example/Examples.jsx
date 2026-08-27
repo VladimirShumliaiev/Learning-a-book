@@ -93,36 +93,37 @@ import React from "react";
 // }
 
 // main();
-async function userOne() {
-  const response = await fetch(`https://jsonplaceholder.typicode.com/users/1`);
+function getDay(day) {
+  switch (day) {
+    case 1:
+      console.log("Понедельник");
+      break;
+    case 2:
+      console.log("Вторник");
+      break;
+    case 3:
+      console.log("Среда");
+      break;
+    case 4:
+      console.log("Четверг");
+      break;
+    case 5:
+      console.log("Пятница");
+      break;
+    case 6:
+      console.log("Суббота");
+      break;
+    case 7:
+      console.log("Воскресенье");
+      break;
 
-  if (!response.ok) {
-    throw new Error("Http user 1");
+    default:
+      alert("?");
+      break;
   }
-  const user = await response.json();
-  return user;
 }
 
-async function userTwo() {
-  const response = await fetch(`https://jsonplaceholder.typicode.com/users/2`);
-
-  if (!response.ok) {
-    throw new Error("Http user 2");
-  }
-  const user = await response.json();
-  return user;
-}
-
-async function getUser() {
-  try {
-    const data = await Promise.all([userOne(), userTwo()]);
-    console.log(data);
-  } catch (error) {
-    console.log(error.message);
-  }
-}
-
-getUser();
+getDay(8);
 export default function Examples() {
   return <div></div>;
 }
