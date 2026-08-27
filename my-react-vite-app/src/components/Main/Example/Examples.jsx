@@ -93,23 +93,35 @@ import React from "react";
 // }
 
 // main();
+async function userOne() {
+  const response = await fetch(`https://jsonplaceholder.typicode.com/users/1`);
+
+  if (!response.ok) {
+    throw new Error("Http user 1");
+  }
+  const user = await response.json();
+  return user;
+}
+
+async function userTwo() {
+  const response = await fetch(`https://jsonplaceholder.typicode.com/users/2`);
+
+  if (!response.ok) {
+    throw new Error("Http user 2");
+  }
+  const user = await response.json();
+  return user;
+}
+
 async function getUser() {
   try {
-    const response = await fetch(
-      `https://jsonplaceholder.typicode.com/users/1`,
-    );
-
-    if (!response.ok) {
-      throw new Error("Http error");
-    }
-
-    const user = await response.json;
-    console.log(user);
-    return user;
+    const data = await Promise.all([userOne(), userTwo()]);
+    console.log(data);
   } catch (error) {
     console.log(error.message);
   }
 }
+
 getUser();
 export default function Examples() {
   return <div></div>;
