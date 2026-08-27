@@ -97,9 +97,10 @@ const users = [
   { name: "Alex", age: 30 },
   { name: "John", age: 25 },
   { name: "Mike", age: 35 },
+  { name: "Bob", age: 20 },
 ];
 
-const newUsers = users.map(({ name, age }) => `${name} - ${age}`);
+const newUsers = users.filter(({ age }) => age > 25).map(({ name }) => name);
 
 console.log(newUsers);
 export default function Examples() {
