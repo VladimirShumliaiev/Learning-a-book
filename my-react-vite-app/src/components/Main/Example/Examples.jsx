@@ -109,13 +109,21 @@ export default function Examples() {
       setTitle("");
     }
   };
+
+  const deleteHandle = (id) => {
+    setText(text.filter((_, i) => i !== id));
+  };
   return (
     <div>
       <input onChange={inputHandle} value={title} type="text" />
       <button onClick={buttonHandle}>add</button>
+
       <div>
         {text.map((text, i) => (
-          <p key={i}>{text}</p>
+          <p key={i}>
+            {text}
+            <button onClick={() => deleteHandle(i)}>delete</button>
+          </p>
         ))}
       </div>
     </div>
