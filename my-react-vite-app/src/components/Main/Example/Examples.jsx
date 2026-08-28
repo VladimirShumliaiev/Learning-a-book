@@ -97,9 +97,17 @@ import React, { useState } from "react";
 
 export default function Examples() {
   const [title, setTitle] = useState("");
+  const [text, setText] = useState([]);
 
   const inputHandle = (event) => {
     setTitle(event.target.value);
+  };
+
+  const addHandle = () => {
+    if (title.trim().length > 0) {
+      setText([...text, title]);
+      setTitle("");
+    }
   };
 
   return (
@@ -110,7 +118,10 @@ export default function Examples() {
         type="text"
         placeholder="...abc"
       />
-      <button>add</button>
+      <button onClick={addHandle}>add</button>
+      {text.map((e, i) => (
+        <span key={i}>{e}</span>
+      ))}
     </div>
   );
 }
