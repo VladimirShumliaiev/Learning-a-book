@@ -98,12 +98,15 @@ export default function Examples() {
   const [count, setCount] = useState(0);
 
   const handlePlus = () => {
-    setCount(count + 1);
+    setCount((prev) => prev + 1);
     console.log(count);
   };
-
   const handleMinus = () => {
-    setCount(count - 1);
+    setCount((prev) => prev - 1);
+    console.log(count);
+  };
+  const handleNull = () => {
+    setCount(0);
     console.log(count);
   };
 
@@ -111,8 +114,9 @@ export default function Examples() {
     <div>
       <div>
         <button onClick={handlePlus}>+</button>
-        <span>{count}</span>
         <button onClick={handleMinus}>-</button>
+        <button onClick={handleNull}>0</button>
+        <span>{count}</span>
       </div>
     </div>
   );
