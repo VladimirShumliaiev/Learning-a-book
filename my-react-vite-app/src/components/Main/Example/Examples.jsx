@@ -1,3 +1,4 @@
+import { current } from "@reduxjs/toolkit";
 import React, { useState } from "react";
 
 // function delay(message, shouldFail) {
@@ -95,25 +96,25 @@ import React, { useState } from "react";
 // main();
 
 export default function Examples() {
-  const [name, setName] = useState("");
-  const [text, setText] = useState("");
+  const [title, setTitle] = useState("");
+  const [getText, setGetText] = useState("");
 
-  const inputHandle = (event) => {
-    setName(event.target.value);
+  const handleInput = (event) => {
+    setTitle(event.target.value);
   };
-  const handleButton = () => {
-    if (name.trim().length > 0) {
-      setText(name);
-      setName("");
+
+  const buttonHandle = () => {
+    if (title.trim().length > 0) {
+      setGetText(title);
+      setTitle("");
     }
   };
 
   return (
     <div>
-      <input onChange={inputHandle} value={name} type="text" />
-      <button onClick={handleButton} value={name}>
-        {text}
-      </button>
+      <input onChange={handleInput} value={title} type="text" />
+      <button onClick={buttonHandle}>add</button>
+      {getText}
     </div>
   );
 }
