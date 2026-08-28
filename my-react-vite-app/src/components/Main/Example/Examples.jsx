@@ -96,5 +96,21 @@ import React, { useState } from "react";
 // main();
 
 export default function Examples() {
-  return <div></div>;
+  const [title, setTitle] = useState("");
+
+  const inputHandle = (event) => {
+    setTitle(event.target.value);
+  };
+
+  return (
+    <div>
+      <input
+        onChange={inputHandle}
+        value={title}
+        type="text"
+        placeholder="...abc"
+      />
+      <button>add</button>
+    </div>
+  );
 }
