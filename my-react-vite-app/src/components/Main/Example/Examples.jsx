@@ -96,27 +96,5 @@ import React, { useState } from "react";
 // main();
 
 export default function Examples() {
-  const [title, setTitle] = useState("");
-  const [text, setText] = useState([]);
-
-  const handleInput = (event) => {
-    setTitle(event.target.value);
-  };
-
-  const buttonHandle = () => {
-    if (title.trim().length > 0) {
-      setText([...text, title]);
-      setTitle("");
-    }
-  };
-
-  return (
-    <div>
-      <input onChange={handleInput} value={title} type="text" />
-      <button onClick={buttonHandle}>add</button>
-      {text.map((item, id) => (
-        <p key={id}>{item}</p>
-      ))}
-    </div>
-  );
+  return <div></div>;
 }
