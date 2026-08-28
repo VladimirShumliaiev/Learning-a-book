@@ -96,7 +96,8 @@ import React from "react";
 
 export default function Examples() {
   const handleOnclick = (event) => {
-    console.log(event);
+    event.target.textContent = "Нажато!";
+    console.log(event.target.textContent);
   };
   return (
     <div>
