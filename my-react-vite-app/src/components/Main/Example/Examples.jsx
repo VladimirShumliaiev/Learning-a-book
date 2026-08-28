@@ -96,39 +96,39 @@ import React, { useState } from "react";
 // main();
 
 export default function Examples() {
-  const [title, setTitle] = useState("");
-  const [text, setText] = useState([]);
-  const [id, setId] = useState(0);
+  const [inputValue, setInputValue] = useState("");
+  const [item, setItem] = useState([]);
+  const [nextId, setNextId] = useState(0);
 
   const inputHandle = (event) => {
-    setTitle(event.target.value);
+    setInputValue(event.target.value);
   };
 
   const addHandle = () => {
-    if (title.trim().length > 0) {
-      setText([...text, { title, id }]);
-      setTitle("");
-      setId(id + 1);
+    if (inputValue.trim().length > 0) {
+      setItem([...item, { inputValue, nextId }]);
+      setInputValue("");
+      setNextId(nextId + 1);
     }
   };
 
   const deleteHandle = (id) => {
-    setText(text.filter((e) => e.id !== id));
+    setItem(item.filter((e) => e.nextId !== id));
   };
 
   return (
     <div>
       <input
         onChange={inputHandle}
-        value={title}
+        value={inputValue}
         type="text"
         placeholder="...abc"
       />
       <button onClick={() => addHandle()}>add</button>
-      {text.map((e) => (
-        <div key={e.id}>
-          {e.title}
-          <button onClick={() => deleteHandle(e.id)}>x</button>
+      {item.map((e) => (
+        <div key={e.nextId}>
+          {e.inputValue}
+          <button onClick={() => deleteHandle(e.nextId)}>x</button>
         </div>
       ))}
     </div>
