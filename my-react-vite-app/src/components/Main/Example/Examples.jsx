@@ -97,15 +97,23 @@ import React, { useState } from "react";
 export default function Examples() {
   const [count, setCount] = useState(0);
 
-  const handleOnclick = () => {
+  const handlePlus = () => {
     setCount(count + 1);
+    console.log(count);
+  };
+
+  const handleMinus = () => {
+    setCount(count - 1);
     console.log(count);
   };
 
   return (
     <div>
-      <p>{count}</p>
-      <button onClick={handleOnclick}>Нажми меня</button>
+      <div>
+        <button onClick={handlePlus}>+</button>
+        <span>{count}</span>
+        <button onClick={handleMinus}>-</button>
+      </div>
     </div>
   );
 }
