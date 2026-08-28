@@ -105,7 +105,7 @@ export default function Examples() {
   return (
     <div>
       <p>{count}</p>
-      <button onClick={() => handleOnclick()}>Нажми меня</button>
+      <button onClick={handleOnclick}>Нажми меня</button>
     </div>
   );
 }
