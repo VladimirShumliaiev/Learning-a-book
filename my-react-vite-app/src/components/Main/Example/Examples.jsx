@@ -44,7 +44,7 @@ import React from "react";
 // }
 // getUsers();
 
-//TITLE Promise all
+// TITLE Promise all
 // async function getUsers() {
 //   try {
 //     const response = await Promise.all([
@@ -95,5 +95,12 @@ import React from "react";
 // main();
 
 export default function Examples() {
-  return <div></div>;
+  const handleOnclick = (event) => {
+    console.log(event);
+  };
+  return (
+    <div>
+      <button onClick={handleOnclick}>Нажми меня</button>
+    </div>
+  );
 }
