@@ -96,5 +96,28 @@ import React, { useState } from "react";
 // main();
 
 export default function Examples() {
-  return <div></div>;
+  const [title, setTitle] = useState("");
+  const [text, setText] = useState([]);
+
+  const inputHandle = (event) => {
+    setTitle(event.target.value);
+  };
+
+  const buttonHandle = () => {
+    if (title.trim().length > 0) {
+      setText([...text, title]);
+      setTitle("");
+    }
+  };
+  return (
+    <div>
+      <input onChange={inputHandle} value={title} type="text" />
+      <button onClick={buttonHandle}>add</button>
+      <div>
+        {text.map((e, i) => (
+          <p key={i}>{e}</p>
+        ))}
+      </div>
+    </div>
+  );
 }
