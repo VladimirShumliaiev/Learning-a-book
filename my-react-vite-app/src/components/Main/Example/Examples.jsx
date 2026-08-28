@@ -95,15 +95,25 @@ import React, { useState } from "react";
 // main();
 
 export default function Examples() {
-  const [name, setName] = useState();
+  const [name, setName] = useState("");
+  const [text, setText] = useState("");
 
   const inputHandle = (event) => {
     setName(event.target.value);
   };
+  const handleButton = () => {
+    if (name.trim().length > 0) {
+      setText(name);
+      setName("");
+    }
+  };
 
   return (
-    <>
+    <div>
       <input onChange={inputHandle} value={name} type="text" />
-    </>
+      <button onClick={handleButton} value={name}>
+        {text}
+      </button>
+    </div>
   );
 }
