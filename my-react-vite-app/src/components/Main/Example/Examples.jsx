@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // function delay(message, shouldFail) {
 //   return new Promise((resolve, reject) => {
@@ -95,13 +95,17 @@ import React from "react";
 // main();
 
 export default function Examples() {
-  const handleOnclick = (event) => {
-    event.target.textContent = "Нажато!";
-    console.log(event.target.textContent);
+  const [count, setCount] = useState(0);
+
+  const handleOnclick = () => {
+    setCount(count + 1);
+    console.log(count);
   };
+
   return (
     <div>
-      <button onClick={handleOnclick}>Нажми меня</button>
+      <p>{count}</p>
+      <button onClick={() => handleOnclick()}>Нажми меня</button>
     </div>
   );
 }
