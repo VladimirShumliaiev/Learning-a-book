@@ -114,8 +114,8 @@ export default function Examples() {
       <input onChange={inputHandle} value={title} type="text" />
       <button onClick={buttonHandle}>add</button>
       <div>
-        {text.map((e, i) => (
-          <p key={i}>{e}</p>
+        {text.map((text, i) => (
+          <p key={i}>{text}</p>
         ))}
       </div>
     </div>
