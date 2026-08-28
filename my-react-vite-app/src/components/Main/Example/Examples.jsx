@@ -112,6 +112,10 @@ export default function Examples() {
     }
   };
 
+  const deleteHandle = (id) => {
+    setText(text.filter((e) => e.id !== id));
+  };
+
   return (
     <div>
       <input
@@ -120,11 +124,11 @@ export default function Examples() {
         type="text"
         placeholder="...abc"
       />
-      <button onClick={addHandle}>add</button>
-      {text.map((e, i) => (
-        <div key={i}>
-          {e}
-          <button>x</button>
+      <button onClick={() => addHandle()}>add</button>
+      {text.map((e) => (
+        <div key={e.id}>
+          {e.title}
+          <button onClick={() => deleteHandle(e.id)}>x</button>
         </div>
       ))}
     </div>
