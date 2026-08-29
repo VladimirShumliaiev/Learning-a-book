@@ -128,7 +128,7 @@ export default function Examples() {
       {item.map((e) => (
         <div key={e.nextId}>
           {e.inputValue}
-          <button onClick={() => deleteHandle(e.nextId)}>x</button>
+          <button onClick={() => deleteHandle(e.nextId)}>delete</button>
         </div>
       ))}
     </div>
