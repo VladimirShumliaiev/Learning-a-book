@@ -94,16 +94,23 @@ import React, { useState } from "react";
 // }
 
 // main();
-const user = {
-  name: "Alex",
-  age: 25,
-  city: "Kyiv",
-  job: "Developer",
-};
+async function getUser() {
+  try {
+    const response = await fetch(
+      `https://jsonplaceholder.typicode.com/users/1`,
+    );
 
-const { name, ...rest } = user;
-console.log(rest);
-console.log(name);
+    if (!response.ok) {
+      throw new Error("error http");
+    }
+
+    const data = await response.json();
+    console.log(data.name);
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+getUser();
 export default function Examples() {
   return <div></div>;
 }
