@@ -95,21 +95,26 @@ import React, { useState } from "react";
 
 // main();
 
-const promise1 = Promise.reject("Ошибка 1");
-
-const promise2 = new Promise((resolve) => {
-  setTimeout(() => resolve("Успех 2"), 2000);
-});
-
-const promise3 = new Promise((resolve) => {
-  setTimeout(() => resolve("Успех 3"), 1000);
-});
-async function test() {
-  const data = await Promise.any([promise1, promise2, promise3]);
-  console.log(data);
-}
-
-test();
 export default function Examples() {
-  return <div></div>;
+  const [count, setCount] = useState(0);
+
+  const plusHandle = () => {
+    setCount((prev) => prev + 1);
+  };
+  const minusHandle = () => {
+    setCount((prev) => prev - 1);
+  };
+  const resetHandle = () => {
+    setCount(0);
+  };
+  return (
+    <div>
+      <button onClick={minusHandle}> - </button>
+      {count}
+      <button onClick={plusHandle}>+ </button>
+      <div>
+        <button onClick={resetHandle}>reset</button>
+      </div>
+    </div>
+  );
 }
