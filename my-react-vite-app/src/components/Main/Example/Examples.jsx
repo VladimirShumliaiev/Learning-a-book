@@ -98,15 +98,12 @@ const user = {
   name: "Alex",
   age: 25,
   city: "Kyiv",
+  job: "Developer",
 };
 
-const newUser = {
-  ...user,
-  city: "Lviv",
-};
-
-console.log(newUser);
-console.log(user);
+const { name, ...rest } = user;
+console.log(rest);
+console.log(name);
 export default function Examples() {
   return <div></div>;
 }
