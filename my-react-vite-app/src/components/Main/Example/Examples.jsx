@@ -100,9 +100,11 @@ const users = [
   { name: "John", age: 30 },
   { name: "Mike", age: 15 },
 ];
-const newUsers = users.filter(({ age }) => age >= 18).map(({ name }) => name);
-console.log(newUsers);
 
+const ageSum = users.reduce((sum, age) => {
+  return sum + age.age;
+}, 0);
+console.log(ageSum);
 export default function Examples() {
   return <div></div>;
 }
