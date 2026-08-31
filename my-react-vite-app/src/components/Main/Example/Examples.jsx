@@ -94,23 +94,35 @@ import React, { useState } from "react";
 // }
 
 // main();
-async function getUser() {
-  try {
-    const response = await fetch(
-      `https://jsonplaceholder.typicode.com/users/1`,
-    );
 
-    if (!response.ok) {
-      throw new Error("error http");
-    }
+async function userOne() {
+  const response = await fetch(`https://jsonplaceholder.typicode.com/users/1`);
 
-    const data = await response.json();
-    console.log(data.name);
-  } catch (error) {
-    console.log(error.message);
-  }
+  const data = await response.json();
+  return data;
 }
-getUser();
+
+async function userTwo() {
+  const response = await fetch(`https://jsonplaceholder.typicode.com/users/2`);
+
+  const data = await response.json();
+  return data;
+}
+
+async function userThree() {
+  const response = await fetch(`https://jsonplaceholder.typicode.com/users/3`);
+
+  const data = await response.json();
+  return data;
+}
+async function getUsers() {
+  const data = await Promise.all([userOne(), userTwo(), userThree()]);
+
+  const names = data.map(({ name }) => name);
+  console.log(names);
+}
+
+getUsers();
 export default function Examples() {
   return <div></div>;
 }
