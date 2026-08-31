@@ -95,36 +95,19 @@ import React, { useState } from "react";
 
 // main();
 
-async function userOne() {
-  const response = await fetch(`https://jsonplaceholder.typicode.com/users/1`);
+const promise1 = new Promise((resolve) => {
+  setTimeout(() => resolve("Первый"), 2000);
+});
 
-  const data = await response.json();
-  return data;
+const promise2 = new Promise((resolve) => {
+  setTimeout(() => resolve("Второй"), 1000);
+});
+async function test() {
+  const data = await Promise.race([promise1, promise2]);
+  console.log(data);
 }
 
-async function userTwo() {
-  const response = await fetch(`https://jsonplaceholder.typicode.com/users/2`);
-
-  const data = await response.json();
-  return data;
-}
-
-async function userThree() {
-  const response = await fetch(
-    `https://jsonplaceholder.typicode.com/users/9999999999999`,
-  );
-
-  const data = await response.json();
-  return data;
-}
-async function getUsers() {
-  const data = await Promise.allSettled([userOne(), userTwo(), userThree()]);
-
-  const status = data.map((e) => e.status);
-  console.log(status);
-}
-
-getUsers();
+test();
 export default function Examples() {
   return <div></div>;
 }
