@@ -95,15 +95,17 @@ import React, { useState } from "react";
 
 // main();
 
-const promise1 = new Promise((resolve) => {
-  setTimeout(() => resolve("Первый"), 2000);
-});
+const promise1 = Promise.reject("Ошибка 1");
 
 const promise2 = new Promise((resolve) => {
-  setTimeout(() => resolve("Второй"), 1000);
+  setTimeout(() => resolve("Успех 2"), 2000);
+});
+
+const promise3 = new Promise((resolve) => {
+  setTimeout(() => resolve("Успех 3"), 1000);
 });
 async function test() {
-  const data = await Promise.race([promise1, promise2]);
+  const data = await Promise.any([promise1, promise2, promise3]);
   console.log(data);
 }
 
