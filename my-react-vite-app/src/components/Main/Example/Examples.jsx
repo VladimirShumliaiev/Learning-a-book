@@ -94,43 +94,15 @@ import React, { useState } from "react";
 // }
 
 // main();
+const users = [
+  { name: "Alex", age: 25 },
+  { name: "Bob", age: 17 },
+  { name: "John", age: 30 },
+  { name: "Mike", age: 15 },
+];
+const newUsers = users.filter(({ age }) => age >= 18).map(({ name }) => name);
+console.log(newUsers);
 
 export default function Examples() {
-  const [inputValue, setInputValue] = useState("");
-  const [item, setItem] = useState([]);
-  const [nextId, setNextId] = useState(0);
-
-  const inputHandle = (event) => {
-    setInputValue(event.target.value);
-  };
-
-  const addHandle = () => {
-    if (inputValue.trim().length > 0) {
-      setItem([...item, { inputValue, nextId }]);
-      setInputValue("");
-      setNextId(nextId + 1);
-    }
-  };
-
-  const deleteHandle = (id) => {
-    setItem(item.filter((e) => e.nextId !== id));
-  };
-
-  return (
-    <div>
-      <input
-        onChange={inputHandle}
-        value={inputValue}
-        type="text"
-        placeholder="...abc"
-      />
-      <button onClick={() => addHandle()}>add</button>
-      {item.map((e) => (
-        <div key={e.nextId}>
-          {e.inputValue}
-          <button onClick={() => deleteHandle(e.nextId)}>delete</button>
-        </div>
-      ))}
-    </div>
-  );
+  return <div></div>;
 }
