@@ -94,17 +94,19 @@ import React, { useState } from "react";
 // }
 
 // main();
-const users = [
-  { name: "Alex", age: 25 },
-  { name: "Bob", age: 17 },
-  { name: "John", age: 30 },
-  { name: "Mike", age: 15 },
-];
+const user = {
+  name: "Alex",
+  age: 25,
+  city: "Kyiv",
+};
 
-const ageSum = users.reduce((sum, age) => {
-  return sum + age.age;
-}, 0);
-console.log(ageSum);
+const newUser = {
+  ...user,
+  city: "Lviv",
+};
+
+console.log(newUser);
+console.log(user);
 export default function Examples() {
   return <div></div>;
 }
