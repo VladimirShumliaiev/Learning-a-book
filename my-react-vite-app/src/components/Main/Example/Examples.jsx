@@ -110,16 +110,18 @@ async function userTwo() {
 }
 
 async function userThree() {
-  const response = await fetch(`https://jsonplaceholder.typicode.com/users/3`);
+  const response = await fetch(
+    `https://jsonplaceholder.typicode.com/users/9999999999999`,
+  );
 
   const data = await response.json();
   return data;
 }
 async function getUsers() {
-  const data = await Promise.all([userOne(), userTwo(), userThree()]);
+  const data = await Promise.allSettled([userOne(), userTwo(), userThree()]);
 
-  const names = data.map(({ name }) => name);
-  console.log(names);
+  const status = data.map((e) => e.status);
+  console.log(status);
 }
 
 getUsers();
