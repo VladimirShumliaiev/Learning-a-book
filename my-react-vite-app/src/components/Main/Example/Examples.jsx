@@ -115,6 +115,8 @@ export default function Examples() {
   const deleteHandle = (id) => {
     setItem(item.filter((e) => e.id !== id));
   };
+
+  console.log(id);
   return (
     <div>
       <input onChange={inputHandle} value={inputValue} type="text" />
