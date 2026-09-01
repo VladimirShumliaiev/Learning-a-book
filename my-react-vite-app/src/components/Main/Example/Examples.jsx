@@ -96,25 +96,19 @@ import React, { useState } from "react";
 // main();
 
 export default function Examples() {
-  const [count, setCount] = useState(0);
+  const [inputValue, setInputValue] = useState("");
+  const [item, setItem] = useState([])
 
-  const plusHandle = () => {
-    setCount((prev) => prev + 1);
+  const inputHandle = (event) => {
+    setInputValue(event.target.value);
   };
-  const minusHandle = () => {
-    setCount((prev) => prev - 1);
-  };
-  const resetHandle = () => {
-    setCount(0);
-  };
+
+  const buttonHandle = () => 
   return (
     <div>
-      <button onClick={minusHandle}> - </button>
-      {count}
-      <button onClick={plusHandle}>+ </button>
-      <div>
-        <button onClick={resetHandle}>reset</button>
-      </div>
+      <input onChange={inputHandle} value={inputValue} type="text" />
+      <button onClick={}>add</button>
+      <div>{inputValue}</div>
     </div>
   );
 }
