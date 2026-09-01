@@ -97,18 +97,32 @@ import React, { useState } from "react";
 
 export default function Examples() {
   const [inputValue, setInputValue] = useState("");
-  const [item, setItem] = useState([])
+  const [item, setItem] = useState([]);
 
   const inputHandle = (event) => {
     setInputValue(event.target.value);
   };
 
-  const buttonHandle = () => 
+  const buttonHandle = () => {
+    if (inputValue.trim().length > 0) {
+      setItem((prev) => [...prev, inputValue]);
+      setInputValue("");
+    }
+  };
+
+  const deleteHandle = 
   return (
     <div>
       <input onChange={inputHandle} value={inputValue} type="text" />
-      <button onClick={}>add</button>
-      <div>{inputValue}</div>
+      <button onClick={() => buttonHandle()}>add</button>
+      <div>
+        {item.map((e, i) => (
+          <div key={i}>
+            {e}
+            <button>del</button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
