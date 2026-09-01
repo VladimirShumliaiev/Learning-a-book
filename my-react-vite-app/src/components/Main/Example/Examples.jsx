@@ -120,7 +120,7 @@ export default function Examples() {
   return (
     <div>
       <input onChange={inputHandle} value={inputValue} type="text" />
-      <button onClick={() => buttonHandle()}>add</button>
+      <button onClick={buttonHandle}>add</button>
       <div>
         {item.map(({ inputValue, id }) => (
           <div key={id}>
