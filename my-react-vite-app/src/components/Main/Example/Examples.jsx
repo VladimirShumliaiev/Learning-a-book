@@ -106,7 +106,7 @@ export default function Examples() {
 
   const addHandle = () => {
     if (inputValue.trim().length > 0) {
-      setItem((prev) => [...prev, { inputValue, id }]);
+      setItem([...item, { inputValue, id }]);
       setInputValue("");
       setId(id + 1);
     }
