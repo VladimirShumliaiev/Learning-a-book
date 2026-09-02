@@ -103,10 +103,19 @@ export default function Examples() {
   const inputHandle = (event) => {
     setInputValue(event.target.value);
   };
+
+  const addHandle = () => {
+    if (inputValue.trim().length > 0) {
+      setItem(...inputValue, { item, id });
+      setInputValue("");
+      setId(id + 1);
+    }
+  };
   return (
     <div>
       <input onChange={inputHandle} value={inputValue} type="text" />
-      <button>add</button>
+      <button onClick={addHandle}>add</button>
+      {item}
     </div>
   );
 }
