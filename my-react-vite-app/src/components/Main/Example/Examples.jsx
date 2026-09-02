@@ -96,39 +96,5 @@ import React, { useState } from "react";
 // main();
 
 export default function Examples() {
-  const [inputValue, setInputValue] = useState("");
-  const [item, setItem] = useState([]);
-  const [id, setId] = useState(0);
-
-  const inputHandle = (event) => {
-    setInputValue(event.target.value);
-  };
-
-  const buttonHandle = () => {
-    if (inputValue.trim().length > 0) {
-      setItem((prev) => [...prev, { inputValue, id }]);
-      setInputValue("");
-      setId(id + 1);
-    }
-  };
-
-  const deleteHandle = (id) => {
-    setItem(item.filter((e) => e.id !== id));
-  };
-
-  console.log(id);
-  return (
-    <div>
-      <input onChange={inputHandle} value={inputValue} type="text" />
-      <button onClick={buttonHandle}>+</button>
-      <div>
-        {item.map(({ inputValue, id }) => (
-          <div key={id}>
-            {inputValue}
-            <button onClick={() => deleteHandle(id)}>del</button>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+  return <div></div>;
 }
