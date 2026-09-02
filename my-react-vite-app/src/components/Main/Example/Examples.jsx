@@ -106,16 +106,25 @@ export default function Examples() {
 
   const addHandle = () => {
     if (inputValue.trim().length > 0) {
-      setItem(...inputValue, { item, id });
+      setItem((prev) => [...prev, { inputValue, id }]);
       setInputValue("");
       setId(id + 1);
     }
+  };
+
+  const deleteHandle = (id) => {
+    setItem((prev) => prev.filter((e) => e.id !== id));
   };
   return (
     <div>
       <input onChange={inputHandle} value={inputValue} type="text" />
       <button onClick={addHandle}>add</button>
-      {item}
+      {item.map(({ inputValue, id }) => (
+        <div key={id}>
+          {inputValue}
+          <button onClick={() => deleteHandle(id)}>delete</button>
+        </div>
+      ))}
     </div>
   );
 }
