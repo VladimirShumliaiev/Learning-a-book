@@ -96,5 +96,17 @@ import React, { useState } from "react";
 // main();
 
 export default function Examples() {
-  return <div></div>;
+  const [inputValue, setInputValue] = useState("");
+  const [item, setItem] = useState([]);
+  const [id, setId] = useState(0);
+
+  const inputHandle = (event) => {
+    setInputValue(event.target.value);
+  };
+  return (
+    <div>
+      <input onChange={inputHandle} value={inputValue} type="text" />
+      <button>add</button>
+    </div>
+  );
 }
