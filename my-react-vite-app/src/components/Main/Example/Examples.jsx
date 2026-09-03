@@ -94,7 +94,14 @@ import React, { useState } from "react";
 // }
 
 // main();
+const products = [
+  { id: 1, name: "Телефон", price: 12000 },
+  { id: 2, name: "Ноутбук", price: 30000 },
+  { id: 3, name: "Наушники", price: 3000 },
+  { id: 4, name: "Монитор", price: 8000 },
+];
 
 export default function Examples() {
+  const [product, setProduct] = useState("");
   return <div></div>;
 }
