@@ -103,24 +103,29 @@ const products = [
 
 export default function Examples() {
   const [product, setProduct] = useState(products);
-  const [item, setItem] = useState();
 
   const deleteHandle = (id) => {
     setProduct(product.filter((prev) => prev.id !== id));
   };
 
-  const inputHandle = () => {};
+  const addProduct = () => {
+    setProduct((prev) => [
+      ...prev,
+      { name: "Клавиатура", price: "2500", id: 5 },
+    ]);
+  };
+
   return (
     <div>
-      <input type="text" />
-      <button>add Product</button>
       {product.map(({ name, id, price }) => (
         <div key={id}>
-          <div></div>
           {name} :{price}
           <button onClick={() => deleteHandle(id)}>x</button>
         </div>
       ))}
+      <div>
+        <button onClick={addProduct}>add Product</button>
+      </div>
     </div>
   );
 }
