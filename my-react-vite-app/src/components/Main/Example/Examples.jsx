@@ -111,8 +111,8 @@ export default function Examples() {
     setProduct((prev) => prev.filter((product) => product.id !== id));
   };
 
-  const addHandle = (id) => {
-    setProduct((prev) => [...prev, { name, price, nextId: id }]);
+  const addHandle = () => {
+    setProduct((prev) => [...prev, { name, price, id: nextId }]);
     setNextId((prev) => prev + 1);
     setName("");
     setPrice("");
