@@ -102,5 +102,50 @@ const products = [
 ];
 
 export default function Examples() {
-  return <div></div>;
+  const [product, setProduct] = useState(products);
+  const [name, setName] = useState("");
+  const [price, setPrice] = useState("");
+  const [nextId, setNextId] = useState(5);
+
+  const deleteHandle = (id) => {
+    setProduct((prev) => prev.filter((product) => product.id !== id));
+  };
+
+  const addHandle = (id) => {
+    setProduct((prev) => [...prev, { name, price, nextId: id }]);
+    setNextId((prev) => prev + 1);
+    setName("");
+    setPrice("");
+  };
+
+  const nameHandle = (event) => {
+    setName(event.target.value);
+  };
+  const priceHandle = (event) => {
+    setPrice(event.target.value);
+  };
+
+  return (
+    <div>
+      {product.map(({ name, price, id }) => (
+        <div key={id}>
+          {name}: {price}
+          <button onClick={() => deleteHandle(id)}>delete</button>
+        </div>
+      ))}
+      <input
+        onChange={nameHandle}
+        placeholder="name"
+        value={name}
+        type="text"
+      />
+      <input
+        onChange={priceHandle}
+        placeholder="price"
+        value={price}
+        type="text"
+      />
+      <button onClick={addHandle}>add</button>
+    </div>
+  );
 }
