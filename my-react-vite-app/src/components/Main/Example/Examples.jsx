@@ -1,4 +1,4 @@
-import { current } from "@reduxjs/toolkit";
+import { addListener, current } from "@reduxjs/toolkit";
 import React, { useState } from "react";
 
 // function delay(message, shouldFail) {
@@ -102,6 +102,25 @@ const products = [
 ];
 
 export default function Examples() {
-  const [product, setProduct] = useState("");
-  return <div></div>;
+  const [product, setProduct] = useState(products);
+  const [item, setItem] = useState();
+
+  const deleteHandle = (id) => {
+    setProduct(product.filter((prev) => prev.id !== id));
+  };
+
+  const inputHandle = () => {};
+  return (
+    <div>
+      <input type="text" />
+      <button>add Product</button>
+      {product.map(({ name, id, price }) => (
+        <div key={id}>
+          <div></div>
+          {name} :{price}
+          <button onClick={() => deleteHandle(id)}>x</button>
+        </div>
+      ))}
+    </div>
+  );
 }
