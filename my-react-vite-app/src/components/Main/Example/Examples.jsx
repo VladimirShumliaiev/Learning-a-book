@@ -103,16 +103,15 @@ const products = [
 
 export default function Examples() {
   const [product, setProduct] = useState(products);
+  const [name, setName] = useState('')
+  const [price,setPrice] = useState('')
 
   const deleteHandle = (id) => {
-    setProduct(product.filter((prev) => prev.id !== id));
+    setProduct((prev) => prev.filter((product) => product.id !== id));
   };
 
   const addProduct = () => {
-    setProduct((prev) => [
-      ...prev,
-      { name: "Клавиатура", price: "2500", id: 5 },
-    ]);
+    setProduct((prev) => [...prev, { name: "Клавиатура", price: 2500, id: 5 }]);
   };
 
   return (
@@ -124,6 +123,7 @@ export default function Examples() {
         </div>
       ))}
       <div>
+        <input type="text" /> input type="text" />
         <button onClick={addProduct}>add Product</button>
       </div>
     </div>
