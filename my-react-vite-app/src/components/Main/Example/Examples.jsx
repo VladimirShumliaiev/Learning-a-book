@@ -105,17 +105,24 @@ export default function Examples() {
   const [product, setProduct] = useState(products);
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
+  const [nextId, setNextId] = useState(5);
 
   const deleteHandle = (id) => {
     setProduct((prev) => prev.filter((product) => product.id !== id));
   };
 
   const addProduct = () => {
-    setProduct((prev) => [...prev, { name: "Клавиатура", price: 2500, id: 5 }]);
+    setProduct((prev) => [...prev, { name, price, id: nextId }]);
+    setNextId((prev) => prev + 1);
+    setName("");
+    setPrice("");
   };
 
-  const inputHandel = () => {
-      setName(prev => prev)
+  const nameHandel = (event) => {
+    setName(event.target.value);
+  };
+  const priceHandel = (event) => {
+    setPrice(event.target.value);
   };
 
   return (
@@ -127,8 +134,18 @@ export default function Examples() {
         </div>
       ))}
       <div>
-        <input onChange={} value={name} placeholder="name" type="text" />
-        <input placeholder="price" type="text" />
+        <input
+          onChange={nameHandel}
+          value={name}
+          placeholder="name"
+          type="text"
+        />
+        <input
+          onChange={priceHandel}
+          value={price}
+          placeholder="price"
+          type="text"
+        />
         <button onClick={addProduct}>add Product</button>
       </div>
     </div>
