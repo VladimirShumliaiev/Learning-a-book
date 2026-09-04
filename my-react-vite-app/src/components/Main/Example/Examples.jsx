@@ -112,7 +112,7 @@ export default function Examples() {
   };
 
   const handleAdd = () => {
-    if (productName.trim().length > 0 && productPrice.trim().length > 0) {
+    if (productName.trim().length && productPrice.trim().length) {
       setProductsList((prev) => [
         ...prev,
         { name: productName, price: productPrice, id: nextProductId },
