@@ -114,6 +114,8 @@ export default function Examples() {
   const addHandle = () => {
     setProduct((prev) => [...prev, { name, price, id: nextId }]);
     setNextId((prev) => prev + 1);
+    setName("");
+    setPrice("");
   };
 
   const nameHandle = (event) => {
