@@ -108,7 +108,7 @@ export default function Examples() {
   const [nextProductId, setNextProductId] = useState(5);
 
   const handleDelete = (id) => {
-    setProductsList((prev) => prev.filter((pro) => pro.id !== id));
+    setProductsList((prev) => prev.filter((product) => product.id !== id));
   };
 
   const handleAdd = () => {
