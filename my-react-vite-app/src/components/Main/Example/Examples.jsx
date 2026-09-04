@@ -112,13 +112,15 @@ export default function Examples() {
   };
 
   const handleAdd = () => {
-    setProductsList((prev) => [
-      ...prev,
-      { name: productName, price: productPrice, id: nextProductId },
-    ]);
-    setNextProductId((prev) => prev + 1);
-    setProductName("");
-    setProductPrice("");
+    if (productName.trim().length > 0 && productPrice.trim().length > 0) {
+      setProductsList((prev) => [
+        ...prev,
+        { name: productName, price: productPrice, id: nextProductId },
+      ]);
+      setNextProductId((prev) => prev + 1);
+      setProductName("");
+      setProductPrice("");
+    }
   };
 
   const handleNameChange = (event) => {
