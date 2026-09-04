@@ -102,32 +102,35 @@ const products = [
 ];
 
 export default function Examples() {
-  const [product, setProduct] = useState(products);
-  const [name, setName] = useState("");
-  const [price, setPrice] = useState("");
-  const [nextId, setNextId] = useState(5);
+  const [productsList, setProductsList] = useState(products);
+  const [productName, setProductName] = useState("");
+  const [productPrice, setProductPrice] = useState("");
+  const [nextProductId, setNextProductId] = useState(5);
 
   const deleteHandle = (id) => {
-    setProduct((prev) => prev.filter((pro) => pro.id !== id));
+    setProductsList((prev) => prev.filter((pro) => pro.id !== id));
   };
 
   const addHandle = () => {
-    setProduct((prev) => [...prev, { name, price, id: nextId }]);
-    setNextId((prev) => prev + 1);
-    setName("");
-    setPrice("");
+    setProductsList((prev) => [
+      ...prev,
+      { name: productName, price: productPrice, id: nextProductId },
+    ]);
+    setNextProductId((prev) => prev + 1);
+    setProductName("");
+    setProductPrice("");
   };
 
   const nameHandle = (event) => {
-    setName(event.target.value);
+    setProductName(event.target.value);
   };
   const priceHandle = (event) => {
-    setPrice(event.target.value);
+    setProductPrice(event.target.value);
   };
 
   return (
     <div>
-      {product.map(({ name, price, id }) => (
+      {productsList.map(({ name, price, id }) => (
         <div key={id}>
           {name}:{price}
           <button onClick={() => deleteHandle(id)}>x</button>
@@ -135,13 +138,13 @@ export default function Examples() {
       ))}
       <input
         onChange={nameHandle}
-        value={name}
+        value={productName}
         placeholder="name..."
         type="text"
       />
       <input
         onChange={priceHandle}
-        value={price}
+        value={productPrice}
         placeholder="price..."
         type="text"
       />
