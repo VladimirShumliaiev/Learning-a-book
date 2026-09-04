@@ -107,11 +107,11 @@ export default function Examples() {
   const [productPrice, setProductPrice] = useState("");
   const [nextProductId, setNextProductId] = useState(5);
 
-  const deleteHandle = (id) => {
+  const handleDelete = (id) => {
     setProductsList((prev) => prev.filter((pro) => pro.id !== id));
   };
 
-  const addHandle = () => {
+  const handleAdd = () => {
     setProductsList((prev) => [
       ...prev,
       { name: productName, price: productPrice, id: nextProductId },
@@ -121,10 +121,10 @@ export default function Examples() {
     setProductPrice("");
   };
 
-  const nameHandle = (event) => {
+  const handleNameChange = (event) => {
     setProductName(event.target.value);
   };
-  const priceHandle = (event) => {
+  const handlePriceChange = (event) => {
     setProductPrice(event.target.value);
   };
 
@@ -133,22 +133,22 @@ export default function Examples() {
       {productsList.map(({ name, price, id }) => (
         <div key={id}>
           {name}:{price}
-          <button onClick={() => deleteHandle(id)}>x</button>
+          <button onClick={() => handleDelete(id)}>x</button>
         </div>
       ))}
       <input
-        onChange={nameHandle}
+        onChange={handleNameChange}
         value={productName}
         placeholder="name..."
         type="text"
       />
       <input
-        onChange={priceHandle}
+        onChange={handlePriceChange}
         value={productPrice}
         placeholder="price..."
         type="text"
       />
-      <button onClick={addHandle}>add</button>
+      <button onClick={handleAdd}>add</button>
     </div>
   );
 }
