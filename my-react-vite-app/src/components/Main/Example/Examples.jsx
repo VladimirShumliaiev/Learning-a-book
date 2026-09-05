@@ -108,8 +108,12 @@ export default function Examples() {
   const [productNextId, setProductSetId] = useState(5);
 
   const handleAddProduct = () => {
-    const price = Number(NaN);
-    if (productName.trim().length && productPrice.trim().length) {
+    const price = Number(productPrice);
+    if (
+      productName.trim().length &&
+      productPrice.trim().length &&
+      !Number.isNaN(price)
+    ) {
       setProductList((product) => [
         ...product,
         { name: productName, price: productPrice, id: productNextId },
