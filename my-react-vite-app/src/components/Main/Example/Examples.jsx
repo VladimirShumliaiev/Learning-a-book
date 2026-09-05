@@ -105,7 +105,7 @@ export default function Examples() {
   const [productsList, setProductList] = useState(products);
   const [productName, setProductName] = useState("");
   const [productPrice, setProductPrice] = useState("");
-  const [productNextId, setProductSetId] = useState(5);
+  const [nextProductId, setNextProductId] = useState(5);
 
   const handleAddProduct = () => {
     const price = Number(productPrice);
@@ -116,10 +116,10 @@ export default function Examples() {
     ) {
       setProductList((product) => [
         ...product,
-        { name: productName, price: productPrice, id: productNextId },
+        { name: productName, price: productPrice, id: nextProductId },
       ]);
 
-      setProductSetId((prev) => prev + 1);
+      setNextProductId((prev) => prev + 1);
       setProductName("");
       setProductPrice("");
     }
