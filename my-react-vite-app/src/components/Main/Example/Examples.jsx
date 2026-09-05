@@ -102,5 +102,56 @@ const products = [
 ];
 
 export default function Examples() {
-  return <div></div>;
+  const [productsList, setProductList] = useState(products);
+  const [productName, setProductName] = useState("");
+  const [productPrice, setProductPrice] = useState("");
+  const [productNextId, setProductSetId] = useState(5);
+
+  const handleAddProduct = () => {
+    const price = Number(NaN);
+    if (productName.trim().length && productPrice.trim().length) {
+      setProductList((product) => [
+        ...product,
+        { name: productName, price: productPrice, id: productNextId },
+      ]);
+
+      setProductSetId((prev) => prev + 1);
+      setProductName("");
+      setProductPrice("");
+    }
+  };
+
+  const handleDeleteProduct = (id) => {
+    setProductList((prev) => prev.filter((product) => product.id !== id));
+  };
+
+  const handleNameInput = (event) => {
+    setProductName(event.target.value);
+  };
+  const handlePriceInput = (event) => {
+    setProductPrice(event.target.value);
+  };
+  return (
+    <div>
+      {productsList.map(({ name, price, id }) => (
+        <div key={id}>
+          {name}: {price}
+          <button onClick={() => handleDeleteProduct(id)}>x</button>
+        </div>
+      ))}
+      <input
+        onChange={handleNameInput}
+        value={productName}
+        placeholder="...name"
+        type="text"
+      />
+      <input
+        onChange={handlePriceInput}
+        value={productPrice}
+        placeholder="...price"
+        type="text"
+      />
+      <button onClick={handleAddProduct}>add product</button>
+    </div>
+  );
 }
