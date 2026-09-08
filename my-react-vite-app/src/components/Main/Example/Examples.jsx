@@ -121,6 +121,13 @@ export default function Examples() {
     setProductsList((prev) => prev.filter((product) => product.id !== id));
   };
 
+  const handlePriceInput = (event) => {
+    setProductPrice(event.target.value);
+  };
+  const handleNameInput = (event) => {
+    setProductName(event.target.value);
+  };
+
   return (
     <div>
       {productsList.map(({ name, price, id }) => (
@@ -129,8 +136,18 @@ export default function Examples() {
         </div>
       ))}
 
-      <input value={productName} placeholder="name..." type="text" />
-      <input value={productPrice} type="text" placeholder="price..." />
+      <input
+        onChange={handleNameInput}
+        value={productName}
+        placeholder="name..."
+        type="text"
+      />
+      <input
+        onChange={handlePriceInput}
+        value={productPrice}
+        type="text"
+        placeholder="price..."
+      />
       <button onClick={handleAddProduct}>add product</button>
     </div>
   );
