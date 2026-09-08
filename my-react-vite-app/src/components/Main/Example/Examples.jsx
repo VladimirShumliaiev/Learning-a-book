@@ -108,15 +108,21 @@ export default function Examples() {
   const [productNextId, setProductNextId] = useState(5);
 
   const handleAddProduct = () => {
-    setProductsList((prev) => [
-      ...prev,
-      { name: productName, price: productPrice, id: productNextId },
-    ]);
-    setProductNextId((pev) => pev + 1);
-    setProductName("");
-    setProductPrice("");
+    const price = Number(productPrice);
+    if (
+      productName.trim().length &&
+      productPrice.trim().length &&
+      !Number.isNaN(price)
+    ) {
+      setProductsList((prev) => [
+        ...prev,
+        { name: productName, price: productPrice, id: productNextId },
+      ]);
+      setProductNextId((pev) => pev + 1);
+      setProductName("");
+      setProductPrice("");
+    }
   };
-
   const handleDelate = (id) => {
     setProductsList((prev) => prev.filter((product) => product.id !== id));
   };
