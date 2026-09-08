@@ -105,7 +105,33 @@ export default function Examples() {
   const [productsList, setProductsList] = useState(products);
   const [productName, setProductName] = useState("");
   const [productPrice, setProductPrice] = useState("");
-  const [productName, setProductName] = useState("");
   const [productNextId, setProductNextId] = useState(5);
-  return <div></div>;
+
+  const handleAddProduct = () => {
+    setProductsList((prev) => [
+      ...prev,
+      { name: productName, price: productPrice, id: productNextId },
+    ]);
+    setProductNextId((pev) => pev + 1);
+    setProductName("");
+    setProductPrice("");
+  };
+
+  const handleDelate = (id) => {
+    setProductsList((prev) => prev.filter((product) => product.id !== id));
+  };
+
+  return (
+    <div>
+      {productsList.map(({ name, price, id }) => (
+        <div key={id}>
+          {name}: {price} <button onClick={handleDelate}>x</button>
+        </div>
+      ))}
+
+      <input value={productName} placeholder="name..." type="text" />
+      <input value={productPrice} type="text" placeholder="price..." />
+      <button onClick={handleAddProduct}>add product</button>
+    </div>
+  );
 }
