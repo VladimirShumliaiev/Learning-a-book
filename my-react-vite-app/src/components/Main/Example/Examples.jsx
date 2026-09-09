@@ -106,6 +106,7 @@ export default function Examples() {
   const [productName, setProductName] = useState("");
   const [productPrice, setProductPrice] = useState("");
   const [productNextId, setProductNextId] = useState(5);
+  const [editingProductId, setEditingProductId] = useState(null);
 
   const handleAddProduct = () => {
     const price = Number(productPrice);
