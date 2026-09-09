@@ -155,6 +155,9 @@ export default function Examples() {
     setProductPrice("");
     setEditingProductId(null);
   };
+
+  console.log(productsList);
+  console.log(productName);
   console.log(productPrice);
   return (
     <div>
