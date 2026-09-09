@@ -136,10 +136,18 @@ export default function Examples() {
   };
 
   const updateProduct = (id) => {
-    setProductsList((prev) =>
+    setEditingProductId(id);
+
+    const product = productsList.find((product) => product.id === id);
+    setProductName(product.name);
+    setProductPrice(product.price);
+  };
+
+  const saveProduct = (prev) => {
+    prev.map((prev) =>
       prev.map((product) =>
-        product.id === id
-          ? { ...product, price: productPrice, name: productName }
+        product.id === editingProductId
+          ? [...product, { name: productName, price: productPrice }]
           : product,
       ),
     );
