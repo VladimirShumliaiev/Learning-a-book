@@ -135,7 +135,7 @@ export default function Examples() {
   };
 
   const updateProduct = (id) => {
-    return alert("id");
+    return alert(id);
   };
 
   return (
