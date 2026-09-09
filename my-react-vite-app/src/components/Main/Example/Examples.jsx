@@ -134,18 +134,12 @@ export default function Examples() {
     setProductName(event.target.value);
   };
 
-  const updateProduct = () => {
-    setProductsList((prev) => [
-      ...prev,
-      { id: productNextId, newPrice: productPrice },
-    ]);
-  };
-
   return (
     <div>
       {productsList.map(({ name, price, id }) => (
         <div key={id}>
-          {name}: {price} <button onClick={() => handleDelate(id)}>x</button>
+          <button>updateProduct</button> {name}: {price}{" "}
+          <button onClick={() => handleDelate(id)}>x</button>
         </div>
       ))}
 
