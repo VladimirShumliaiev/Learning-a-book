@@ -134,12 +134,16 @@ export default function Examples() {
     setProductName(event.target.value);
   };
 
+  const updateProduct = (id) => {
+    return alert("id");
+  };
+
   return (
     <div>
       {productsList.map(({ name, price, id }) => (
         <div key={id}>
-          <button>updateProduct</button> {name}: {price}{" "}
-          <button onClick={() => handleDelate(id)}>x</button>
+          <button onClick={() => updateProduct(id)}>updateProduct</button>{" "}
+          {name}: {price} <button onClick={() => handleDelate(id)}>x</button>
         </div>
       ))}
 
