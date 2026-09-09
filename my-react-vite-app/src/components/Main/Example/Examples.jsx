@@ -143,14 +143,17 @@ export default function Examples() {
     setProductPrice(product.price);
   };
 
-  const saveProduct = (prev) => {
-    prev.map((prev) =>
+  const saveProduct = () => {
+    setProductsList((prev) =>
       prev.map((product) =>
         product.id === editingProductId
-          ? [...product, { name: productName, price: productPrice }]
+          ? { ...product, name: productName, price: productPrice }
           : product,
       ),
     );
+    setProductName("");
+    setProductPrice("");
+    setEditingProductId(null);
   };
 
   return (
@@ -175,6 +178,7 @@ export default function Examples() {
         placeholder="price..."
       />
       <button onClick={handleAddProduct}>add product</button>
+      <button onClick={saveProduct}>save</button>
     </div>
   );
 }
