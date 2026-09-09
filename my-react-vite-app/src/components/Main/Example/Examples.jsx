@@ -135,7 +135,11 @@ export default function Examples() {
   };
 
   const updateProduct = (id) => {
-    return alert(id);
+    setProductsList((prev) =>
+      prev.map((product) =>
+        product.id === id ? { ...product, price: productPrice } : product,
+      ),
+    );
   };
 
   return (
