@@ -134,6 +134,13 @@ export default function Examples() {
     setProductName(event.target.value);
   };
 
+  const updateProduct = () => {
+    setProductsList((prev) => [
+      ...prev,
+      { id: productNextId, newPrice: productPrice },
+    ]);
+  };
+
   return (
     <div>
       {productsList.map(({ name, price, id }) => (
