@@ -155,7 +155,7 @@ export default function Examples() {
     setProductPrice("");
     setEditingProductId(null);
   };
-
+  console.log(productPrice);
   return (
     <div>
       {productsList.map(({ name, price, id }) => (
