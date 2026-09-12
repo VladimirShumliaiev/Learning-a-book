@@ -163,8 +163,8 @@ export default function Examples() {
     <div>
       {productsList.map(({ name, price, id }) => (
         <div key={id}>
-          <button onClick={() => updateProduct(id)}>updateProduct</button>{" "}
-          {name}: {price} <button onClick={() => handleDelate(id)}>x</button>
+          <button onClick={() => updateProduct(id)}>update</button> {name}:{" "}
+          {price} <button onClick={() => handleDelate(id)}>x</button>
         </div>
       ))}
 
