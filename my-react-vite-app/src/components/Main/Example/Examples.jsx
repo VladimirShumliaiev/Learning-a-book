@@ -159,6 +159,7 @@ export default function Examples() {
   console.log(productsList);
   console.log(productName);
   console.log(productPrice);
+
   return (
     <div>
       {productsList.map(({ name, price, id }) => (
