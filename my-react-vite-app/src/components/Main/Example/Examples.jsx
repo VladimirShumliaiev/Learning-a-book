@@ -120,7 +120,12 @@ export default function Examples() {
   };
 
   const handleAddProduct = () => {
-    if (productName.trim().length && productPrice.trim().length) {
+    const price = Number(productPrice);
+    if (
+      productName.trim().length &&
+      productPrice.trim().length &&
+      !Number.isNaN(price)
+    ) {
       setProductsList((prev) => [
         ...prev,
         { id: productNextId, name: productName, price: productPrice },
