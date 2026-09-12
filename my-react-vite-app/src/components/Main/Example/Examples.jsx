@@ -106,83 +106,51 @@ export default function Examples() {
   const [productName, setProductName] = useState("");
   const [productPrice, setProductPrice] = useState("");
   const [productNextId, setProductNextId] = useState(5);
-  const [editingProductId, setEditingProductId] = useState(null);
 
-  const handleAddProduct = () => {
-    const price = Number(productPrice);
-    if (
-      productName.trim().length &&
-      productPrice.trim().length &&
-      !Number.isNaN(price)
-    ) {
-      setProductsList((prev) => [
-        ...prev,
-        { name: productName, price: productPrice, id: productNextId },
-      ]);
-      setProductNextId((pev) => pev + 1);
-      setProductName("");
-      setProductPrice("");
-    }
-  };
-  const handleDelate = (id) => {
+  const handleDelete = (id) => {
     setProductsList((prev) => prev.filter((product) => product.id !== id));
   };
 
-  const handlePriceInput = (event) => {
-    setProductPrice(event.target.value);
-  };
-  const handleNameInput = (event) => {
+  const handelInputName = (event) => {
     setProductName(event.target.value);
   };
 
-  const updateProduct = (id) => {
-    setEditingProductId(id);
-
-    const product = productsList.find((product) => product.id === id);
-    setProductName(product.name);
-    setProductPrice(product.price);
+  const handleInputPrice = (event) => {
+    setProductPrice(event.target.value);
   };
 
-  const saveProduct = () => {
-    setProductsList((prev) =>
-      prev.map((product) =>
-        product.id === editingProductId
-          ? { ...product, name: productName, price: productPrice }
-          : product,
-      ),
-    );
-    setProductName("");
-    setProductPrice("");
-    setEditingProductId(null);
+  const handleAddProduct = () => {
+    if (productName.trim().length && productPrice.trim().length) {
+      setProductsList((prev) => [
+        ...prev,
+        { id: productNextId, name: productName, price: productPrice },
+      ]);
+      setProductNextId((prev) => prev + 1);
+      setProductPrice("");
+      setProductName("");
+    }
   };
-
-  console.log(productsList);
-  console.log(productName);
-  console.log(productPrice);
 
   return (
     <div>
       {productsList.map(({ name, price, id }) => (
         <div key={id}>
-          <button onClick={() => updateProduct(id)}>update</button> {name}:{" "}
-          {price} <button onClick={() => handleDelate(id)}>x</button>
+          {name} : {price} <button onClick={() => handleDelete(id)}>x</button>
         </div>
       ))}
-
       <input
-        onChange={handleNameInput}
+        onChange={handelInputName}
         value={productName}
         placeholder="name..."
         type="text"
       />
       <input
-        onChange={handlePriceInput}
+        onChange={handleInputPrice}
         value={productPrice}
-        type="text"
         placeholder="price..."
+        type="text"
       />
-      <button onClick={handleAddProduct}>add product</button>
-      <button onClick={saveProduct}>save</button>
+      <button onClick={handleAddProduct}>add</button>
     </div>
   );
 }
