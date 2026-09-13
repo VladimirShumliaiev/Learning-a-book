@@ -106,6 +106,7 @@ export default function Examples() {
   const [productName, setProductName] = useState("");
   const [productPrice, setProductPrice] = useState("");
   const [productNextId, setProductNextId] = useState(5);
+  const [editingProductId, setEditingProductId] = useState(null);
 
   const handleDelete = (id) => {
     setProductsList((prev) => prev.filter((product) => product.id !== id));
@@ -136,11 +137,21 @@ export default function Examples() {
     }
   };
 
+  const handleEditProduct = (id) => {
+    setEditingProductId(id);
+
+    const product = productsList.find((product) => product.id === id);
+    setProductName(product.name);
+    setProductPrice(product.price);
+  };
+
   return (
     <div>
       {productsList.map(({ name, price, id }) => (
         <div key={id}>
+          <button onClick={() => handleEditProduct(id)}>edit product</button>{" "}
           {name} : {price} <button onClick={() => handleDelete(id)}>x</button>
+          <button>save</button>
         </div>
       ))}
       <input
