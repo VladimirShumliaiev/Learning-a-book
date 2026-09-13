@@ -145,13 +145,24 @@ export default function Examples() {
     setProductPrice(product.price);
   };
 
+  const handleSaveProduct = () => {
+    setProductsList((prev) =>
+      prev.map((product) =>
+        product.id === editingProductId
+          ? { ...product, name: productName, price: productPrice }
+          : product,
+      ),
+    );
+    setProductName("");
+    setProductPrice("");
+  };
+
   return (
     <div>
       {productsList.map(({ name, price, id }) => (
         <div key={id}>
           <button onClick={() => handleEditProduct(id)}>edit product</button>{" "}
           {name} : {price} <button onClick={() => handleDelete(id)}>x</button>
-          <button>save</button>
         </div>
       ))}
       <input
@@ -167,6 +178,7 @@ export default function Examples() {
         type="text"
       />
       <button onClick={handleAddProduct}>add</button>
+      <button onClick={handleSaveProduct}>save</button>
     </div>
   );
 }
