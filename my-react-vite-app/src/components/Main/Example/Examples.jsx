@@ -129,7 +129,7 @@ export default function Examples() {
     ) {
       setProductsList((prev) => [
         ...prev,
-        { id: productNextId, name: productName, price: productPrice },
+        { id: productNextId, name: productName, price },
       ]);
       setProductNextId((prev) => prev + 1);
       setProductPrice("");
