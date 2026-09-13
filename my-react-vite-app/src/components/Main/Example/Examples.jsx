@@ -156,7 +156,7 @@ export default function Examples() {
       setProductsList((prev) =>
         prev.map((product) =>
           product.id === editingProductId
-            ? { ...product, name: productName, price: productPrice }
+            ? { ...product, name: productName, price: price }
             : product,
         ),
       );
@@ -165,7 +165,7 @@ export default function Examples() {
       setEditingProductId(null);
     }
   };
-
+  console.log(editingProductId);
   return (
     <div>
       {productsList.map(({ name, price, id }) => (
