@@ -129,7 +129,7 @@ export default function Examples() {
     ) {
       setProductsList((prev) => [
         ...prev,
-        { id: productNextId, name: productName, price },
+        { id: productNextId, name: productName, price: price },
       ]);
       setProductNextId((prev) => prev + 1);
       setProductPrice("");
@@ -146,16 +146,24 @@ export default function Examples() {
   };
 
   const handleSaveProduct = () => {
-    setProductsList((prev) =>
-      prev.map((product) =>
-        product.id === editingProductId
-          ? { ...product, name: productName, price: productPrice }
-          : product,
-      ),
-    );
-    setProductName("");
-    setProductPrice("");
-    setEditingProductId(null);
+    const price = Number(productPrice);
+
+    if (
+      productName.trim().length &&
+      productPrice.trim().length &&
+      !Number.isNaN(price)
+    ) {
+      setProductsList((prev) =>
+        prev.map((product) =>
+          product.id === editingProductId
+            ? { ...product, name: productName, price: productPrice }
+            : product,
+        ),
+      );
+      setProductName("");
+      setProductPrice("");
+      setEditingProductId(null);
+    }
   };
 
   return (
