@@ -171,7 +171,8 @@ export default function Examples() {
       {productsList.map(({ name, price, id }) => (
         <div key={id}>
           <button onClick={() => handleEditProduct(id)}>edit product</button>{" "}
-          {name} : {price} <button onClick={() => handleDelete(id)}>x</button>
+          {name} : {price}{" "}
+          <button onClick={() => handleDelete(id)}>delete</button>
         </div>
       ))}
       <input
