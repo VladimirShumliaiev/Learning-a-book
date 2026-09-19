@@ -110,6 +110,8 @@ export default function Examples() {
     setProductsList((prev) => prev.filter((product) => product.id !== id));
   };
 
+  co
+
   return (
     <div>
       {productsList.map(({ id, name, price }) => (
@@ -118,8 +120,9 @@ export default function Examples() {
           <button onClick={() => handleDeleteProduct(id)}>x</button>
         </div>
       ))}
-      <input type="text" />
-      <input type="text" />
+      <input onChange={} value={productName} type="text" placeholder="name..." />
+      <input onChange={} value={productPrice} type="text" placeholder="price..." />
+      <button>add</button>
     </div>
   );
 }
