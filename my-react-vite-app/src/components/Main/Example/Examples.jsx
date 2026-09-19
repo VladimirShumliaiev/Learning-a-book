@@ -105,6 +105,7 @@ export default function Examples() {
   const [productsList, setProductsList] = useState(products);
   const [productName, setProductName] = useState("");
   const [productPrice, setProductPrice] = useState("");
+  const [productNextId, setProductNextId] = useState(5);
 
   const handleDeleteProduct = (id) => {
     setProductsList((prev) => prev.filter((product) => product.id !== id));
@@ -124,6 +125,13 @@ export default function Examples() {
       productPrice.trim().length &&
       !Number.isNaN(price)
     ) {
+      setProductsList((prev) => [
+        ...prev,
+        { name: productName, price: productPrice, id: productNextId },
+      ]);
+      setProductNextId((prev) => prev + 1);
+      setProductPrice("");
+      setProductName("");
     }
   };
 
@@ -147,7 +155,7 @@ export default function Examples() {
         type="text"
         placeholder="price..."
       />
-      <button>add</button>
+      <button onClick={handleAddProduct}>add</button>
     </div>
   );
 }
