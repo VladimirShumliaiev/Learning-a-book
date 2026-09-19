@@ -105,92 +105,21 @@ export default function Examples() {
   const [productsList, setProductsList] = useState(products);
   const [productName, setProductName] = useState("");
   const [productPrice, setProductPrice] = useState("");
-  const [productNextId, setProductNextId] = useState(5);
-  const [editingProductId, setEditingProductId] = useState(null);
 
-  const handleDelete = (id) => {
+  const handleDeleteProduct = (id) => {
     setProductsList((prev) => prev.filter((product) => product.id !== id));
   };
 
-  const handelInputName = (event) => {
-    setProductName(event.target.value);
-  };
-
-  const handleInputPrice = (event) => {
-    setProductPrice(event.target.value);
-  };
-
-  const handleAddProduct = () => {
-    const price = Number(productPrice);
-    if (
-      productName.trim().length &&
-      productPrice.trim().length &&
-      !Number.isNaN(price)
-    ) {
-      setProductsList((prev) => [
-        ...prev,
-        { id: productNextId, name: productName, price: price },
-      ]);
-      setProductNextId((prev) => prev + 1);
-      setProductPrice("");
-      setProductName("");
-    }
-  };
-
-  const handleEditProduct = (id) => {
-    setEditingProductId(id);
-
-    const product = productsList.find((product) => product.id === id);
-    setProductName(product.name);
-    setProductPrice(product.price);
-  };
-
-  const handleSaveProduct = () => {
-    const price = Number(productPrice);
-
-    if (
-      productName.trim().length &&
-      productPrice.trim().length &&
-      !Number.isNaN(price)
-    ) {
-      setProductsList((prev) =>
-        prev.map((product) =>
-          product.id === editingProductId
-            ? { ...product, name: productName, price: price }
-            : product,
-        ),
-      );
-      setProductName("");
-      setProductPrice("");
-      setEditingProductId(null);
-    }
-  };
-
-  console.log(editingProductId);
-
   return (
     <div>
-      {productsList.map(({ name, price, id }) => (
+      {productsList.map(({ id, name, price }) => (
         <div key={id}>
-          <button onClick={() => handleEditProduct(id)}>edit product</button>{" "}
-          {name} : {price}{" "}
-          <button onClick={() => handleDelete(id)}>delete</button>
+          {name}:{price}
+          <button onClick={() => handleDeleteProduct(id)}>x</button>
         </div>
       ))}
-      <input
-        onChange={handelInputName}
-        value={productName}
-        placeholder="name..."
-        type="text"
-      />
-      <input
-        onChange={handleInputPrice}
-        value={productPrice}
-        placeholder="price..."
-        type="text"
-      />
-      <button onClick={handleAddProduct}>add</button>
-      <button onClick={handleSaveProduct}>save</button>
+      <input type="text" />
+      <input type="text" />
     </div>
   );
 }
