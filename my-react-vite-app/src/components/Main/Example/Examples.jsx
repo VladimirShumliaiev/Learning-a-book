@@ -110,7 +110,22 @@ export default function Examples() {
     setProductsList((prev) => prev.filter((product) => product.id !== id));
   };
 
-  co
+  const handleInputName = (event) => {
+    setProductName(event.target.value);
+  };
+  const handleInputPrice = (event) => {
+    setProductPrice(event.target.value);
+  };
+
+  const handleAddProduct = () => {
+    const price = Number(productPrice);
+    if (
+      productName.trim().length &&
+      productPrice.trim().length &&
+      !Number.isNaN(price)
+    ) {
+    }
+  };
 
   return (
     <div>
@@ -120,8 +135,18 @@ export default function Examples() {
           <button onClick={() => handleDeleteProduct(id)}>x</button>
         </div>
       ))}
-      <input onChange={} value={productName} type="text" placeholder="name..." />
-      <input onChange={} value={productPrice} type="text" placeholder="price..." />
+      <input
+        onChange={handleInputName}
+        value={productName}
+        type="text"
+        placeholder="name..."
+      />
+      <input
+        onChange={handleInputPrice}
+        value={productPrice}
+        type="text"
+        placeholder="price..."
+      />
       <button>add</button>
     </div>
   );
